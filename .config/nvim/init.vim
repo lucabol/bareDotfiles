@@ -13,13 +13,14 @@ call minpac#add('nvim-lua/popup.nvim') " VIM popup api for neovim. Eventually it
 call minpac#add('nvim-telescope/telescope.nvim') " Fuzzy finder
 
 call minpac#add('neovim/nvim-lspconfig') " Coomon configurations for Nvim LSP client
+call minpac#add('williamboman/nvim-lsp-installer') " Coomon configurations for Nvim LSP client
 call minpac#add('hrsh7th/vim-vsnip') " Snippet engine of LSP snippets
 call minpac#add('hrsh7th/nvim-compe') " Autocompletion for built-in LSP
 
 " LSP config from https://github.com/sharksforarms/vim-rust
 call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
 
-call minpac#add('razzmatazz/csharp-language-server') " hacky csharp
+"call minpac#add('razzmatazz/csharp-language-server') " hacky csharp
 
 command! PackUpdate source $MYVIMRC | call minpac#update()
 command! PackClean  source $MYVIMRC | call minpac#clean()
@@ -62,7 +63,27 @@ local on_attach = function(client, bufnr)
 
 end
 
+local lsp_installer = require("nvim-lsp-installer")
 
+lsp_installer.on_server_ready(function(server)
+  local opts = {
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      }
+    }
+
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
+
+--[[
 require'lspconfig'.csharp_ls.setup {
     on_attach = on_attach,
     flags = {
@@ -75,6 +96,7 @@ require('rust-tools').setup {
       debounce_text_changes = 150,
     }
   }
+]]--
 
 EOF
 
