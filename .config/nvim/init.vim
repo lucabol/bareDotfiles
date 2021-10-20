@@ -7,6 +7,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'}) " Plugin manager using packa
 call minpac#add('overcache/NeoSolarized') " Color theme see configs
 call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
 call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
+call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
 call minpac#add('tmadsen/vim-compiler-plugin-for-dotnet') " :make for dotnet build
 
 call minpac#add('nvim-lua/plenary.nvim') "Generic function used by popup.nvim
@@ -18,14 +19,16 @@ call minpac#add('williamboman/nvim-lsp-installer') " Coomon configurations for N
 call minpac#add('hrsh7th/vim-vsnip') " Snippet engine of LSP snippets
 call minpac#add('hrsh7th/nvim-compe') " Autocompletion for built-in LSP
 
-" LSP config from https://github.com/sharksforarms/vim-rust
-call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
+" LSP config from https://github.com/sharksforarms/vim-rust seems broken
+" call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
 
-"call minpac#add('razzmatazz/csharp-language-server') " hacky csharp
+call minpac#add('rust-lang/rust') " Make, Universal CTags, rustfmt, playpen
 
 command! PackUpdate source $MYVIMRC | call minpac#update()
 command! PackClean  source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
+
+let mapleader = " "
 
 " LSP SETTINGS {{{1
 lua << EOF
@@ -74,35 +77,12 @@ lsp_installer.on_server_ready(function(server)
       }
     }
 
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-
     -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
 end)
 
---[[
-require'lspconfig'.csharp_ls.setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
-require('rust-tools').setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
-]]--
-
 EOF
-
-let g:lsp_log_verbose = 1
-let g:lsp_log_file = expand('/home/lucabol/lsp.log')
 
 " Completion
 lua <<EOF
@@ -162,13 +142,10 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 let g:rustfmt_autosave = 1
 
-" Set make to cargo instead of the useless default of rustc from the rust.vim
-" default plugin.
-autocmd FileType rust compiler! cargo
+autocmd FileType rust compiler cargo
 
 " PLUGINS SETTINGS {{{1
 
-let mapleader = ","
 
 " Enable if not using LSP. Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 500ms; no delay when writing).
