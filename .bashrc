@@ -11,7 +11,15 @@ esac
 # Use Vim commands
 set -o vi
 
-export BROWSER=lynx
+# Moved from .profile has that wasn't running in wsl when starting i3
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
+
+export DOTNET_ROOT=$HOME/dotnet
+
+export BROWSER=firefox
+export EDITOR=nvim
+
+# Change colors to use terminal
 export LYNX_LSS=$HOME/.lynx.lss
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -121,3 +129,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# These are needed for wsl2
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+export LIBGL_ALWAYS_INDIRECT=1
+
+. "$HOME/.cargo/env"
