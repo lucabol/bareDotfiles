@@ -134,4 +134,10 @@ fi
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 export LIBGL_ALWAYS_INDIRECT=1
 
+# Added automatically by Rust toolchain. Afraid to change it.
 . "$HOME/.cargo/env"
+
+# Makes git ask for ssh just once https://stackoverflow.com/questions/52423626/remember-git-passphrase-in-wsl
+/usr/bin/keychain --nogui ~/.ssh/id_rsa --quiet
+source $HOME/.keychain/DESKTOP-1JAQF68-sh
+
