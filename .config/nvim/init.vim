@@ -7,6 +7,8 @@ call minpac#add('k-takata/minpac', {'type': 'opt'}) " Plugin manager using packa
 call minpac#add('overcache/NeoSolarized') " Color theme see configs
 call minpac#add('jiangmiao/auto-pairs') " Smart editing closing brackets
 call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
+call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
+call minpac#add('tmadsen/vim-compiler-plugin-for-dotnet') " :make for dotnet build
 
 call minpac#add('nvim-lua/plenary.nvim') "Generic function used by popup.nvim
 call minpac#add('nvim-lua/popup.nvim') " VIM popup api for neovim. Eventually it will go upstream.
