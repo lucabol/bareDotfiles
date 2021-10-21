@@ -320,6 +320,10 @@ exec st -n st_scratch
 #bindsym $mod+Shift+a [instance="authy"] scratchpad show
 #exec authy
 
+# Default configuration
+exec --no-startup-id st
+exec firefox -name browser
+
 # i3bar
 bar {
     status_command i3status --config ~/.config/i3/i3status.conf

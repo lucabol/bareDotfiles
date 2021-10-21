@@ -17,7 +17,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
 export DOTNET_ROOT=$HOME/dotnet
 
 export BROWSER=firefox
-export EDITOR=nvim
+export EDITOR='nvr -l'
+export VISUAL='nvr -l'
 
 # Change colors to use terminal
 export LYNX_LSS=$HOME/.lynx.lss
@@ -86,6 +87,12 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Override for nvim terminal
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  export PS1="» "
+  alias nvim="nvr -l"
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -100,11 +107,6 @@ fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

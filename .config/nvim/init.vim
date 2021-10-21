@@ -8,7 +8,6 @@ call minpac#add('overcache/NeoSolarized') " Color theme see configs
 call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
 call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
 call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
-call minpac#add('tmadsen/vim-compiler-plugin-for-dotnet') " :make for dotnet build
 
 call minpac#add('nvim-lua/plenary.nvim') "Generic function used by popup.nvim
 call minpac#add('nvim-lua/popup.nvim') " VIM popup api for neovim. Eventually it will go upstream.
@@ -16,7 +15,6 @@ call minpac#add('nvim-telescope/telescope.nvim') " Fuzzy finder
 
 call minpac#add('neovim/nvim-lspconfig') " Coomon configurations for Nvim LSP client
 call minpac#add('williamboman/nvim-lsp-installer') " Coomon configurations for Nvim LSP client
-call minpac#add('hrsh7th/vim-vsnip') " Snippet engine of LSP snippets
 call minpac#add('hrsh7th/nvim-compe') " Autocompletion for built-in LSP
 
 " LSP config from https://github.com/sharksforarms/vim-rust seems broken
@@ -135,14 +133,12 @@ autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-" RUST {{{1
-" Not using the LSP requires uncommenting the lines below
-" call minpac#add('neomake/neomake') " Async syntax checking: Neommake!
-" call minpac#add('rust-lang/rust.vim') " Better rust plugin: RustFmt
-
 let g:rustfmt_autosave = 1
 
 autocmd FileType rust compiler cargo
+autocmd FileType cs setlocal makeprg=dotnet
+autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
+autocmd FileType fs compiler dotnet_build
 
 " PLUGINS SETTINGS {{{1
 
@@ -157,6 +153,18 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" VIM-TEST
+nnoremap <leader>t :TestSuite<CR>
+
+" TERMINAL {{{1
+"
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+endif
 
 " COLOR SCHEME {{{1
 set termguicolors
@@ -313,7 +321,6 @@ set statusline+=\ %l:%c
 set statusline+=\ 
 
 " EDITING KEY BINDINGS {{{1
-
 " FILE TYPES {{{1
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
