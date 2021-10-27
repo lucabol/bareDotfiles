@@ -15,7 +15,7 @@ call minpac#add('nvim-telescope/telescope.nvim') " Fuzzy finder
 
 call minpac#add('neovim/nvim-lspconfig') " Coomon configurations for Nvim LSP client
 call minpac#add('williamboman/nvim-lsp-installer') " Coomon configurations for Nvim LSP client
-call minpac#add('hrsh7th/nvim-compe') " Autocompletion for built-in LSP
+call minpac#add('hrsh7th/nvim-compe') " AutoCompletion
 
 " LSP config from https://github.com/sharksforarms/vim-rust seems broken
 " call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
@@ -79,8 +79,10 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
 end)
-
 EOF
+
+" As recommended by nvim-compe
+set completeopt=menuone,noselect
 
 " Completion
 lua <<EOF
@@ -92,28 +94,39 @@ require'compe'.setup {
   preselect = 'enable';
   throttle_time = 80;
   source_timeout = 200;
+  resolve_timeout = 800;
   incomplete_delay = 400;
   max_abbr_width = 100;
   max_kind_width = 100;
   max_menu_width = 100;
+  documentation = {
+    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
+    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
+    max_width = 120,
+    min_width = 60,
+    max_height = math.floor(vim.o.lines * 0.3),
+    min_height = 1,
+  };
 
   source = {
     path = true;
     buffer = true;
     calc = true;
-    vsnip = true;
     nvim_lsp = true;
     nvim_lua = true;
-    spell = true;
-    tags = true;
-    snippets_nvim = true;
+    vsnip = true;
+    ultisnips = true;
+    luasnip = true;
   };
 }
+
 EOF
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -142,7 +155,6 @@ autocmd FileType fs compiler dotnet_build
 
 " PLUGINS SETTINGS {{{1
 
-
 " Enable if not using LSP. Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 500ms; no delay when writing).
 " call neomake#configure#automake('nrwi', 500)
@@ -154,18 +166,27 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" VIM-TEST
-nnoremap <leader>t :TestSuite<CR>
-
 " TERMINAL {{{1
 "
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
-  tnoremap <C-v><Esc> <Esc>
-  highlight! link TermCursor Cursor
-  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
-endif
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-v><Esc> <Esc>
 
+tnoremap <C-J> <C-\><C-n><C-W><C-J>
+tnoremap <C-K> <C-\><C-n><C-W><C-K>
+tnoremap <C-L> <C-\><C-n><C-W><C-L>
+tnoremap <C-H> <C-\><C-n><C-W><C-H>
+
+highlight! link TermCursor Cursor
+highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+
+augroup TerminalEnter
+    autocmd!
+    " Enter edit mode on terminal enter
+    autocmd WinEnter term://* :startinsert
+    " Autoresize terminal window
+    autocmd WinLeave term://* :resize 1
+    autocmd WinEnter term://* :resize 15
+augroup END
 " COLOR SCHEME {{{1
 set termguicolors
 
@@ -233,10 +254,8 @@ set mouse=a
 " Enable autowrite when leaving a buffer in various ways.
 set autowriteall
 
-" Shows the number the line is on as absolute, but the rest is relative.
-" It is better for motion commands, but likely worse for Ex cmds.
+" Absolute numbers.
 set number
-set relativenumber
 
 " If terminal supports it, set the icon for the file (also
 " see iconstring). 'st', 'urxvt' and 'xterm' doesn't seem to work ...
@@ -321,6 +340,17 @@ set statusline+=\ %l:%c
 set statusline+=\ 
 
 " EDITING KEY BINDINGS {{{1
+" CTRL + direction to move between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+" Split below and to the right
+set splitbelow
+set splitright
+
 " FILE TYPES {{{1
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -328,37 +358,6 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd Filetype markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0
 
 " PROGRAMMING {{{1
-
-
-" Enables Omni completion
-filetype plugin on
-
-" If a plugin has not set an omnifunc use the syntax completion file to
-" provide a poor man omni completion.
-if has("autocmd") && exists("+omnifunc")
-        autocmd Filetype *
-                \ if &omnifunc == "" |
-                        \ setlocal omnifunc=syntaxcomplete#Complete |
-                \ endif
-        endif
-
-" Avoid showing extra messages when using completion
-set shortmess+=c
-
-" Trying disabling all of the below to see pure LSP experience
-" Set completeopt to have a better completion experience
-" set completeopt=menu,menuone,noselect
-
-
-" When popup is visible Enter selects the highlighted menu item.
-" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Simulates down key when popup appears, keeping the menu alive while you
-" type.
-"inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-" open omni completion menu closing previous if open and opening new menu without changing the text
-"inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') . '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 
 
 " TRICKS {{{1

@@ -55,12 +55,6 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # wmfocus
 bindsym $mod+space Exec wmfocus
 
-# Try to implement https://github.com/jwilm/i3-vim-focus but failed
-#bindsym --release $mod+$left exec "i3-vim-focus left"
-#bindsym --release $mod+$down exec "i3-vim-focus down"
-#bindsym --release $mod+$up exec "i3-vim-focus up"
-#bindsym --release $mod+$right exec "i3-vim-focus right"
-
 # change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -72,6 +66,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 
 # move focused window
 bindsym $mod+Shift+$left move left
