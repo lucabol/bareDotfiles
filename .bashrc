@@ -134,7 +134,7 @@ fi
 
 # These are needed for wsl2
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-export LIBGL_ALWAYS_INDIRECT=1
+export LIBGL_ALWAYS_INDIRECT=0
 
 # Added automatically by Rust toolchain. Afraid to change it.
 . "$HOME/.cargo/env"

@@ -5,4 +5,5 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ide="nvim -c '15split | term'"
+alias rm='echo "This is not the command you are looking for."; false'
 source ~/.googler_at

@@ -154,7 +154,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Auto tiling
-exec_always --no-startup-id autotiling
+exec_always --no-startup-id i3-auto-layout
 
 # assign apps to workspaces
 #assign [class="Thunderbird" instance="Mail"] $mail
