@@ -8,6 +8,12 @@ case $- in
       *) return;;
 esac
 
+if [ -f ~/bin/sensible.bash ]; then
+   source ~/bin/sensible.bash
+fi
+
+eval "$(starship init bash)"
+
 # Use Vim commands
 set -o vi
 
