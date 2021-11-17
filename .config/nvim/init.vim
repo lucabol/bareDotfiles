@@ -8,6 +8,7 @@ call minpac#add('overcache/NeoSolarized') " Color theme see configs
 call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
 call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
 call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
+call minpac#add('sbdchd/neoformat') " Formatting code
 
 call minpac#add('nvim-lua/plenary.nvim') "Generic function used by popup.nvim
 call minpac#add('nvim-lua/popup.nvim') " VIM popup api for neovim. Eventually it will go upstream.
@@ -166,6 +167,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" NEOFORMAT
+let g:neoformat_enabled_c = ['astyle']
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
 " TERMINAL {{{1
 "
 tnoremap <Esc> <C-\><C-n>
@@ -270,8 +279,8 @@ set titlestring=%f%(\ %M%)
 set expandtab
 
 " Set tab length.
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 " If a search term has uppercase chars, do a case sensitive search. Otherwise
 " use a case insensitive one.
@@ -295,6 +304,8 @@ augroup END
 
 " Don't show intro message when opening without files.
 set shortmess+=I
+
+set foldmethod=marker
 
 " Custom statusline {{{2
 " Inspired by: https://shapeshed.com/vim-statuslines/
@@ -351,6 +362,8 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+nnoremap <Leader>m :w<CR> :Make!<CR>
+nnoremap <Leader>t :w<CR> :make check<CR>
 " FILE TYPES {{{1
 autocmd Filetype gitcommit setlocal spell textwidth=72
 

@@ -4,6 +4,7 @@ git clone http://git.suckless.org/st
 cd st
 git apply ../st-patches/*.diff
 sed -i 's/static char \*font.*/static char \*font = "PragmataPro Mono:size=12:antialias=true:autohint=true";/' ../st/config.def.h
+sed -i 's/static double minlatency = 8/static double minlatency = 2/' ../st/config.def.h
 
 # without the below middle mouse key paste selection while shift-ctrl-v paste the copy https://st.suckless.org/patches/clipboard/
 # sed -i 's/selpaste/clippaste/' ../st/config.def.h
