@@ -57,6 +57,15 @@
 *color7:                S_base2
 *color15:               S_base3
 
-! XTERM FONT
+! XTERM
 XTerm*faceName: xft:PragmataPro Mono:size=12:antialias=true:autohint=true
 xterm*visualBell:         off
+XTerm*utf8: 1
+
+XTerm*selectToClipboard: true
+
+XTerm*translations: #override Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)  select-start() select-end()
+
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+XTerm*SaveLines: 9000

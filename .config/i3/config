@@ -38,7 +38,7 @@ set $right l
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -290,12 +290,12 @@ for_window [class="st-*"] border normal 1
 # Terminal scratchpad
 for_window [instance="st_scratch"] move to scratchpad, border none
 bindsym $mod+Shift+x [instance="st_scratch"] scratchpad show
-exec st -n st_scratch
+exec xterm -n st_scratch
 
 # htop scratchpad
 #for_window [instance="htop_scratchpad"] move to scratchpad, border none
 #bindsym $mod+Shift+t [instance="htop_scratchpad"] scratchpad show
-#exec st -name htop_scratchpad -e htop
+#exec xterm -name htop_scratchpad -e htop
 
 # keepassxc scratchpad
 #for_window [instance="keepassxc"] move to scratchpad, border none
