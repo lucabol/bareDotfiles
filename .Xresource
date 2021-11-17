@@ -62,7 +62,7 @@ XTerm*faceName: xft:PragmataPro Mono:size=12:antialias=true:autohint=true
 xterm*visualBell:         off
 XTerm*utf8: 1
 
-XTerm*selectToClipboard: true
+! XTerm*selectToClipboard: true
 
 XTerm*translations: #override Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)  select-start() select-end()
 
