@@ -9,7 +9,10 @@ call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
 call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
 call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
 call minpac#add('sbdchd/neoformat') " Formatting code
+call minpac#add('gabrielpoca/replacer.nvim') " Edit quickfix windows including file names <leader>h
 
+call minpac#add('nvim-telescope/telescope-fzf-native.nvim') "fuzzy searching for telescope
+call minpac#add('nvim-treesitter/nvim-treesitter') "Better syntax highlighting TSUpdate, TSInstall
 call minpac#add('nvim-lua/plenary.nvim') "Generic function used by popup.nvim
 call minpac#add('nvim-lua/popup.nvim') " VIM popup api for neovim. Eventually it will go upstream.
 call minpac#add('nvim-telescope/telescope.nvim') " Fuzzy finder
@@ -22,6 +25,9 @@ call minpac#add('hrsh7th/nvim-compe') " AutoCompletion
 " call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
 
 call minpac#add('rust-lang/rust') " Make, Universal CTags, rustfmt, playpen
+
+
+call minpac#add('vimwiki/vimwiki') " Wiki commands L ww, Enter follow/create, <Backs> go back, <tab> next link
 
 command! PackUpdate source $MYVIMRC | call minpac#update()
 command! PackClean  source $MYVIMRC | call minpac#clean()
@@ -167,6 +173,25 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+lua << EOF
+-- You dont need to set any of these options. These are the default ones. Only
+-- the loading is important
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+  }
+}
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
+EOF
+
 " NEOFORMAT
 let g:neoformat_enabled_c = ['astyle']
 
@@ -174,6 +199,9 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+" REPLACER
+nmap <leader>h :lua require("replacer").run()<cr>
 
 " TERMINAL {{{1
 "
@@ -196,6 +224,34 @@ augroup TerminalEnter
     autocmd WinLeave term://* :resize 1
     autocmd WinEnter term://* :resize 15
 augroup END
+
+" VIMWIKI {{{1
+let wiki = {
+\           'path': '~/vimwiki/',
+\           'path_html': '~/vimwiki/HTML/',
+\           'auto_export': 0,
+\           'index': 'Home',
+\           'syntax': 'markdown',
+\           'ext': '.md',
+\           'auto_toc': 1,
+\           'maxhi': 1,
+\           'nested_syntaxes': {'python': 'python', 'js': 'javascript', 'c++': 'cpp'},
+\           'list_margin': -1,
+\           'auto_tags': 1
+\           }
+
+" Make wiki the default vimwiki setup
+let g:vimwiki_list = [wiki]
+" When opening a directory containing a file with this name and default wiki
+" extention, assume it is a vimwiki
+let g:vimwiki_dir_link = ''
+" Only treat .md files under a path in vimwiki_list as wiki files
+let g:vimwiki_global_ext = 0
+
+" I want to see the double square brackets because I like to identify the
+" concept I am referencing.
+let g:vimwiki_conceallevel=0
+
 " COLOR SCHEME {{{1
 set termguicolors
 

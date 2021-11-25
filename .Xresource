@@ -1,3 +1,12 @@
+! OVERALL
+Xft.dpi:                192
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
 ! SOLARIZED LIGHT
 
 #define S_base03        #002b36
@@ -58,14 +67,31 @@
 *color15:               S_base3
 
 ! XTERM
-XTerm*faceName: xft:PragmataPro Mono:size=12:antialias=true:autohint=true
 xterm*visualBell:         off
 XTerm*utf8: 1
 
-! XTerm*selectToClipboard: true
-
-XTerm*translations: #override Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)  select-start() select-end()
-
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
 XTerm*SaveLines: 9000
+
+XTerm*VT100.Translations: #override \
+    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+
+! For xtermcontrol to work
+*VT100.allowWindowOps: true
+*VT100.allowTitleOps: true
+*VT100.allowFontOps: true
+
+XTerm*faceName: xft:PragmataPro Mono:size=10:antialias=true:autohint=false
+
+XTerm*font:  -*-terminus-*-*-*-32-*-*-*-*-*-iso10646-1
+XTerm*font1: -*-terminus-*-*-*-12-*-*-*-*-*-iso10646-1
+XTerm*font2: -*-terminus-*-*-*-14-*-*-*-*-*-iso10646-1
+XTerm*font3: -*-terminus-*-*-*-16-*-*-*-*-*-iso10646-1
+XTerm*font4: -*-terminus-*-*-*-22-*-*-*-*-*-iso10646-1
+XTerm*font5: -*-terminus-*-*-*-24-*-*-*-*-*-iso10646-1
+XTerm*font6: -*-terminus-*-*-*-32-*-*-*-*-*-iso10646-1
+

@@ -13,7 +13,7 @@ fi
 
 xrdb -merge ~/.Xresource
 # Manage hi dpi settings https://superuser.com/questions/1370361/blurry-fonts-on-using-windows-default-scaling-with-wsl-gui-applications-hidpi/1550608#1550608
-export GDK_SCALE=0.5
-export GDK_DPI_SCALE=2
+#export GDK_SCALE=0.5
+#export GDK_DPI_SCALE=2
 
 i3

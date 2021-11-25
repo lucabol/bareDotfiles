@@ -110,9 +110,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# These are needed for wsl2
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-export LIBGL_ALWAYS_INDIRECT=0
+# These are needed for wsl2 running i3 through a Windows X server, it breaks wslg
+# export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+# export LIBGL_ALWAYS_INDIRECT=0
 
 # Added automatically by Rust toolchain. Afraid to change it.
 . "$HOME/.cargo/env"
