@@ -9,7 +9,7 @@ call minpac#add('tpope/vim-commentary') " gcc, gc<motion>, in visual mode gc
 call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, use copen
 call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
 call minpac#add('sbdchd/neoformat') " Formatting code
-call minpac#add('gabrielpoca/replacer.nvim') " Edit quickfix windows including file names <leader>h
+call minpac#add('stefandtw/quickfix-reflector.vim') " Edit quickfix windows
 
 call minpac#add('nvim-telescope/telescope-fzf-native.nvim') "fuzzy searching for telescope
 call minpac#add('nvim-treesitter/nvim-treesitter') "Better syntax highlighting TSUpdate, TSInstall
@@ -199,9 +199,6 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
-
-" REPLACER
-nmap <leader>h :lua require("replacer").run()<cr>
 
 " TERMINAL {{{1
 "
@@ -420,6 +417,22 @@ set splitright
 
 nnoremap <Leader>m :w<CR> :Make!<CR>
 nnoremap <Leader>t :w<CR> :make check<CR>
+
+" Buffermanipulation
+nnoremap L :bn<CR>
+nnoremap H :bp<CR>
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader><Leader> :b#<CR>
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
 " FILE TYPES {{{1
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
