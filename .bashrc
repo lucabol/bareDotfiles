@@ -22,7 +22,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
 
 export DOTNET_ROOT=$HOME/dotnet
 
-export BROWSER=firefox
+export BROWSER=lynx
 export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 
