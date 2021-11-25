@@ -1,0 +1,4 @@
+# Make wslg work, it shouldn't be needed.
+sudo rm -rf /tmp/.X11-unix
+ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
+
