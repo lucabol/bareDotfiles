@@ -1,4 +1,4 @@
-" PLUGINS {{{1
+" PLUGINS {{{
 
 packadd minpac
 call minpac#init()
@@ -158,7 +158,6 @@ let g:rustfmt_autosave = 1
 autocmd FileType rust compiler cargo
 autocmd FileType cs setlocal makeprg=dotnet
 autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
-autocmd FileType fs compiler dotnet_build
 
 " PLUGINS SETTINGS {{{1
 
@@ -418,7 +417,7 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-nnoremap <Leader>m :w<CR> :Make!<CR>
+nnoremap <Leader>m :w<CR> :make<CR>
 nnoremap <Leader>t :w<CR> :make check<CR>
 
 " Buffermanipulation
@@ -442,6 +441,9 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 autocmd Filetype markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0
 
+augroup filetypedetect
+    au! BufRead,BufNewFile *.4th       setfiletype forth
+augroup END
 " PROGRAMMING {{{1
 
 
@@ -450,6 +452,20 @@ autocmd Filetype markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=
 " Close all folds when opening a new buffer.
 autocmd BufRead * normal zM
 
+" guard for distributions lacking the 'persistent_undo' feature.
+if has('persistent_undo')
+    " define a path to store persistent undo files.
+    let target_path = expand('~/.config/vim-persisted-undo/')
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call system('mkdir -p ' . target_path)
+    endif
+    " point Vim to the defined undo directory.
+    let &undodir = target_path
+    " finally, enable undo persistence.
+    set undofile
+endif
 
 " BUGS {{{1
 
