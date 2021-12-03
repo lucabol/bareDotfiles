@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# map ctrl-a to fg for fast switching between terminals
+bind '"\C-a":"fg\n"'
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
