@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+if [ $# -eq 0 ]
+    then echo "You need to provide the library name"
+fi
+
+mkdir "$1"
+cd "$1"
+
+dotnet new sln
+dotnet new classlib -o "$1"
+dotnet sln add "$1"/"$1".csproj
+
+dotnet new console -o "$1".Program
+dotnet sln add "$1".Program/"$1".Program.csproj
+dotnet add "$1".Program/"$1".Program.csproj reference "$1"/"$1".csproj
+
+dotnet new xunit -o "$1".Tests
+dotnet sln add "$1".Tests/"$1".Tests.csproj
+dotnet add "$1".Tests/"$1".Tests.csproj reference "$1"/"$1".csproj
+
+dotnet run --project "$1".Program/"$1".Program.csproj
+dotnet test
