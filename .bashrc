@@ -25,9 +25,12 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
 
 export DOTNET_ROOT=$HOME/dotnet
 
+# This avoids a xclip related error when running nvim
+export DISPLAY=:0
+
 export BROWSER=lynx
-export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Change colors to use terminal
 export LYNX_LSS=$HOME/.lynx.lss

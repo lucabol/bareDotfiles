@@ -88,6 +88,105 @@ lsp_installer.on_server_ready(function(server)
 end)
 EOF
 
+" Show errors on bottom https://www.reddit.com/r/neovim/comments/og1cdv/neovim_lsp_how_do_you_get_diagnostic_mesages_to/
+lua << EOF
+-- Location information about the last message printed. The format is
+-- `(did print, buffer number, line number)`.
+local last_echo = { false, -1, -1 }
+
+-- The timer used for displaying a diagnostic in the commandline.
+local echo_timer = nil
+
+-- The timer after which to display a diagnostic in the commandline.
+local echo_timeout = 250
+
+-- The highlight group to use for warning messages.
+local warning_hlgroup = 'WarningMsg'
+
+-- The highlight group to use for error messages.
+local error_hlgroup = 'ErrorMsg'
+
+-- If the first diagnostic line has fewer than this many characters, also add
+-- the second line to it.
+local short_line_limit = 20
+
+-- Shows the current line's diagnostics in a floating window.
+function show_line_diagnostics()
+  vim
+    .lsp
+    .diagnostic
+    .show_line_diagnostics({ severity_limit = 'Warning' }, vim.fn.bufnr(''))
+end
+
+-- Prints the first diagnostic for the current line.
+function echo_diagnostic()
+  if echo_timer then
+    echo_timer:stop()
+  end
+
+  echo_timer = vim.defer_fn(
+    function()
+      local line = vim.fn.line('.') - 1
+      local bufnr = vim.api.nvim_win_get_buf(0)
+
+      if last_echo[1] and last_echo[2] == bufnr and last_echo[3] == line then
+        return
+      end
+
+      local diags = vim
+        .lsp
+        .diagnostic
+        .get_line_diagnostics(bufnf, line, { severity_limit = 'Warning' })
+
+      if #diags == 0 then
+        -- If we previously echo'd a message, clear it out by echoing an empty
+        -- message.
+        if last_echo[1] then
+          last_echo = { false, -1, -1 }
+
+          vim.api.nvim_command('echo ""')
+        end
+
+        return
+      end
+
+      last_echo = { true, bufnr, line }
+
+      local diag = diags[1]
+      local width = vim.api.nvim_get_option('columns') - 15
+      local lines = vim.split(diag.message, "\n")
+      local message = lines[1]
+      local trimmed = false
+
+      if #lines > 1 and #message <= short_line_limit then
+        message = message .. ' ' .. lines[2]
+      end
+
+      if width > 0 and #message >= width then
+        message = message:sub(1, width) .. '...'
+      end
+
+      local kind = 'warning'
+      local hlgroup = warning_hlgroup
+
+      if diag.severity == vim.lsp.protocol.DiagnosticSeverity.Error then
+        kind = 'error'
+        hlgroup = error_hlgroup
+      end
+
+      local chunks = {
+        { kind .. ': ', hlgroup },
+        { message }
+      }
+
+      vim.api.nvim_echo(chunks, false, {})
+    end,
+    echo_timeout
+  )
+end
+EOF
+autocmd CursorMoved * :lua echo_diagnostic()
+
 " As recommended by nvim-compe
 set completeopt=menuone,noselect
 
@@ -156,7 +255,7 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 let g:rustfmt_autosave = 1
 
 autocmd FileType rust compiler cargo
-autocmd FileType cs setlocal makeprg=dotnet
+" autocmd FileType cs setlocal makeprg=dotnet\ build\ /property:GenerateFullPaths=true
 autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
 
 " PLUGINS SETTINGS {{{1
@@ -197,10 +296,10 @@ EOF
 " NEOFORMAT
 let g:neoformat_enabled_c = ['astyle']
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * undojoin | Neoformat
+" augroup END
 
 " TERMINAL {{{1
 "
@@ -302,7 +401,7 @@ set showmatch
 set colorcolumn=100
 
 " Use system clipboard.
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " Display tabs as \ and trailing spaces as the middle dot.
 set listchars=tab:->,trail:·
@@ -417,8 +516,8 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-nnoremap <Leader>m :w<CR> :make<CR>
-nnoremap <Leader>t :w<CR> :make check<CR>
+nnoremap <Leader>m :wa<CR> :make<CR>
+nnoremap <Leader>t :wa<CR> :make check<CR>
 
 " Buffermanipulation
 nnoremap L :bn<CR>
