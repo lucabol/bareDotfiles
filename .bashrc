@@ -25,9 +25,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
 
 export DOTNET_ROOT=$HOME/dotnet
 
-# This avoids a xclip related error when running nvim
-export DISPLAY=:0
-
 export BROWSER=lynx
 export EDITOR="nvim"
 export VISUAL="nvim"

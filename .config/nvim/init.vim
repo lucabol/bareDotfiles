@@ -10,6 +10,7 @@ call minpac#add('tpope/vim-dispatch') " Make fills quicklist, Make! is async, us
 call minpac#add('radenling/vim-dispatch-neovim') " Display Make in terminal
 call minpac#add('sbdchd/neoformat') " Formatting code
 call minpac#add('stefandtw/quickfix-reflector.vim') " Edit quickfix windows
+call minpac#add('godlygeek/tabular') " Align text : , =
 
 call minpac#add('nvim-telescope/telescope-fzf-native.nvim') "fuzzy searching for telescope
 call minpac#add('nvim-treesitter/nvim-treesitter') "Better syntax highlighting TSUpdate, TSInstall
@@ -26,8 +27,10 @@ call minpac#add('hrsh7th/nvim-compe') " AutoCompletion
 
 call minpac#add('rust-lang/rust') " Make, Universal CTags, rustfmt, playpen
 
-
 call minpac#add('vimwiki/vimwiki') " Wiki commands L ww, Enter follow/create, <Backs> go back, <tab> next link
+
+let g:vimspector_enable_mappings = 'HUMAN'
+call minpac#add('puremourning/vimspector') " Debug, in human mode F5, ShF5 stop, CtrShF5 restart, F9 break, F10, F11, ShF11 out
 
 command! PackUpdate source $MYVIMRC | call minpac#update()
 command! PackClean  source $MYVIMRC | call minpac#clean()
@@ -260,6 +263,16 @@ autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
 
 " PLUGINS SETTINGS {{{1
 
+" TABULARIZE
+nmap <Leader>a  :Tabularize<CR>
+vmap <Leader>a  :Tabularize<CR>
+nmap <Leader>aa :Tabularize /=<CR>
+vmap <Leader>aa :Tabularize /=<CR>
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+
 " Enable if not using LSP. Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 500ms; no delay when writing).
 " call neomake#configure#automake('nrwi', 500)
@@ -400,8 +413,20 @@ set showmatch
 " Highlight line 99
 set colorcolumn=100
 
-" Use system clipboard.
+" Use system clipboard. https://www.reddit.com/r/neovim/comments/g94zrl/solution_neovim_clipboard_with_wsl/
 set clipboard+=unnamedplus
+let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \      '+': 'clip.exe',
+            \      '*': 'clip.exe',
+            \    },
+            \   'paste': {
+            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
 
 " Display tabs as \ and trailing spaces as the middle dot.
 set listchars=tab:->,trail:·

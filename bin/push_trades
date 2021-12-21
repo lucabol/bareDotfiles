@@ -1,0 +1,5 @@
+#!/bin/bash
+pushd ~/.local/share/lupo
+gl commit -m "Some changes"
+gl publish
+popd

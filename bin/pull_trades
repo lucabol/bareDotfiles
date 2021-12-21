@@ -1,0 +1,4 @@
+#!/bin/bash
+pushd ~/.local/share/lupo
+gl merge
+popd
