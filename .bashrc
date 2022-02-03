@@ -15,6 +15,8 @@ if [ -f ~/bin/sensible.bash ]; then
    source ~/bin/sensible.bash
 fi
 
+source ~/.nuget_api
+
 eval "$(starship init bash)"
 
 # Use Vim commands

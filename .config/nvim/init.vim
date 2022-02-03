@@ -284,6 +284,12 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" VIMSPECTOR
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
+
 lua << EOF
 -- You dont need to set any of these options. These are the default ones. Only
 -- the loading is important
@@ -429,8 +435,8 @@ let g:clipboard = {
             \ }
 
 " Display tabs as \ and trailing spaces as the middle dot.
-set listchars=tab:->,trail:·
-set list
+" set listchars=tab:->,trail:·
+" set list
 
 " Highlight line where the cursor is. You could also highlight just the
 " numbers on the left.
@@ -486,7 +492,7 @@ set shortmess+=I
 
 set foldmethod=marker
 
-" Custom statusline {{{2
+" CUSTOM STATUS LINE {{{2
 " Inspired by: https://shapeshed.com/vim-statuslines/
 " + https://gist.github.com/bla-rs/c439daa0aaa5dea899056bc0b7d34ead
 
@@ -568,9 +574,6 @@ autocmd Filetype markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=
 augroup filetypedetect
     au! BufRead,BufNewFile *.4th       setfiletype forth
 augroup END
-" PROGRAMMING {{{1
-
-
 " TRICKS {{{1
 
 " Close all folds when opening a new buffer.
