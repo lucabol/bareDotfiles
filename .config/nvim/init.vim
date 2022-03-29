@@ -20,12 +20,19 @@ call minpac#add('nvim-telescope/telescope.nvim') " Fuzzy finder
 
 call minpac#add('neovim/nvim-lspconfig') " Coomon configurations for Nvim LSP client
 call minpac#add('williamboman/nvim-lsp-installer') " Coomon configurations for Nvim LSP client
-call minpac#add('hrsh7th/nvim-compe') " AutoCompletion
+
+call minpac#add('hrsh7th/cmp-nvim-lsp') " AutoCompletion
+call minpac#add('hrsh7th/nvim-cmp') " AutoCompletion
+
+
+call minpac#add('MunifTanjim/nui.nvim') " UI for Idris lsp
+call minpac#add('ShinKage/idris2-nvim') " Idris Plugin
 
 " LSP config from https://github.com/sharksforarms/vim-rust seems broken
 " call minpac#add('simrat39/rust-tools.nvim') " Extra functionality on top of rust analyzer
 
 call minpac#add('rust-lang/rust') " Make, Universal CTags, rustfmt, playpen
+call minpac#add('ziglang/zig.vim') " File detection and syntax highlgithing for zig
 
 call minpac#add('vimwiki/vimwiki') " Wiki commands L ww, Enter follow/create, <Backs> go back, <tab> next link
 
@@ -37,10 +44,68 @@ command! PackClean  source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
 
 let mapleader = " "
+let maplocalleader = ","
 
 " LSP SETTINGS {{{1
+
 lua << EOF
 local nvim_lsp = require('lspconfig')
+
+local cmp = require'cmp'
+cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      end,
+    },
+    mapping = {
+      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+--[[
+local lsp_signature = require "lsp_signature"
+
+lsp_signature.setup {
+  bind = true,
+  handler_opts = {
+    border = "rounded",
+  },
+}
+--]]
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+local enhance_server_opts = {
+  -- Provide settings that should only apply to the "eslintls" server
+  ["test"] = function(opts)
+    opts.settings = {
+      format = {
+        enable = true,
+      },
+    }
+  end,
+}
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -80,15 +145,52 @@ local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)
   local opts = {
       on_attach = on_attach,
+      capabilities = capabilities,
       flags = {
         debounce_text_changes = 150,
       }
     }
 
-    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-    server:setup(opts)
-    vim.cmd [[ do User LspAttachBuffers ]]
+  if enhance_server_opts[server.name] then
+    -- Enhance the default opts with the server-specific ones
+    enhance_server_opts[server.name](opts)
+  end
+  server:setup(opts)
+
+  vim.cmd [[ do User LspAttachBuffers ]]
 end)
+
+local installIdris = function() -- way to comment out all the code, by making it a function
+    local idris_on_attach = function(client, bufnr)
+        on_attach()
+        vim.cmd [[nnoremap <Leader>ac <Cmd>lua require('idris2.code_action').add_clause()<CR>]]    
+        vim.cmd [[nnoremap <Leader>cs <Cmd>lua require('idris2.code_action').case_split()<CR>]]    
+        vim.cmd [[nnoremap <Leader>ps <Cmd>lua require('idris2.code_action').expr_search()<CR>]]    
+        vim.cmd [[nnoremap <Leader>mw <Cmd>lua require('idris2.code_action').make_with()<CR>]]    
+        vim.cmd [[nnoremap <Leader>ml <Cmd>lua require('idris2.code_action').make_lemma()<CR>]]    
+        vim.cmd [[nnoremap <Leader>mc <Cmd>lua require('idris2.code_action').make_case()<CR>]]    
+        vim.cmd [[nnoremap <Leader>ev <Cmd>lua require('idris2.repl').evaluate()<CR>]]    
+    end
+
+    local idrisopts = {
+      client = {
+        hover = {
+          use_split = true, -- Persistent split instead of popups for hover
+          split_size = '30%', -- Size of persistent split, if used
+          auto_resize_split = true, -- Should resize split to use minimum space
+          split_position = 'bottom', -- bottom, top, left or right
+          with_history = true, -- Show history of hovers instead of only last
+          use_as_popup = false, -- Close the split on cursor movement
+        },
+      },
+      server = {on_attach = idris_on_attach}, -- Options passed to lspconfig idris2 configuration
+      autostart_semantic = true, -- Should start and refresh semantic highlight automatically
+      code_action_post_hook = function(action) end, -- Function to execute after a code action is performed:
+      use_default_semantic_hl_groups = true, -- Set default highlight groups for semantic tokens
+    }
+    require('idris2').setup(idrisopts)
+end
+--]]
 EOF
 
 " Show errors on bottom https://www.reddit.com/r/neovim/comments/og1cdv/neovim_lsp_how_do_you_get_diagnostic_mesages_to/
@@ -190,46 +292,9 @@ end
 EOF
 autocmd CursorMoved * :lua echo_diagnostic()
 
-" As recommended by nvim-compe
-set completeopt=menuone,noselect
+" set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noselect
 
-" Completion
-lua <<EOF
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  resolve_timeout = 800;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = {
-    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
-    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
-    max_width = 120,
-    min_width = 60,
-    max_height = math.floor(vim.o.lines * 0.3),
-    min_height = 1,
-  };
-
-  source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-    luasnip = true;
-  };
-}
-
-EOF
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
@@ -548,6 +613,7 @@ set splitbelow
 set splitright
 
 nnoremap <Leader>m :wa<CR> :make<CR>
+nnoremap <Leader>r :wa<CR> :make run<CR>
 nnoremap <Leader>t :wa<CR> :make check<CR>
 
 " Buffermanipulation
