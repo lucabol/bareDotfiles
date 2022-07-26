@@ -1,2 +1,4 @@
 [2022-04-15 13:30] Started taking @notes with jrnl.
 Trying it out.
+
+[2022-04-15 14:37] @tips Recursively deleting a directory in @powershell is rm -r -fo dirname.
