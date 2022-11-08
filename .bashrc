@@ -28,8 +28,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$PATH"
 export DOTNET_ROOT=$HOME/dotnet
 
 export BROWSER=lynx
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="lvim"
+export VISUAL="lvim"
 
 # Change colors to use terminal
 export LYNX_LSS=$HOME/.lynx.lss
