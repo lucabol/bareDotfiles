@@ -45,6 +45,10 @@ require('packer').startup(function(use)
     end
   } end)
 
+-- new filetype part of 0.7: https://neovim.io/news/2022/04
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+
 -- Set color scheme
 vim.o.termguicolors = true
 vim.o.background = "light"
