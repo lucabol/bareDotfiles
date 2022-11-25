@@ -1,0 +1,10 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
+column <- args[1]
+stopifnot(column != "")
+
+csvfile <- readLines(file("stdin"))
+df <- read.csv(text = csvfile, header = TRUE)
+a <- df[, column]
+scale <- if (length(args) >= 2) as.numeric(args[2]) else 1
+stem(a, scale)

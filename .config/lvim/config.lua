@@ -38,6 +38,8 @@ lvim.builtin.theme.name="tokyonight" -- Workaround to be able to set light style
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["<space>"] = { ":b#<CR>", "Switch to previous buffer" }
+lvim.builtin.which_key.vmappings["<CR>"] = { ":ToggleTermSendVisualSelection<CR>", "Send visual selection to terminal" }
+lvim.builtin.which_key.mappings["<CR>"] = { ":ToggleTermSendCurrentLine<CR>j", "Send current line to terminal" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
@@ -53,6 +55,7 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "startify" -- the other choice is dashboard
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.direction = "horizontal"
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default" -- not sure, alternative is lvim
@@ -89,4 +92,5 @@ lvim.plugins = {
     { "folke/trouble.nvim", cmd = "TroubleToggle", },
     { "ray-x/lsp_signature.nvim", event = "BufRead", config = function() require"lsp_signature".on_attach() end, },
     { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end, },
+    { "JuliaEditorSupport/julia-vim" },
 }
