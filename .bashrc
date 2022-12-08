@@ -17,6 +17,9 @@ fi
 
 source ~/.nuget_api
 
+# Development keys, don't put under github
+source ~/.secrets
+
 eval "$(starship init bash)"
 
 # Use Vim commands
