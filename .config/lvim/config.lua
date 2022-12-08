@@ -1,5 +1,6 @@
 -- general
 vim.opt.background="light"
+vim.opt.mouse=""
 
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
