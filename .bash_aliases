@@ -15,4 +15,17 @@ alias idris2='rlwrap idris2'
 alias idris='rlwrap idris'
 alias nvim=lvim
 
+alias mutate="dplyr mutate"
+alias filter="dplyr filter"
+alias select="dplyr select"
+alias summarise="dplyr summarise"
+alias group_by="dplyr group_by"
+alias ungroup="dplyr ungroup"
+alias count="dplyr count"
+alias arrange="dplyr arrange"
+alias kable="dplyr kable"
+
+alias run=./Taskfile
+alias run-init="curl -so Taskfile https://raw.githubusercontent.com/adriancooney/Taskfile/master/Taskfile.template && chmod +x Taskfile"
+
 source ~/.googler_at
