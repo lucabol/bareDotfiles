@@ -3,31 +3,31 @@
 # for examples
 
 # map ctrl-a to fg for fast switching between terminals
-bind '"\C-a":"fg\n"'
+bind -x '"\C-a":"fg"'
 
 # If not running interactively, don't do anything
+# See https://unix.stackexchange.com/questions/257571/why-does-bashrc-check-whether-the-current-shell-is-interactive
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-if [ -f ~/bin/sensible.bash ]; then
-   source ~/bin/sensible.bash
-fi
 
-# Development keys, don't put under github
+# Development keys, don't put under github. Aliases & sensible bash.
 source ~/.secrets
+source ~/.bash_aliases
+source ~/bin/sensible.bash
 
+# Fancy prompt - config in ~/.config/starship.toml
 eval "$(starship init bash)"
 
 # Use Vim commands
 set -o vi
 
 # Moved from .profile has that wasn't running in wsl when starting i3
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotnet:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
 
-export DOTNET_ROOT=$HOME/dotnet
-
+# Default programs
 export BROWSER=lynx
 export EDITOR="lvim"
 export VISUAL="lvim"
@@ -37,11 +37,6 @@ export LYNX_LSS=$HOME/.lynx.lss
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # These are needed for wsl2 running i3 through a Windows X server, it breaks wslg
 # export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
