@@ -18,7 +18,11 @@ function help {     # Prints help
     echo "By adding 'alias run=./Taskfile' you can then call it as 'run <task> <args>"
     echo
     echo "Tasks:"
-    grep '^function .* #.* ' $0 | cut -d' ' -f 2- | tr -d '{#' | sed 's/^/  /g'
+    grep '^function .* #.* ' Taskfile | # Start with function and has # somewhere
+      cut -d' ' -f 2- |                 # Remove the word 'function'
+      tr -d '{' |                       # Remove '{}'
+      sed 's/^/  /g' |                  # Indent by two spaces
+      column --table --separator '#'    # column it using # as the separator
 }
 
 ${@:-help}
