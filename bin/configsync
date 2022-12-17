@@ -1,0 +1,7 @@
+#!/bin/bash
+config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+$config status
+read -p "CTRL+C to stop." -n 1 -r
+$config add -u
+$config commit -m "Small changes"
+$config push
