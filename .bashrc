@@ -28,12 +28,9 @@ set -o vi
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
 
 # Default programs
-export BROWSER=lynx
+export BROWSER="web"
 export EDITOR="lvim"
 export VISUAL="lvim"
-
-# Change colors to use terminal
-export LYNX_LSS=$HOME/.lynx.lss
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"

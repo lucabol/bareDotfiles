@@ -1,3 +1,5 @@
 [user]
 	email = lucabol@microsoft.com
 	name = Luca Bolognese
+[safe]
+	directory = /usr/local/src/googler
