@@ -1,0 +1,1 @@
+gnuplot -e "$2;data = system('cat -');set print \$db;print data;unset print;plot \$db $1"

@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+gcc -v -xc -E /dev/null 2>&1 | awk ' /^End of search list/ {exit} p {print} /^#include <\.\.\.> search starts here:/ {p=1}' | xargs sh -c 'for x; do if [ -e "$x/$1" ]; then echo "$x/$1"; exit; fi; done' sh

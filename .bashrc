@@ -25,7 +25,7 @@ eval "$(starship init bash)"
 set -o vi
 
 # Moved from .profile has that wasn't running in wsl when starting i3
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
+export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
 
 # Default programs
 export BROWSER="web"
