@@ -16,7 +16,7 @@ esac
 # Development keys, don't put under github. Aliases & sensible bash.
 source ~/.secrets
 source ~/.bash_aliases
-source ~/bin/sensible.bash
+source ~/scripts/sensible.bash
 
 # Fancy prompt - config in ~/.config/starship.toml
 eval "$(starship init bash)"

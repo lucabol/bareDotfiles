@@ -1,4 +1,5 @@
 #!/usr/bin/env Rscript
+# Create a stem plot, pass column to extract from csv
 args <- commandArgs(trailingOnly = TRUE)
 column <- args[1]
 stopifnot(column != "")

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Convert source files to pdf colorizing them first
 
 echo "SOURCES -> HTMLS -> PDFS"
 find . -name "$1" -print0 | while read -d $'\0' source_file

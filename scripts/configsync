@@ -1,4 +1,6 @@
 #!/bin/bash
+# Push changed configuration files to github
+
 config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 $config status
 read -p "CTRL+C to stop." -n 1 -r

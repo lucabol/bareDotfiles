@@ -1,1 +1,4 @@
+#!/bin/bash
+# Simplify calling gnuplot, pass as first parameter whatever comes after the 'plot' command
+# As second parameter whatever you want to execute before the plot (i.e., setting axis etc..)
 gnuplot -e "$2;data = system('cat -');set print \$db;print data;unset print;plot \$db $1"

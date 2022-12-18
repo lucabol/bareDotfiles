@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Display image using inline protocol
 
 set -o pipefail
 

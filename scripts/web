@@ -1,2 +1,3 @@
 #!/bin/bash
+# Launch w3m with inline images
 w3m -sixel $@

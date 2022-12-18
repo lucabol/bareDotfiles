@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Create a solution with console, classlib and test given a library name
 
 if [ $# -eq 0 ]
     then echo "You need to provide the library name"
