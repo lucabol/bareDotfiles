@@ -2,7 +2,7 @@ alias lynx='lynx -accept_all_cookies -number_fields -show_rate -use_mouse -vikey
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias xo=xdg-open
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -a'
 alias l='ls -CF'
 alias ide="lvim -c '15split | term'"
 alias rm='echo "This is not the command you are looking for."; false'
