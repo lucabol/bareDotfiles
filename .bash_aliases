@@ -6,13 +6,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ide="lvim -c '15split | term'"
 alias rm='echo "This is not the command you are looking for."; false'
-alias agcc=aarch64-linux-gnu-gcc-8
-alias aas=aarch64-linux-gnu-as
-alias ald=aarch64-linux-gnu-ld
-alias aobjdump=aarch64-linux-gnu-objdump
-alias svim='nvim -u ~/.SpaceVim/vimrc'
-alias idris2='rlwrap idris2'
-alias idris='rlwrap idris'
 alias nvim=lvim
 
 alias mutate="dplyr mutate"
@@ -27,6 +20,8 @@ alias kable="dplyr kable"
 
 alias run=./Taskfile
 alias run-init="curl -so Taskfile https://raw.githubusercontent.com/lucabol/bareDotfiles/master/.Taskfile && chmod +x Taskfile"
+
+alias note='find ~/notes -print0|xargs -P 4 -0'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
