@@ -35,4 +35,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+function ls {
+  exa "$@"
+}
 source ~/.googler_at

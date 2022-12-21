@@ -26,6 +26,7 @@ set -o vi
 
 # Moved from .profile has that wasn't running in wsl when starting i3
 export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
+export LS_COLORS="$(/home/lucabol/.cargo/bin/vivid generate solarized-light)"
 
 # Default programs
 export BROWSER="web"
