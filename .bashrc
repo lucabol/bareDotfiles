@@ -29,9 +29,10 @@ export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/
 export LS_COLORS="$(/home/lucabol/.cargo/bin/vivid generate solarized-light)"
 
 # Default programs
-export BROWSER="web"
+export BROWSER="lynx"
 export EDITOR="lvim"
 export VISUAL="lvim"
+export LYNX_LSS=$HOME/.lynx.lss
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
