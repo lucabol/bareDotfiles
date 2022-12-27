@@ -1,0 +1,1 @@
+zig targets | jq .libc
