@@ -85,7 +85,7 @@ XTerm*VT100.Translations: #override \
 *VT100.allowTitleOps: true
 *VT100.allowFontOps: true
 
-XTerm*faceName: xft:PragmataPro Mono:size=10:antialias=true:autohint=false
+XTerm*faceName: xft:PragmataPro Mono:size=6:antialias=true:autohint=false
 
 XTerm*font:  -*-terminus-*-*-*-32-*-*-*-*-*-iso10646-1
 XTerm*font1: -*-terminus-*-*-*-12-*-*-*-*-*-iso10646-1
