@@ -9,7 +9,7 @@ inlinePlot <- function(aplot = last_plot()) {
   sink(nullfile())
   filename <- tempfile(tmpdir = "/tmp", fileext = ".jpg")
   suppressMessages(ggsave(filename = filename, plot = aplot, width = 6, height = 4))
-  system(paste("display -r -W 90% -H 90% ", filename))
+  system(paste("display -W 90% -H 90% ", filename))
   file.remove(filename)
   sink()
 }

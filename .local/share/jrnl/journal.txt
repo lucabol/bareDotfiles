@@ -940,3 +940,17 @@ fi
 * [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
 * [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_
 * [ShellCheck](https://www.shellcheck.net/) _(shellcheck.net)_
+
+[2022-12-29 08:11] Simplified Linux From Scratch LFS.
+@suckless https://github.com/comfies/tldrlfs
+
+[2022-12-29 08:17] Suckless Software @suckless.
+https://github.com/173duprot/harm-less
+
+[2022-12-29 08:29] Harmful Software and alternatives @suckless.
+https://harmful.cat-v.org/software/
+
+[2022-12-29 08:31] Plan9 Linux ports @suckless.
+https://asyncial.github.io/plan-9-linux/
+
+[2022-12-29 08:33] ports
