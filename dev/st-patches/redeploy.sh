@@ -1,3 +1,4 @@
+set -e
 cd ..
 rm -rf st
 git clone http://git.suckless.org/st

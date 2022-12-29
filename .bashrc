@@ -37,10 +37,6 @@ export LYNX_LSS=$HOME/.lynx.lss
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# These are needed for wsl2 running i3 through a Windows X server, it breaks wslg
-# export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-# export LIBGL_ALWAYS_INDIRECT=0
-
 # Added automatically by Rust toolchain. Afraid to change it.
 . "$HOME/.cargo/env"
 
@@ -48,5 +44,7 @@ export LYNX_LSS=$HOME/.lynx.lss
 /usr/bin/keychain --nogui ~/.ssh/id_rsa --quiet
 source $HOME/.keychain/DESKTOP-1JAQF68-sh
 
+xrdb merge $HOME/.Xresources
+
 # Needed for mintty until I figure out how to start in home
-cd /home/lucabol/
+cd $HOME

@@ -73,20 +73,34 @@ XTerm*utf8: 1
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 
+! How many lines are saved when scrolling
 XTerm*SaveLines: 9000
 
-XTerm*VT100.Translations: #override \
+! Use clipboard for everything
+XTerm*selectToClipboard: true
+
+! ctrl +/-/= change font size
+xterm*translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+! ctrl shift c/v copy and paste, the first line to copy to both primary and clipboard
+XTerm*translations: #override \
+    <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
     Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
     Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 ! For xtermcontrol to work
 *VT100.allowWindowOps: true
 *VT100.allowTitleOps: true
 *VT100.allowFontOps: true
 
+! Default truefont
 XTerm*faceName: xft:PragmataPro Mono:size=6:antialias=true:autohint=false
 
+! Default bitmap fonts
 XTerm*font:  -*-terminus-*-*-*-32-*-*-*-*-*-iso10646-1
 XTerm*font1: -*-terminus-*-*-*-12-*-*-*-*-*-iso10646-1
 XTerm*font2: -*-terminus-*-*-*-14-*-*-*-*-*-iso10646-1
@@ -95,3 +109,10 @@ XTerm*font4: -*-terminus-*-*-*-22-*-*-*-*-*-iso10646-1
 XTerm*font5: -*-terminus-*-*-*-24-*-*-*-*-*-iso10646-1
 XTerm*font6: -*-terminus-*-*-*-32-*-*-*-*-*-iso10646-1
 
+! Enable sixel graphics from https://codeberg.org/coffee/sixel-experiments
+XTerm*decTerminalID: vt340
+XTerm*numColorRegisters: 256
+xterm*sixelScrolling: true
+xterm*sixelScrollsRight: true
+XTerm*regisScreenSize: 1920x1080
+!XTerm*disallowedWindowOps: 1,2,3,4,5,6,7,8,9,11,13,19,20,21,GetSelection,SetSelection,SetWinLines,SetXprop

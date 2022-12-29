@@ -3,8 +3,9 @@ source ~/.bashrc
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-export LIBGL_ALWAYS_INDIRECT=1
+# These are needed for wsl2 running i3 through a Windows X server, it breaks wslg
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# export LIBGL_ALWAYS_INDIRECT=0
 
 dbus_status=$(service dbus status)
 if [[ $dbus_status = *"is not running"* ]]; then
