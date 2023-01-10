@@ -957,3 +957,6 @@ https://asyncial.github.io/plan-9-linux/
 
 [2022-12-30 09:50] Kiss Linux.
 @suckless https://kisslinux.org/ https://codeberg.org/kiss-community https://codeberg.org/kiss-community/community
+
+[2023-01-10 10:50] Freestanding libc easy.
+@suckless at https://github.com/Velko/FsLibc
