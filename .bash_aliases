@@ -1,12 +1,22 @@
+alias l=exa
+alias e=lvim
+alias g=batgrep
+alias v=bat
+alias m=batman
+
+alias nvim=lvim
+alias ls=exa
+alias grep=batgrep
+alias less=bat
+alias more=bat
+
 alias lynx='lynx -accept_all_cookies -number_fields -show_rate -use_mouse -vikeys'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias xo=xdg-open
-alias ll='ls -alF'
-alias la='ls -a'
-alias l='ls -CF'
+alias ll='l -alF'
+alias la='l -a'
 alias ide="lvim -c '15split | term'"
 alias rm='echo "This is not the command you are looking for."; false'
-alias nvim=lvim
 
 alias mutate="dplyr mutate"
 alias filter="dplyr filter"
@@ -32,7 +42,4 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-function ls {
-  exa "$@"
-}
 source ~/.googler_at

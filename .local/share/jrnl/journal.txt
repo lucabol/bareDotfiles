@@ -954,3 +954,6 @@ https://harmful.cat-v.org/software/
 https://asyncial.github.io/plan-9-linux/
 
 [2022-12-29 08:33] ports
+
+[2022-12-30 09:50] Kiss Linux.
+@suckless https://kisslinux.org/ https://codeberg.org/kiss-community https://codeberg.org/kiss-community/community
