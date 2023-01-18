@@ -9,6 +9,7 @@ alias ls=exa
 alias grep=batgrep
 alias less=bat
 alias more=bat
+alias rm=trash
 
 alias lynx='lynx -accept_all_cookies -number_fields -show_rate -use_mouse -vikeys'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -16,7 +17,6 @@ alias xo=xdg-open
 alias ll='l -alF'
 alias la='l -a'
 alias ide="lvim -c '15split | term'"
-alias rm='echo "This is not the command you are looking for."; false'
 
 alias mutate="dplyr mutate"
 alias filter="dplyr filter"

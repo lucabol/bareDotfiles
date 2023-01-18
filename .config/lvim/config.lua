@@ -1,9 +1,9 @@
 -- general
-vim.opt.background="light"
-vim.opt.mouse=""
+vim.opt.background = "light"
+vim.opt.mouse = ""
 
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save = false
 lvim.colorscheme = "solarized"
 
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -34,7 +34,7 @@ lvim.builtin.telescope.defaults.mappings = {
 }
 
 -- Change theme settings
-lvim.builtin.theme.name="tokyonight" -- Workaround to be able to set light style - https://github.com/LunarVim/lunar.nvim/issues/1 
+lvim.builtin.theme.name = "tokyonight" -- Workaround to be able to set light style - https://github.com/LunarVim/lunar.nvim/issues/1
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
@@ -89,9 +89,9 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-    { "ishan9299/nvim-solarized-lua" },
-    { "folke/trouble.nvim", cmd = "TroubleToggle", },
-    { "ray-x/lsp_signature.nvim", event = "BufRead", config = function() require"lsp_signature".on_attach() end, },
-    { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end, },
-    { "JuliaEditorSupport/julia-vim" },
+  { "ishan9299/nvim-solarized-lua" },
+  { "folke/trouble.nvim", cmd = "TroubleToggle", },
+  { "ray-x/lsp_signature.nvim", event = "BufRead", config = function() require "lsp_signature".on_attach() end, },
+  { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end, },
+  { "JuliaEditorSupport/julia-vim" },
 }
