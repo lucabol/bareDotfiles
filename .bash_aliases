@@ -1,7 +1,7 @@
 alias l=exa
 alias e=lvim
 alias g=batgrep
-alias v=bat
+alias v='bat -n'
 alias m=batman
 
 alias nvim=lvim

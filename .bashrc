@@ -18,6 +18,15 @@ source ~/.secrets
 source ~/.bash_aliases
 source ~/scripts/sensible.bash
 
+# Git alias to quick pushing changes to code
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git push
+    git status
+}
+alias gp=gitpush
+
 # Fancy prompt - config in ~/.config/starship.toml
 eval "$(starship init bash)"
 
@@ -25,7 +34,7 @@ eval "$(starship init bash)"
 set -o vi
 
 # Moved from .profile has that wasn't running in wsl when starting i3
-export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$PATH"
+export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$HOME/dev/riscv/bin:$HOME/.dotnet/tools:$PATH"
 export LS_COLORS="$(/home/lucabol/.cargo/bin/vivid generate solarized-light)"
 
 # Default programs
@@ -33,6 +42,12 @@ export BROWSER="lynx"
 export EDITOR="lvim"
 export VISUAL="lvim"
 export LYNX_LSS=$HOME/.lynx.lss
+
+# Make ASAN exit on errors
+export ASAN_OPTIONS=abort_on_error=1:halt_on_error=1
+export UBSAN_OPTIONS=abort_on_error=1:halt_on_error=1
+# Necessary for vesa drivers https://devblogs.microsoft.com/commandline/d3d12-gpu-video-acceleration-in-the-windows-subsystem-for-linux-now-available/
+export LIBVA_DRIVER_NAME=d3d12
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
