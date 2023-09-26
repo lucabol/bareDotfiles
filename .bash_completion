@@ -1,0 +1,3 @@
+DOCOPT_WORDLIST_BIN="/home/lucabol/.cargo/bin/docopt-wordlist"
+source "/home/lucabol/.cargo/scripts/docopt-wordlist.bash"
+complete -F _docopt_wordlist_commands qsv
