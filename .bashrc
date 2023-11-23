@@ -34,12 +34,12 @@ eval "$(starship init bash)"
 set -o vi
 
 # Moved from .profile has that wasn't running in wsl when starting i3
-export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/dev/dsutils:$HOME/dev/riscv/bin:$HOME/.dotnet/tools:$PATH"
+export PATH="$HOME/scripts:$HOME/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$PATH"
 export LS_COLORS="$(/home/lucabol/.cargo/bin/vivid generate solarized-light)"
 
 # Make .NET8 the default version
-# export DOTNET_ROOT=/home/lucabol/dev/dotnet8
-# export PATH=/home/lucabol/dev/dotnet8:$PATH
+export DOTNET_ROOT=/home/lucabol/dev/dotnet8
+export PATH=/home/lucabol/dev/dotnet8:$PATH
 
 # Default programs
 export BROWSER="lynx"
