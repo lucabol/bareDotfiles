@@ -56,12 +56,9 @@ export LIBVA_DRIVER_NAME=d3d12
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Added automatically by Rust toolchain. Afraid to change it.
-. "$HOME/.cargo/env"
-
 # Makes git ask for ssh just once https://stackoverflow.com/questions/52423626/remember-git-passphrase-in-wsl
 /usr/bin/keychain --nogui ~/.ssh/id_rsa --quiet
-source $HOME/.keychain/DESKTOP-1JAQF68-sh
+# source $HOME/.keychain/DESKTOP-1JAQF68-sh
 
 xrdb merge $HOME/.Xresources
 

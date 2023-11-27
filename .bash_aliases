@@ -1,14 +1,14 @@
 alias l=exa
 alias e=lvim
 alias g=batgrep
-alias v='bat -n'
+alias v='batcat -n'
 alias m=batman
 
 alias nvim=lvim
 alias ls=exa
 alias grep=batgrep
-alias less=bat
-alias more=bat
+alias less=batcat
+alias more=batcat
 alias rm=trash
 
 alias lynx='lynx -accept_all_cookies -number_fields -show_rate -use_mouse -vikeys'
