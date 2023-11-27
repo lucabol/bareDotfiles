@@ -873,3 +873,29 @@ git status
 config status
 #1701103895
 config add .profile 
+#1701103924
+config add .bash_completion .bash_history
+#1701103932
+v bin/rus
+#1701103934
+v bin/rush
+#1701103955
+config commit -m "New"
+#1701103963
+e .bashrc
+#1701103982
+ls .keychain/
+#1701103998
+v .keychain/Ryzen-Lucabol-sh
+#1701104027
+bash .keychain/Ryzen-Lucabol-sh 
+#1701104031
+config push
+#1701104096
+config status
+#1701104106
+config add .
+#1701104119
+config status
+#1701104135
+config .bash_history bin/*
