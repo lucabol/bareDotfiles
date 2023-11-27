@@ -18,8 +18,5 @@ fi
 
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.idris2/bin:$HOME/.cabal/bin:$PATH"
 
-. "$HOME/.cargo/env"
-
 # opam configuration
 test -r /home/lucabol/.opam/opam-init/init.sh && . /home/lucabol/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

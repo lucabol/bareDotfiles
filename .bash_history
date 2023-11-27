@@ -849,3 +849,27 @@ git commit -m Test
 config commit -m "New computer"
 #1701103623
 git add .bash*
+#1701103629
+config add .bash*
+#1701103634
+config commit -m "New computer"
+#1701103638
+config putsh
+#1701103641
+config push
+#1701103724
+git push --set-upstream origin master
+#1701103793
+config push --set-upstream origin master
+#1701103805
+config push
+#1701103821
+config status
+#1701103858
+config add .
+#1701103873
+git status
+#1701103876
+config status
+#1701103895
+config add .profile 
