@@ -58,7 +58,7 @@ export LIBVA_DRIVER_NAME=d3d12
 
 # Makes git ask for ssh just once https://stackoverflow.com/questions/52423626/remember-git-passphrase-in-wsl
 /usr/bin/keychain --nogui ~/.ssh/id_rsa --quiet
-# source $HOME/.keychain/DESKTOP-1JAQF68-sh
+source $HOME/.keychain/Ryzen-Lucabol-sh
 
 xrdb merge $HOME/.Xresources
 

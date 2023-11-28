@@ -899,3 +899,265 @@ config add .
 config status
 #1701104135
 config .bash_history bin/*
+#1701104143
+config add .bash_history bin/*
+#1701104146
+config status
+#1701104170
+source .bashrc 
+#1701104180
+git commit -m "New"
+#1701104187
+config commit -m "New"
+#1701104198
+config prune
+#1701104201
+config push
+#1701104212
+config status
+#1701104220
+config add -u
+#1701104223
+config status
+#1701104399
+truecolor-test 
+#1701104403
+version
+#1701105854
+cd dev
+#1701105860
+git clone https://github.com/lucabol/libc-size-test.git
+#1701105865
+cd libc-size-test/
+#1701105871
+./build.sh 
+#1701105893
+sudo apt install nasm
+#1701105904
+sudo apt install zig
+#1701105974
+snap install zig --classic --beta
+#1701105978
+sudo snap install zig --classic --beta
+#1701105988
+./build
+#1701105993
+./build.sh 
+#1701106169
+cd ..
+#1701106174
+wget https://www.fefe.de/dietlibc/dietlibc-0.34.tar.xz
+#1701106205
+tar -xvf archive.tar.xz
+#1701106214
+tar -xvf dietlibc-0.34.tar.xz 
+#1701106217
+cd dietlibc-0.34/
+#1701106218
+make
+#1701106313
+sudo install bin-i386/diet /usr/local/bin
+#1701106332
+ls bin-x86_64/diet
+#1701106345
+install bin-i386/diet /usr/local/bin
+#1701106352
+install ./bin-i386/diet /usr/local/bin
+#1701106375
+make install
+#1701106381
+diet
+#1701106395
+sudo apt install dietlibc-dev
+#1701106400
+cd ..
+#1701106404
+cd libc-size-test/
+#1701106405
+make
+#1701106408
+./build.sh 
+#1701106424
+v fsl-init.c 
+#1701106447
+v build.sh 
+#1701106462
+fslc
+#1701106537
+cd ..
+#1701106541
+git clone https://github.com/Velko/FsLibc.git
+#1701106545
+cd FsLibc/
+#1701106580
+sudo apt install cmake
+#1701106626
+cmake -DCMAKE_BUILD_TYPE=Release .
+#1701106630
+make
+#1701106704
+grep UnitTest *.c
+#1701106711
+grep UnitTest *
+#1701106791
+ls tests/
+#1701106803
+ls libc/
+#1701106904
+ll
+#1701106910
+ls include
+#1701106916
+ls libc/include/
+#1701106927
+cd ..
+#1701106936
+rm dietlibc-0.34.tar.xz 
+#1701106948
+ls libc-size-test/
+#1701106950
+make
+#1701106961
+cd libc-size-test/
+#1701106964
+./build.sh 
+#1701159814
+cd dev
+#1701159825
+cd FsLibc/
+#1701159829
+make
+#1701159842
+cd ..
+#1701159848
+cd libc-size-test/
+#1701159855
+v build.sh 
+#1701159889
+cd ..
+#1701159893
+cd FsLibc/
+#1701159899
+make install
+#1701160040
+cd ..
+#1701160045
+git clone https://github.com/unittest-cpp/unittest-cpp.git
+#1701160052
+cd unittest-cpp/
+#1701160057
+less README.md 
+#1701160078
+less INSTALL 
+#1701160112
+./autogen.sh 
+#1701160123
+less INSTALL 
+#1701160149
+v README.md 
+#1701160193
+make
+#1701160201
+./configure.ac
+#1701160214
+libtoolize
+#1701160220
+sudo apt install libtool
+#1701160238
+./autogen.sh 
+#1701160251
+make
+#1701160258
+./configure
+#1701160266
+make
+#1701160275
+make install
+#1701160279
+sudo make install
+#1701160308
+cd ..
+#1701160312
+l
+#1701160317
+cd libc-size-test/
+#1701160321
+./build.sh 
+#1701160381
+e fsl-init.c 
+#1701160492
+cd ..
+#1701160494
+cd FsLibc/
+#1701160496
+make
+#1701160520
+ls /usr/local/include/
+#1701160524
+ls /usr/local/include/UnitTest++/
+#1701160560
+make
+#1701160591
+e /home/lucabol/dev/FsLibc/tests/assert_d_tests.cpp
+#1701160607
+make
+#1701160651
+cd libc
+#1701160659
+ls include/
+#1701160684
+v ../../libc-size-test/build.sh 
+#1701160767
+cd ..
+#1701160778
+cd libc-size-test/
+#1701160785
+mkdir fslibc
+#1701160830
+cp -r ../FsLibc/libc/include fslibc/
+#1701160863
+cp -r ../FsLibc/libc/libfslc.a fslibc/
+#1701160870
+e build.sh 
+#1701160895
+./build.sh 
+#1701160926
+git status
+#1701160933
+git add fslibc/*
+#1701160939
+git add build.sh 
+#1701160943
+git status
+#1701160956
+git commit -m "better fslc"
+#1701160958
+git push
+#1701160998
+config push
+#1701161008
+ll
+#1701161016
+git remote
+#1701161019
+git remote -v
+#1701161029
+config remote -v
+#1701161208
+git remote set-url git@github.com:lucabol/libc-size-test.git
+#1701161224
+git remote set-url origin git@github.com:lucabol/libc-size-test.git
+#1701161228
+git remote -v
+#1701161231
+git push
+#1701161331
+hostname
+#1701161336
+ls ~/.keychain/
+#1701161360
+~/.keychain/Ryzen-Lucabol.sh
+#1701161376
+source ~/.keychain/Ryzen-Lucabol-sh
+#1701161385
+e ~/.bashrc 
