@@ -27,6 +27,8 @@ alias ungroup="dplyr ungroup"
 alias count="dplyr count"
 alias arrange="dplyr arrange"
 alias kable="dplyr kable"
+alias get_idf=". $HOME/esp/esp-idf/export.sh ; export PORT=/dev/ttyUSB0"
+alias tgt_idf="idf.py set-target esp32-c3"
 
 alias run=./Taskfile
 alias run-init="curl -so Taskfile https://raw.githubusercontent.com/lucabol/bareDotfiles/master/.Taskfile && chmod +x Taskfile"
