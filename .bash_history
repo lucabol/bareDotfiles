@@ -8137,3 +8137,3379 @@ gdb -tui a.out
 e ~/.gdbinit 
 #1703852740
 gdb a.out
+#1703852759
+config add -u
+#1703852769
+config commit -m "Various changes" ; config push
+#1703852779
+config status
+#1703852969
+gdb a.out
+#1703853076
+history | grep export
+#1703853123
+e ~/scripts/disable_leak_detection.sh
+#1703853142
+e example_ubsan.c 
+#1703853293
+run rund example_ubsan.c 
+#1703853307
+run runr example_ubsan.c 
+#1703853401
+run rund example_ubsan.c 
+#1703853454
+run lint example_ubsan.c 
+#1703853648
+run rund example_ubsan.c
+#1703853776
+run powerpc example_ubsan.c
+#1703853777
+run
+#1703853784
+run powerppc example_ubsan.c
+#1703854034
+run powerppc csv_parser.c 
+#1703854046
+run rund csv_parser.c 
+#1703854057
+run lint csv_parser.c 
+#1703855593
+vis
+#1703855598
+sudo apt install vis
+#1703855612
+vis csv_parser.c 
+#1703856025
+vis -v
+#1703856681
+cd ..
+#1703856686
+git clone https://github.com/martanne/vis.git
+#1703856690
+cd vis
+#1703856705
+grep _t *.h
+#1703856724
+grep _t *.h | less
+#1703856741
+grep int8_t *.h | less
+#1703856766
+grep int16_t *.h | less
+#1703856774
+grep int32_t *.h
+#1703856780
+grep least *.h
+#1703856805
+grep int *.h | less
+#1703856838
+grep int *.h | less -r
+#1703856852
+grep int *.h | batcat --color
+#1703856860
+grep int *.h | batcat --color=always
+#1703856869
+grep --color int *.h | less
+#1703856874
+grep --color=always int *.h | less
+#1703862888
+grep --color=always size_t *.h | less
+#1703862973
+grep --color=always lines *.h | less
+#1703863017
+v text.h
+#1703863117
+v ui.h
+#1703863191
+v configure 
+#1703863275
+v text-io.c 
+#1703863406
+cd ..
+#1703863416
+git clone https://github.com/sqlite/sqlite.git
+#1703865122
+cd sqlite/
+#1703865126
+cd src
+#1703865148
+grep int_t *
+#1703865164
+ll *.h
+#1703865169
+v os.h
+#1703865538
+v hash.h
+#1703865604
+cd ..
+#1703865615
+cd monorepo/
+#1703865880
+run lint
+#1703865887
+run lint csv_parser.c 
+#1703867423
+man 3 printf
+#1703867481
+run lint csv_parser.c 
+#1703867499
+man cppcheck
+#1703867538
+cppcheck enable=* csv_parser.c 
+#1703867547
+man cppcheck
+#1703867556
+cppcheck --enable=* csv_parser.c 
+#1703867566
+cppcheck --enable='*' csv_parser.c 
+#1703867572
+cppcheck --enable='all' csv_parser.c 
+#1703867607
+cppcheck --enable='all' --clang csv_parser.c 
+#1703867658
+run lint csv_parser.c 
+#1703867830
+cppcheck --enable='all' --clang --addon=misra.json --inline-suppr csv_parser.c 
+#1703867877
+cppcheck --enable='all' --clang --addon=misra.json --inline-suppr -i/usr/include csv_parser.c 
+#1703867892
+cppcheck --enable='all' --addon=misra.json --inline-suppr csv_parser.c 
+#1703867897
+cppcheck --enable='all' --clang --addon=misra.json --inline-suppr -i/usr/include csv_parser.c 
+#1703868065
+run lint csv_parser.c 
+#1703868236
+run rund csv_parser.c 
+#1703868244
+run runr csv_parser.c 
+#1703868272
+run rund csv_parser.c 
+#1703868285
+run runr csv_parser.c 
+#1703868405
+run rund csv_parser.c 
+#1703868411
+run runr csv_parser.c 
+#1703868446
+run lint csv_parser.c 
+#1703868457
+v misra.
+#1703868459
+v misra.json 
+#1703868475
+run lint csv_parser.c 
+#1703868576
+run runr csv_parser.c 
+#1703868624
+run lint csv_parser.c 
+#1703868787
+run runr csv_parser.c 
+#1703868850
+run rund csv_parser.c 
+#1703868878
+gdb a.out
+#1703868951
+run rund csv_parser.c 
+#1703868954
+run runr csv_parser.c 
+#1703868969
+run rund csv_parser.c 
+#1703869368
+e ../ulib/csv.h 
+#1703869614
+run lint csv_parser.c 
+#1703870046
+run lint csv_parser.c | less
+#1703870051
+run lint csv_parser.c 
+#1703870375
+run rund csv_parser.c 
+#1703870384
+run lint csv_parser.c 
+#1703870765
+run rund csv_parser.c 
+#1703870878
+run lint csv_parser.c 
+#1703871416
+run cppcheck csv_parser.c 
+#1703871443
+cppcheck  --quiet --enable='all' --clang --inline-suppr csv_parser.c 
+#1703871498
+run lint csv_parser.c 
+#1703871554
+man cppcheck
+#1703871606
+run lint csv_parser.c 
+#1703871776
+run rund csv_parser.c 
+#1703872079
+run lint csv_parser.c 
+#1703865627
+e csv_parser.c 
+#1703927122
+cd ..
+#1703927124
+cd ulib
+#1703927126
+git status
+#1703927148
+git add .; git commit -m "change misra";git push
+#1703927852
+code .
+#1703928215
+sudo apt-get update
+#1703928240
+sudo apt-get install wget ca-certificates
+#1703928247
+code .
+#1703928289
+cd dev/ulib/
+#1703928290
+code .
+#1703928994
+cd dev/ulib/
+#1703928998
+run 
+#1703929002
+run buildall
+#1703929236
+git status
+#1703929253
+git revert span.h
+#1703929260
+git restore span.h
+#1703929263
+git status
+#1703929279
+run buildall
+#1703930434
+clear;run buildall
+#1703931149
+run
+#1703931152
+run checkall
+#1703933868
+clear;run buildall
+#1703934607
+cd ..
+#1703934612
+cd ulib/
+#1703934615
+ll ../lsharp/
+#1703934618
+ll ../lsharp/src/
+#1703934631
+v ../lsharp/src/config.h 
+#1703934690
+v ../lsharp/src/libinc.h
+#1703934791
+v ../lsharp/src/libinc.c
+#1703934806
+ll ../lsharp/src/
+#1703934823
+v ../lsharp/src/Ns.cs 
+#1703934837
+v ../lsharp/src/symtable.h 
+#1703934880
+v ../lsharp/src/symtable.c
+#1703934888
+v ../lsharp/src/ast.h 
+#1703934919
+v ../lsharp/src/main.c 
+#1703934964
+v ../lsharp/src/visit.h
+#1703934969
+v ../lsharp/src/visit.c
+#1703934996
+v ../lsharp/src/config.h 
+#1703935082
+v ../lsharp/src/libinc.h
+#1703935203
+grep Span ../lsharp/*
+#1703935216
+grep Span ../lsharp/src/*
+#1703935240
+grep Span ../lsharp/src/* --color=always | less
+#1704004818
+cd ..
+#1704004823
+git clone https://github.com/git-hub-tig/modern_c_Jens-Gustedt.git
+#1704004828
+cd modern_c_Jens-Gustedt/
+#1704004831
+e Makefile 
+#1704004845
+make
+#1704004873
+v mbstrings.h 
+#1704004924
+e Makefile 
+#1704004938
+make
+#1704004955
+v mbstrings.h 
+#1704005093
+make
+#1704005135
+cd ..
+#1704005140
+git clone https://github.com/jweyrich/p99.git
+#1704005149
+ls p99/
+#1704005181
+make
+#1704005187
+cd modern_c_Jens-Gustedt/
+#1704005188
+make
+#1704005427
+v mbstrings.h 
+#1704005468
+e mbstrings.h
+#1704005506
+make
+#1704005563
+e Makefile 
+#1704005590
+make
+#1704005604
+cd ..
+#1704005628
+cp /mnt/c/Users/lucabol/Downloads/modernC-code.zip ./
+#1704005638
+unzip modernC-code.zip 
+#1704005645
+cd modernC-code/
+#1704005647
+make
+#1704005654
+e Makefile 
+#1704005679
+make
+#1704005743
+cd ..
+#1704005760
+rm modernC*.zip
+#1704005769
+cd modern_c_Jens-Gustedt/
+#1704005780
+e mbstrings.h 
+#1704005797
+e Makefile 
+#1704005809
+make
+#1704005852
+make clean
+#1704005854
+make
+#1704005883
+make clean
+#1704005885
+make
+#1704005937
+./crash 
+#1704005946
+v README.md 
+#1704005953
+cd ..
+#1704005959
+cd modernC-code/
+#1704005962
+v README 
+#1704006022
+make
+#1704006026
+cd ..
+#1704006031
+ll modern
+#1704006035
+ll modern*
+#1704006039
+ll
+#1704006053
+rm -r modernC-code/
+#1704006057
+cd modern_c_Jens-Gustedt/
+#1704006067
+v endianness.c 
+#1704006234
+make clean
+#1704006237
+make -i
+#1704006273
+CC=musl-clang make
+#1704006279
+make clean
+#1704006281
+CC=musl-clang make
+#1704006299
+ll
+#1704006310
+v rationals.h
+#1704008946
+make objects
+#1704008972
+ll end*
+#1704009019
+clang endianness.c -c
+#1704009024
+make objects
+#1704009030
+ll end*
+#1704009048
+rm endianness.o
+#1704009071
+mv endianness.c endianess.c
+#1704009072
+make
+#1704009081
+make clean
+#1704009082
+make
+#1704009135
+v mbstrings-main.c
+#1704009172
+grep mbstate_t_
+#1704009176
+grep mbstate_t_ *
+#1704009642
+make
+#1704009648
+make clean
+#1704009650
+make
+#1704009848
+make clean
+#1704009850
+make
+#1704009861
+make clean
+#1704009877
+make clean;make
+#1704010366
+make
+#1704010371
+make clean;make
+#1704010414
+ll
+#1704010420
+./sighandler_test 
+#1704010445
+v anonymous_function.c 
+#1704010486
+ll *.c
+#1704010495
+v array_or_struct.c 
+#1704010522
+v *.h
+#1704010528
+ll *.h
+#1704010536
+./crash 
+#1704010543
+v crash.h
+#1704010679
+v crash.c
+#1704010699
+./crash 
+#1704010709
+ll
+#1704010727
+./lifetime 
+#1704010747
+v lifetime.c
+#1704010781
+ll | less
+#1704010785
+ll
+#1704010807
+v B9.c
+#1704010846
+./B9
+#1704010861
+./B9-detach 
+#1704010879
+v bad.c 
+#1704010921
+v basic_blocks
+#1704010925
+v basic_blocks.c
+#1704010991
+./basic_blocks a b
+#1704011002
+./basic_blocks2
+#1704011032
+make clean;make
+#1704011077
+./fibonacci
+#1704011083
+./fibonacci6
+#1704011088
+./fibonacciCache
+#1704011096
+./numberline 
+#1704011103
+./numberline 3
+#1704011107
+./numberline 3 6
+#1704011122
+./locale 
+#1704011130
+./locale bob
+#1704011140
+./mbstrings-main 
+#1704011205
+git status
+#1704011271
+make bad
+#1704011280
+grep bad Makefile 
+#1704011295
+make verybad
+#1704011304
+make bad
+#1704011314
+e Makefile 
+#1704011397
+make bad
+#1704011416
+v bad.c
+#1704011437
+make bad
+#1704011457
+make
+#1704011463
+make verybad
+#1704011478
+./getting-started 
+#1704011486
+v getting-started.c
+#1704011509
+./endianess 
+#1704011527
+./yday 
+#1704011538
+./cat
+#1704011542
+./cat bob
+#1704011550
+./cat cat.c
+#1704011579
+v basic_blocks.c
+#1704011614
+v euclid.c
+#1704011634
+./euclid 3
+#1704011637
+./euclid 3 4
+#1704011646
+./euclid 345 344
+#1704011650
+./euclid 346 344
+#1704011669
+v esc.c
+#1704011676
+v esc.h
+#1704011709
+v B9.c
+#1704011722
+./B9
+#1704011744
+./macro_trace 
+#1704011755
+v macro_trace.h
+#1704011779
+v macro_trace.c
+#1704011821
+v extern.c
+#1704011848
+v heron.c
+#1704011868
+v life.h
+#1704011885
+v numberline.c
+#1704011936
+v precision.c
+#1704011946
+./precision 
+#1704011955
+./rationals 
+#1704011964
+./tendots 
+#1704011977
+./shadow 
+#1704011983
+v shadow.c
+#1704012021
+v strcpy.c 
+#1704012047
+./strcpy 
+#1704012057
+./sighandler_test 
+#1704012076
+./strtoul 234
+#1704012094
+v strtoul.c
+#1704012165
+./strtoul 50
+#1704012181
+./strtoul 37
+#1704012195
+v terran.c
+#1704012213
+./terran 
+#1704012218
+./timespec 
+#1704012228
+./timespec 20
+#1704012244
+v timespec.c
+#1704012265
+./trampoline 
+#1704012270
+./va_arg 
+#1704012276
+./va_arg f f f
+#1704012285
+v va_arg.c
+#1704012319
+./va_arg 1 2 3 4
+#1704012327
+v yday.c
+#1704012377
+v trampoline.h
+#1704012410
+v trampoline.c
+#1704012430
+grep inline *
+#1704012447
+v generic.h
+#1704012470
+v generic.c
+#1704012520
+v stats.h
+#1704012538
+v stats.c
+#1704015671
+./mbstrings-main 
+#1704015686
+v mbstrings-main.d
+#1704015689
+v mbstrings-main.c
+#1704015756
+./mbstrings-main 
+#1704017464
+e mbstrings-main.c
+#1704017493
+man setlocale
+#1704017706
+./mbstrings-main 
+#1704017749
+clang mbstrings.c mbstrings-main.c
+#1704017752
+./a.out 
+#1704017764
+clang mbstrings.c mbstrings-main.c
+#1704017765
+./a.out 
+#1704017911
+cd ..
+#1704017918
+git clone https://github.com/afranchuk/prettyprint.git
+#1704017921
+cd prettyprint/
+#1704017923
+make
+#1704017939
+ls build/
+#1704017946
+ls example/
+#1704017959
+ls build
+#1704017963
+cd example/
+#1704017969
+v c-api.c 
+#1704018014
+clang -I../build -L../build c-api.c 
+#1704018022
+ls ../build/
+#1704018032
+clang -I../build -L../build c-api.c -lprettyprint
+#1704018037
+./a.out 
+#1704018043
+cd ..
+#1704019858
+cd modern_c_Jens-Gustedt/
+#1704019883
+git remote -v
+#1704021036
+./a.out 
+#1704021213
+mingw-clang  mbstrings.c mbstrings-main.c
+#1704021220
+mingw-gcc  mbstrings.c mbstrings-main.c
+#1704187348
+cd ..
+#1704187362
+git clone git@gitlab.inria.fr:gustedt/modern-c.git
+#1704187384
+git clone https://gitlab.inria.fr/gustedt/modern-c.git
+#1704187403
+cd modern-c
+#1704187424
+v Makefile 
+#1704187494
+make
+#1704187543
+cp modernC.pdf ../windev/
+#1704192302
+git remote -v
+#1704192469
+cd code
+#1704192471
+make
+#1704192489
+make CC=clang
+#1704192500
+make CC=gcc
+#1704192505
+make clean
+#1704192509
+e Makefile 
+#1704192549
+make
+#1704192596
+v Makefile 
+#1704192600
+make
+#1704192617
+make -f ./Makefile 
+#1704192623
+e Makefile 
+#1704192647
+which musl-gcc
+#1704192658
+which c99
+#1704192718
+make CC=musl-clang
+#1704192728
+make clean
+#1704192732
+make CC=musl-gcc
+#1704192813
+musl-gcc  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD -c analyze-utf8.c 
+#1704192846
+musl-clang  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD -c analyze-utf8.c 
+#1704192853
+clang  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD -c analyze-utf8.c 
+#1704192860
+gcc  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD -c analyze-utf8.c 
+#1704192994
+clang --version
+#1704193253
+gcc --version
+#1704193608
+lsb-release -a
+#1704193654
+lsbsudo apt install lsb-release
+#1704193660
+sudo apt install lsb-release
+#1704193675
+lsb-release
+#1704193683
+lsb_release -a
+#1704194217
+bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+#1704194233
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+#1704194259
+sudo apt update
+#1704194394
+lsb_release -a
+#1704194772
+sudo apt-key adv     --keyserver keyserver.ubuntu.com     --recv-keys 86B72ED9 && sudo add-apt-repository     "deb [arch=amd64] https://pkg.mxe.cc/repos/apt `lsb_release -sc` main" && sudo apt-get update
+#1704194802
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+#1704195141
+ls /etc/apt/sources.list.d
+#1704195213
+sudo rm /etc/apt/sources.list.d/archive_uri-https_pkg_mxe_cc_repos_apt-jammy.list 
+#1704195220
+sudo apt update
+#1704195242
+sudo apt list --upgradable
+#1704195251
+sudo apt list --upgradable | grep clang
+#1704195266
+sudo apt upgrade
+#1704195319
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+#1704195522
+clang --version
+#1704195542
+clang-17 --version
+#1704195551
+make clean
+#1704195560
+make CC=clang-17
+#1704195629
+clang-17 -std=c2x analyze-utf8.c
+#1704195749
+clang-17 -std=c2x analyze-utf8.c -lmodern
+#1704195763
+clang-17 -std=c2x analyze-utf8.c -lmodernC
+#1704195878
+musl-clang --version
+#1704195886
+ln --help
+#1704195901
+which clang-17
+#1704200612
+ln -s
+#1704200616
+ln --help
+#1704200652
+ln -s /usr/bin/clang-17 /home/lucabol/bin/clang
+#1704200656
+clang --version
+#1704200663
+musl-clang --version
+#1704200683
+cd dev/modern-c
+#1704200686
+cd code
+#1704200688
+make
+#1704200694
+make clean
+#1704200701
+e Makefile 
+#1704200713
+make clean; make
+#1704200859
+printenv | grep CC
+#1704200863
+printenv
+#1704200874
+e Makefile 
+#1704200902
+make clean; make
+#1704201003
+clear; make clean; make CC=clang
+#1704201021
+clear; make clean; make CC=musl-gcc
+#1704201042
+clear; make clean; make CC=gcc
+#1704201050
+clear; make clean; make CC=clang
+#1704201071
+git status
+#1704201080
+git pull
+#1704201127
+clear; make clean; make CC=clang
+#1704201229
+clang  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD  -Wl,--gc-sections  analyze-utf8.c libmodernC.a  -lm -lrt -o trampoline
+#1704201293
+clang  -O3 -march=native -fdata-sections -ffunction-sections -Wall -std=c2x  -MD  -Wl,--gc-sections  analyze-utf8.c libmodernC.a  -lm -lrt -o trampoline -Dchar8_t=char
+#1704201313
+grep mbrtoc8 *
+#1704201323
+ls snippets/
+#1704204327
+cd dev
+#1704204331
+cd modern-c
+#1704204332
+git status
+#1704204336
+cd code
+#1704204340
+make
+#1704204367
+mingw-gcc --version
+#1704204373
+mingw-clang
+#1704204378
+mingw-clang --version
+#1704204388
+make clean
+#1704204398
+make CC=mingw-clang
+#1704204407
+e Makefile 
+#1704204422
+make CC=mingw-clang
+#1704204439
+v ../../monorepo/Taskfile 
+#1704204493
+v ../../ulib/Taskfile 
+#1704204527
+make CC="mingw-clang  -target x86_64-w64-windows-gnu"
+#1704204565
+make CC="mingw-clang  -target x86_64-w64-windows-gnu" -k
+#1704204616
+make CC="clang  -target x86_64-w64-windows-gnu" -k
+#1704204784
+make CC="musl-clang  -target x86_64-w64-windows-gnu" -k
+#1704204797
+make clean
+#1704204800
+make CC="musl-clang  -target x86_64-w64-windows-gnu" -k
+#1704204820
+make CC="musl-clang"
+#1704204825
+make CC="clang"
+#1704204833
+make clean
+#1704204834
+make
+#1704204845
+e Makefile 
+#1704204854
+make
+#1704204866
+make clean;make
+#1704205174
+sudo apt-get install manpages-posix manpages-posix-dev
+#1704205185
+man make
+#1704210138
+v array_or_struct.c 
+#1704213265
+./timespec 
+#1704213270
+./enum 
+#1704213279
+./endianness 
+#1704213289
+./basic_blocks
+#1704213297
+ll
+#1704213303
+./bitint 
+#1704213316
+./B9
+#1704213332
+./crash 
+#1704213340
+./fp_except 
+#1704213346
+./generic 
+#1704213352
+./locale 
+#1704213365
+./mbstrings-main 
+#1704213401
+./test-features 
+#1704213412
+./trampoline 
+#1704213416
+./yday 
+#1704213424
+./terran 
+#1704213436
+cd ..
+#1704213440
+cd laststanding/
+#1704213443
+run
+#1704213447
+run clean
+#1704213449
+run build
+#1704213453
+./test/
+#1704213464
+cd ..
+#1704213472
+bin/test 
+#1704213475
+bin/test luca
+#1704213491
+bin/countlines ./l_os.h 
+#1704213497
+e l_os.h 
+#1704214505
+cd ..
+#1704214535
+cd monorepo/
+#1704214544
+ls example_powerpc.c 
+#1704214551
+v example_powerpc.c 
+#1704214562
+run
+#1704214574
+run powerpc example_powerpc.c 
+#1704214587
+run powerpc example_ubsan.c 
+#1704214596
+run powerpc example_use_after_free.c 
+#1704214609
+e csv_parser.c 
+#1704214669
+run rund csv_parser.c 
+#1704214707
+run runr csv_parser.c 
+#1704214724
+run rund csv_parser.c 
+#1704214889
+run rund *.c
+#1704215434
+run rund csv_parser.c 
+#1704215829
+e example_UB2.c
+#1704215865
+run lint example_UB2.c 
+#1704216023
+run rund example_UB2.c 
+#1704216136
+run runr example_UB2.c 
+#1704216143
+run powerpc example_UB2.c 
+#1704216209
+e Taskfile 
+#1704216225
+run lint example_UB2.c 
+#1704216459
+cppcheck --check-config
+#1704216471
+cppcheck --check-config example_UB2.c 
+#1704216528
+run lint example_UB2.c 
+#1704216612
+la
+#1704216647
+run lint example_UB2.c 
+#1704216881
+run runr example_UB2.c 
+#1704216885
+run rund example_UB2.c 
+#1704273320
+cd ..
+#1704273323
+cd nolibc/
+#1704273332
+git status
+#1704273341
+e Makefile 
+#1704273520
+e arch.h 
+#1704273835
+v stdarg.h 
+#1704273845
+v string.h 
+#1704273885
+v stdio.h 
+#1704273910
+v stdlib.h 
+#1704273988
+v time.h 
+#1704273995
+v types.h 
+#1704274006
+v unistd.h 
+#1704274032
+v string.h 
+#1704278497
+cd ..
+#1704278507
+sudo apt install icu-dev
+#1704278522
+sudo apt install icu
+#1704278553
+sudo apt-get install libicu-dev
+#1704278672
+git clone https://github.com/begriffs/wchar-conformance.git
+#1704278676
+cd wchar-conformance/
+#1704278678
+make
+#1704278689
+./configure 
+#1704278693
+make
+#1704278700
+./w 
+#1704278715
+make clean
+#1704278721
+./configure 
+#1704278726
+v configure 
+#1704278738
+make
+#1704278743
+rm w
+#1704278744
+make
+#1704278756
+./w 
+#1704278760
+v w.c 
+#1704278791
+man setlocale
+#1704278977
+locale -a
+#1704279004
+e w.c 
+#1704279023
+make -t
+#1704279026
+make
+#1704279028
+rm w
+#1704279030
+make
+#1704279032
+./w 
+#1704279183
+locale
+#1704279212
+sudo update-locale LANG=en_US.UTF8
+#1704279276
+sudo apt install locales
+#1704279282
+sudo update-locale LANG=en_US.UTF8
+#1704279312
+sudo apt-get install locales language-pack-en 
+#1704279341
+sudo apt-get install locales language-pack-en-base manpages
+#1704279344
+sudo update-locale LANG=en_US.UTF8
+#1704279352
+e w.c 
+#1704279390
+rm w.c 
+#1704279392
+make
+#1704279397
+./configure 
+#1704279398
+make
+#1704279408
+git status
+#1704279412
+git restore w.c
+#1704279418
+./configure 
+#1704279419
+make
+#1704279424
+./w 
+#1704279710
+cd ..
+#1704279715
+git clone https://github.com/begriffs/libc.git
+#1704279717
+cd libc
+#1704279724
+make
+#1704296925
+sudo apt install mpv
+#1704296980
+cd ..
+#1704296986
+git clone https://github.com/skeeto/sort-circle.git
+#1704296994
+rm -rf libc
+#1704296997
+cd sort-circle/
+#1704297002
+make
+#1704297012
+less README.md 
+#1704297023
+./sort | x264 --fps 60 -o video.mp4 /dev/stdin
+#1704297031
+./sort | mpv --no-correct-pts --fps=60 -
+#1704297071
+v sort.c 
+#1704440329
+cd dev/divs
+#1704440331
+dir
+#1704440343
+run
+#1704440353
+ll
+#1704440389
+v fchartR.sh 
+#1704440410
+v chart.sh 
+#1704440425
+./chart.sh
+#1704440436
+v joined.csv 
+#1704440489
+sudo apt install gnuplot
+#1704440594
+v ~/scripts/fplot 
+#1704440705
+v Taskfile 
+#1704440740
+run chart
+#1704440775
+v ~/.gnuplot
+#1704440836
+v ~/.gnuplotstyles/style2.gp 
+#1704440901
+~/scripts/get-mono-scalable-fonts 
+#1704440912
+v ~/scripts/get-mono-scalable-fonts 
+#1704440917
+fc-list
+#1704441008
+sudo apt install font-manager
+#1704441020
+font-manager 
+#1704441319
+fc-list
+#1704441337
+fc-list | grep Pragmata
+#1704441355
+./chart.sh 
+#1704441365
+v chart.sh 
+#1704441426
+v .gnuplot
+#1704441547
+v ~/scripts/fplot 
+#1704441579
+cd dev/divs/
+#1704441584
+v chart.sh 
+#1704441390
+gnuplot
+#1704441709
+cd dev/divs
+#1704441723
+v ~/scripts/fplot 
+#1704441802
+v chart.sh
+#1704441836
+export GCMD='u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(
+     stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704441848
+printenv | GREP GCMD
+#1704441905
+export GSET='set grid y;Fmt(String,moat) = sprintf("{/%s %s}", moat eq "Wide" ? ",30:Bold" : ":Normal",String)'
+#1704441914
+$GSET
+#1704441920
+echo $GSET
+#1704441930
+echo $GCMD
+#1704441963
+gnuplot -e "$GCMD;data = system('cat -');set print \$db;print data;unset print;plot \$db $GSET"
+#1704441994
+gnuplot -e "$GSET;data = system('cat -');set print \$db;print data;unset print;plot \$db $GCMD"
+#1704442015
+<joined.csv gnuplot -e "$GSET;data = system('cat -');set print \$db;print data;unset print;plot \$db $GCMD"
+#1704442032
+cat joined.csv | gnuplot -e "$GSET;data = system('cat -');set print \$db;print data;unset print;plot \$db $GCMD"
+#1704442054
+<joined.csv gnuplot -e "$GSET;data = system('cat -');set print \$db;print data;unset print;plot \$db $GCMD" -v
+#1704442060
+gnuplot --help
+#1704442095
+echo "$GSET;data = system('cat -');set print \$db;print data;unset print;plot \$db $GCMD"
+#1704442160
+<joined.csv gnuplot -e 'set grid y;Fmt(String,moat) = sprintf("{/%s %s}", moat eq "Wide" ? ",30:Bold" : ":Normal",String);data = system('cat -');set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(
+     stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442175
+<joined.csv gnuplot -e 'set grid y;Fmt(String,moat) = sprintf("{/%s %s}", moat eq "Wide" ? ",30:Bold" : ":Normal",String);data = system('cat -');set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442224
+<joined.csv gnuplot -e 'set grid y;Fmt(String,moat) = sprintf("{/%s %s}", moat eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442288
+head joined.csv 
+#1704442379
+<joined.csv gnuplot -e 'set grid y;Fmt(String,M) = sprintf("{/%s %s}", M eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442402
+mv ~/.gnuplot ~/.gnuplot.bak
+#1704442404
+<joined.csv gnuplot -e 'set grid y;Fmt(String,M) = sprintf("{/%s %s}", M eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442446
+mv ~/.gnuplot.bak ~/.gnuplot
+#1704442448
+<joined.csv gnuplot -e 'set grid y;Fmt(String,M) = sprintf("{/%s %s}", M eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442459
+e ~/.gnuplot
+#1704442480
+<joined.csv gnuplot -e 'set grid y;Fmt(String,M) = sprintf("{/%s %s}", M eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442598
+which gnuplot
+#1704442878
+ls -la /run/user
+#1704442908
+sudo chmod 700 $XDG_RUNTIME_DIR
+#1704442918
+<joined.csv gnuplot -e 'set grid y;Fmt(String,M) = sprintf("{/%s %s}", M eq "Wide" ? ",30:Bold" : ":Normal",String);data = system("cat -");set print $db;print data;unset print;plot $db u "Saf":"Yld" ps 1 pt 1, "" u (column("Saf")+1):(column("Yld")+0.12):(Fmt(stringcolumn("Tik"),stringcolumn("M"))) w labels tc "blue" font ",20"'
+#1704442940
+e ~/.gnuplot
+#1704443162
+e gnuscript
+#1704443236
+gnuplot
+#1704443296
+gnuplot --help
+#1704443318
+<joined.csv gnuplot -c gnuscript -
+#1704443519
+<joined.csv gnuplot -pc gnuscript -
+#1704443672
+<joined.csv gnuplot -c gnuscript -
+#1704443929
+gnuplot -c gnuscript
+#1704444075
+mv ~/.gnuplot ~/.gnuplot.bak
+#1704444078
+gnuplot -c gnuscript
+#1704444126
+mv ~/.gnuplot.bak ~/.gnuplot
+#1704444128
+gnuplot -c gnuscript
+#1704444153
+e ~/.gnuplot
+#1704444200
+gnuplot -c gnuscript
+#1704444208
+gnuplot -c gnuscript &
+#1704444241
+mv ~/.gnuplot ~/.gnuplot.bak
+#1704444244
+gnuplot -c gnuscript &
+#1704444479
+gnuplot -pc gnuscript &
+#1704444517
+gnuplot -c gnuscript &
+#1704444532
+gnuplot -c gnuscript
+#1704444644
+gnuplot
+#1704444742
+gnuplot -c gnuscript
+#1704444822
+sudo apt install netbpm
+#1704444848
+sudo apt install netpbm
+#1704444881
+gnuplot -c gnuscript | pbmtoascii 
+#1704444919
+gnuplot -c gnuscript | pbmtogo
+#1704444932
+gnuplot -c gnuscript | pbmtoplot
+#1704444953
+gnuplot -c gnuscript | pbmto10x
+#1704444989
+gnuplot -c gnuscript
+#1704445364
+gnuplot -c gnuscript 
+#1704445411
+e gnuscript 
+#1704445470
+gnuplot -c gnuscript 
+#1704445998
+gnuplot --version
+#1704446162
+sudo apt remove gnuplot
+#1704446171
+cd ..
+#1704446173
+gnuplot
+#1704446181
+which gnuplot
+#1704446186
+sudo apt remove gnuplot
+#1704446207
+sudo apt autoremove
+#1704446212
+gnuplot
+#1704446242
+wget https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/6.0.0/gnuplot-6.0.0.tar.gz
+#1704446273
+tar -xvzf gnuplot-6.0.0.tar.gz 
+#1704446276
+cd gnuplot-6.0.0/
+#1704446288
+v README 
+#1704446329
+v configure
+#1704446344
+./configure --help
+#1704446433
+sudo apt install qtbase5-dev qtbase5-dev-tools libqt5svg5-dev qttools5-dev-tools
+#1704446513
+sudo apt install libcaca-dev libcaca0 caca-utils
+#1704446522
+./configure --help
+#1704446567
+which libcaca
+#1704446634
+./configure --with-caca with-qt=qt5
+#1704446655
+cd dev/gnuplot-6.0.0/
+#1704446664
+./configure --with-caca --with-qt=qt5
+#1704446924
+sudo apt install libgd-dev
+#1704446999
+sudo apt install libcairo-dev
+#1704447006
+sudo apt install libcairo2-dev
+#1704447012
+sudo apt install libpango-dev
+#1704447044
+sudo apt install libcerf
+#1704447047
+sudo apt install libcerf-dev
+#1704447052
+sudo apt install libpango
+#1704447057
+sudo apt install pango
+#1704447077
+sudo apt install libopenspec-dev
+#1704447080
+sudo apt install libopenspec
+#1704447086
+sudo apt install libamos-dev
+#1704447090
+sudo apt install libamos
+#1704447094
+./configure --with-caca with-qt=qt5
+#1704447101
+./configure --with-caca --with-qt=qt5
+#1704447142
+./configure --with-caca --with-qt=qt5 --with-bitmap-terminals
+#1704447231
+sudo apt install libpango1.0-dev
+#1704447287
+make -j
+#1704447307
+make check
+#1704447350
+man checkinstall
+#1704447359
+sudo checkinstall make install
+#1704447371
+sudo make checkinstall
+#1704447412
+sudo apt install checkinstall
+#1704447419
+sudo checkinstall make install
+#1704447463
+cd ..
+#1704447493
+mv /home/lucabol/dev/gnuplot-6.0.0/gnuplot_6.0.0-1_amd64.deb ../
+#1704447502
+cd divs
+#1704447510
+gnuplot -c gnuscript 
+#1704447519
+e gnuscript 
+#1704447538
+gnuplot -c gnuscript 
+#1704447578
+gnuplot -pc gnuscript 
+#1704448250
+e gnuscript 
+#1704448267
+gnuplot -pc gnuscript 
+#1704448468
+cd dev/divs/
+#1704448471
+run build
+#1704448479
+run build 3
+#1704448483
+run chart
+#1704448491
+run
+#1704448499
+run chartall
+#1704448513
+run chartsafe
+#1704448521
+run chartbest
+#1704449087
+v joined.csv 
+#1704449145
+v Taskfile 
+#1704449367
+run build 2
+#1704449369
+run
+#1704449372
+run table
+#1704449380
+run clean
+#1704449383
+run build 2
+#1704449385
+run table
+#1704449406
+gnuplot -pc gnuscript 
+#1704449421
+run chartsafe
+#1704449430
+run chartsafeclear
+#1704449437
+run chartbest
+#1704450447
+font-manager 
+#1704450567
+gnuplot -pc gnuscript 
+#1704450648
+gnuplot -c gnuscript 
+#1704451193
+v Taskfile 
+#1704452717
+gnuplot -c gnuscript 
+#1704452789
+v ~/.gnuplot
+#1704452794
+v ~/.gnuplot.bak 
+#1704452814
+gnuplot -c gnuscript 
+#1704452859
+run table
+#1704452892
+run table | grep wtrg
+#1704452897
+gnuplot -c gnuscript 
+#1704452904
+run table | grep cvs
+#1704452916
+run table
+#1704452923
+run table | grep CSV
+#1704452959
+gnuplot -c gnuscript 
+#1704453026
+run table
+#1704453064
+gnuplot -c gnuscript 
+#1704453263
+v Taskfile 
+#1704453284
+gnuplot -c gnuscript 
+#1704453989
+run chartbestclear
+#1704453995
+run
+#1704454000
+run chartsafe
+#1704454108
+run chartbest
+#1704455029
+v Taskfile 
+#1704455049
+gnuplot -c gnuscript 
+#1704455211
+g
+#1704455221
+gnuplot -c gnuscript 
+#1704455287
+run table
+#1704455407
+run chartsafe
+#1704455430
+run
+#1704455434
+run chartbest
+#1704463983
+awk --help | grep -I csv
+#1704463988
+awk --help | grep -i csv
+#1704463990
+awk --help
+#1704464011
+gawk --help
+#1704464020
+gawk --version
+#1704464074
+awk --csv joined.csv 
+#1704464094
+awk --csv -e 'print' joined.csv 
+#1704464153
+gawk --csv -e 'print' joined.csv 
+#1704464163
+gawk --csv 'print' joined.csv 
+#1704464173
+gawk --csv '{print}' joined.csv 
+#1704464181
+gawk --csv '{print $1}' joined.csv 
+#1704464265
+sudo apt install csvquote
+#1704464309
+cd ..
+#1704464320
+git clone https://github.com/dbro/csvquote.git
+#1704464324
+cd csvquote/
+#1704464341
+make
+#1704464433
+sudo checkinstall -y make install
+#1704464461
+cp csvquote_20240105-1_amd64.deb ../
+#1704464479
+cd ../divs/
+#1704464509
+<joined.csv csvquote | awk '{print}'
+#1704464524
+<joined.csv csvquote | awk '{print $1}'
+#1704464532
+<joined.csv csvquote | awk -F, '{print $1}'
+#1704464537
+<joined.csv csvquote | awk -F, '{print}'
+#1704464548
+<joined.csv csvquote | awk -F, '{print}' | csvquote -u
+#1704464557
+<joined.csv csvquote | awk -F, '{print}' | csvquote -u | qsv table
+#1704464647
+qsv apply operations trim,lower Tik joined.csv 
+#1704464669
+qsv apply operations trim,lower Tik joined.csv > joinedlower.csv
+#1704464689
+gnuplot -c gnuscript 
+#1704464759
+grep -I ipg joined.csv
+#1704464765
+grep -i ipg joined.csv
+#1704464791
+grep -i kvue joined.csv
+#1704464814
+rm joinedlower.csv 
+#1704464912
+gnuplot -c gnuscript 
+#1704465029
+qsv apply calcconv --formatstr 'round({Yld})' --new-column Yldr joined.csv
+#1704465069
+qsv apply calcconv --formatstr 'round({Yld})!' --new-column Yldr joined.csv | head 2
+#1704465076
+qsv apply calcconv --formatstr 'round({Yld})!' --new-column Yldr joined.csv | head
+#1704465098
+qsv apply calcconv --formatstr 'round({Yld})' --new-column Yldr joined.csv | head
+#1704465117
+qsv apply calcconv --formatstr 'round({col4})' --new-column Yldr joined.csv | head
+#1704465173
+qsv apply calcconv --formatstr '{Yld}' --new-column Yldr joined.csv | head
+#1704465192
+qsv apply calcconv --formatstr '{Yld}' -c Yldr joined.csv | head
+#1704465240
+qsv apply calcconv --formatstr '{Yld} + {YldB}' -c Yldr joined.csv | head
+#1704465282
+qsv apply calcconv --formatstr '{YldB}' -c Yldr joined.csv | head
+#1704465295
+qsv apply calcconv --formatstr '{YldB}' -c 'Yldr' joined.csv | head
+#1704465321
+qsv apply calcconv --formatstr '{Yld}' -c 'Yldr' joined.csv | head
+#1704465358
+<joined.csv csvquote | awk -F, '{print}' | csvquote -u
+#1704465435
+awk -V
+#1704465511
+sudo apt upgrade gawk
+#1704465532
+mawk
+#1704465549
+mawk --csv
+#1704465619
+cd ..
+#1704465627
+sudo apt remove gawk
+#1704465640
+git clone git://git.savannah.gnu.org/gawk.git
+#1704465657
+cd gawk/
+#1704465665
+v README
+#1704465690
+./configure --help
+#1704465710
+./configure 
+#1704465733
+make
+#1704466332
+make check
+#1704466367
+sudo checkinstall -y make install
+#1704466384
+cp gawk_0-1_amd64.deb ../
+#1704466390
+gawk --csv
+#1704466401
+cd ../divs/
+#1704466436
+awk --csv '{print}' joined.csv 
+#1704466612
+awk --csv '{print @Yld}' joined.csv 
+#1704466618
+awk --csv '{print $1}' joined.csv 
+#1704466622
+awk --csv '{print $2}' joined.csv 
+#1704466628
+awk --csv '{print $2,$3}' joined.csv 
+#1704466639
+awk -OFS, --csv '{print $2,$3}' joined.csv 
+#1704466649
+man gawk
+#1704466737
+awk -OFS, --csv '{print $0}' joined.csv 
+#1704466818
+awk -OFS, --csv '{$4='bob';print}' joined.csv 
+#1704466834
+awk -OFS, --csv '{$4=bob;print}' joined.csv 
+#1704466846
+awk -OFS, --csv '{print}' joined.csv 
+#1704466860
+awk --csv '{$4='bob';print}' joined.csv 
+#1704466867
+awk --csv '{$4='bob';print}' joined.csv | grep bob
+#1704466873
+awk --csv '{$4=5000;print}' joined.csv | grep bob
+#1704466908
+awk -OFS=, --csv '$4=5000;print}' joined.csv | grep bob
+#1704466915
+awk --OFS=, --csv '$4=5000;print}' joined.csv | grep bob
+#1704467004
+sudo apt install goawk
+#1704467057
+awk --csv '{$4=5000;print}' joined.csv | grep bob
+#1704467067
+awk --csv '{$4=5000;print}' joined.csv 
+#1704467090
+awk --csv 'BEGIN{OFS=","}{$4=5000;print}' joined.csv 
+#1704467386
+sudo apt install go 
+#1704467390
+sudo apt install golang
+#1704467415
+go install github.com/benhoyt/goawk@latest
+#1704467420
+goawk
+#1704467484
+ln -s /home/lucabol/bin/goawk /home/lucabol/go/bin/goawk 
+#1704467502
+ln -s /home/lucabol/go/bin/goawk /home/lucabol/bin/goawk
+#1704467505
+goawk
+#1704467514
+goawk --csv 'BEGIN{OFS=","}{$4=5000;print}' joined.csv 
+#1704467525
+goawk --csv '{$4=5000;print}' joined.csv 
+#1704467553
+goawk -i csv -o csv '{$4=5000;print}' joined.csv 
+#1704467632
+goawk -i csv -o csv -H '{@Yld=5000;print}' joined.csv 
+#1704467646
+goawk -i csv -o csv -H '{@"Yld"=5000;print}' joined.csv 
+#1704467680
+goawk -i csv -o csv -H '{$4=@Yld;print}' joined.csv 
+#1704467710
+goawk -i csv -o csv -H '{$4=@"Yld";print}' joined.csv 
+#1704467717
+goawk -i csv -o csv -H '{$4=@"Yld"+1;print}' joined.csv 
+#1704467896
+goawk -i csv -o csv -H '{$4=@"Yld"+1;print}' joined.csv | head
+#1704467959
+goawk -i csv -o csv -H 'BEGIN { print "Tick", "Yld", "Saf"}{print @Tick,@Yld,@Saf}' joined.csv | head
+#1704467968
+head joined.csv 
+#1704467991
+goawk -i csv -o csv -H 'BEGIN { print "Tik", "Yld", "Saf"}{print @Tik,@Yld,@Saf}' joined.csv | head
+#1704468016
+goawk -i csv -o csv -H 'BEGIN { print "Tik", "Yld", "Saf"}{print @"Tik",@"Yld",@"Saf"}' joined.csv | head
+#1704468049
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf"}{print @"Tik",@"Yld",@"Saf"}' joined.csv | head
+#1704468306
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf"}{printf "%s,%.1f,%s" @"Tik",@"Yld",@"Saf"}' joined.csv | head
+#1704468332
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf"}{printf "%s,%.1f,%s", @"Tik",@"Yld",@"Saf"}' joined.csv | head
+#1704468350
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf"}{printf "%s,%.1f,%s\n", @"Tik",@"Yld",@"Saf"}' joined.csv | head
+#1704468377
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf"}{printf "%s,%.1f,%s\n", @"Tik",@"Yld",@"Saf"}' joined.csv > joinedround.csv
+#1704468386
+ll
+#1704468390
+e gnuscript 
+#1704468412
+gnuplot -c gnuscript 
+#1704468450
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf","M"}{printf "%s,%.1f,%s,%s\n", @"Tik",@"Yld",@"Saf",@"M"}' joined.csv > joinedround.csv
+#1704468460
+rm joinedround.csv 
+#1704468463
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf","M"}{printf "%s,%.1f,%s,%s\n", @"Tik",@"Yld",@"Saf",@"M"}' joined.csv > joinedround.csv
+#1704468466
+gnuplot -c gnuscript 
+#1704475915
+gnuplot
+#1704475967
+gnuplot -c gnuscript 
+#1704476048
+gnuplot
+#1704476095
+cd divs/
+#1704476102
+gnuplot -c gnuscript 
+#1704476859
+gnuplot
+#1704476932
+gnuplot -c gnuscript 
+#1704476964
+gnuplot
+#1704477135
+gnuplot -c gnuscript 
+#1704477632
+cp joined.csv joined2.csv
+#1704477641
+e joined2.csv 
+#1704477668
+gnuplot -c gnuscript 
+#1704479674
+gnuplot
+#1704479710
+gnuplot -c gnuscript 
+#1704479908
+v ~/.gnuplot.bak 
+#1704479963
+gnuplot -c gnuscript 
+#1704480340
+gnuplot
+#1704480546
+gnuplot -c gnuscript 
+#1704524861
+gnuplot
+#1704525673
+gnuplot -c gnuscript 
+#1704526195
+run table
+#1704526332
+gnuplot -c gnuscript 
+#1704526500
+e joined2.csv 
+#1704526527
+goawk -i csv -o csv -H 'BEGIN { print "Tik","Yld","Saf","M"}{printf "%s,%.1f,%s,%s\n", @"Tik",@"Yld",@"Saf",@"M"}' joined.csv > joinedround.csvfffafadffjjjffadfa
+#1704526529
+ffadf
+#1704526532
+ifadfaa
+#1704526547
+cd dev/divs/
+#1704526555
+gnuplot gnuscript 
+#1704526622
+cd dev/divs/
+#1704526626
+gnuplot gnuscript 
+#1704526660
+v ~/.gnuplotstyles/style1.gp 
+#1704526715
+gnuplot gnuscript 
+#1704527267
+[A
+#1704527269
+gnuplot gnuscript 
+#1704527504
+run chart
+#1704527547
+git status
+#1704527569
+git add Taskfile
+#1704527581
+git add gnuscript
+#1704527584
+git status
+#1704527596
+rm joinedround.csv
+#1704527608
+git commit -m "Moving to gnuplot"
+#1704527610
+git push
+#1704529294
+cd dev/divs/
+#1704529296
+run chart
+#1704529307
+run table
+#1704529578
+e Taskfile 
+#1704529704
+run table
+#1704529743
+rm joined2.csv joinedround.csvfffafadffjjjffadfa 
+#1704529753
+rm chart.sh 
+#1704529758
+rm chartRscript 
+#1704529763
+rm fchartR.sh 
+#1704529778
+rm yieldStudy.r 
+#1704529782
+rm littlerchart 
+#1704529789
+run table
+#1704529791
+run chart
+#1704529797
+run clean
+#1704529808
+e Readme.md 
+#1704529959
+git status
+#1704529961
+git add .
+#1704529968
+git commit -m "Cleanup"
+#1704529971
+git push
+#1704529974
+git status
+#1704529984
+run build 2
+#1704529987
+run table
+#1704529991
+run chart
+#1704530105
+run table | grep -iE 'sre|ko' 
+#1704530127
+run table | grep -ie 'sre|ko' 
+#1704530143
+run table | grep -i 'sre\|ko' 
+#1704530162
+run table | grep SRE 
+#1704530166
+run table | grep KO
+#1704530198
+run table | grep XEL
+#1704530202
+run table
+#1704530225
+e gnuscript 
+#1704530249
+run chart
+#1704530478
+git add .; git commit -m "small changes" ; git push
+#1704530482
+git status
+#1704530642
+cd divs
+#1704530648
+e gnuscript 
+#1704530815
+run chart
+#1704530905
+run table
+#1704531005
+run build
+#1704531010
+run build 2
+#1704531013
+run clean
+#1704531035
+run build 2
+#1704531042
+run table
+#1704531230
+run table | grep -i HAS
+#1704531373
+run build 2
+#1704531401
+run table
+#1704531437
+run table | grep -i TGT
+#1704531536
+run build 2 | run table
+#1704532349
+run build 2
+#1704532353
+run table
+#1704532411
+grep CME joined.csv 
+#1704532415
+grep CME fulljoined.csv 
+#1704532429
+grep CME sds.csv 
+#1704532481
+run build 2
+#1704532484
+run table
+#1704532817
+run build 1
+#1704532819
+run table
+#1704533107
+run build 1
+#1704533111
+run table
+#1704533866
+run build 1
+#1704533868
+run table
+#1704533966
+run build 1
+#1704533981
+run table
+#1704534971
+<fulljoined.csv qsv search -s M '[Wide|Narrow]'
+#1704535039
+qsv join --left-anti 1 - 1 msr.csv sdsr.csv 
+#1704535048
+qsv join --left-anti msr.csv sdsr.csv 
+#1704535060
+qsv join --left-anti 1 msr.csv 1 sdsr.csv 
+#1704535101
+qsv join --right-anti 1 msr.csv 1 sdsr.csv 
+#1704535114
+qsv join --left-anti 1 sdsr.csv 1 msr.csv 
+#1704537825
+qsv join --left-anti 1 sdsr.csv 1 msr.csv > sdsonly.csv
+#1704537832
+qsv join --right-anti 1 msr.csv 1 sdsr.csv > msronly.csv
+#1704537851
+qsv join --left-anti 1 msr.csv 1 sdsr.csv > msronly.csv
+#1704537856
+rm msronly.csv 
+#1704537857
+qsv join --left-anti 1 msr.csv 1 sdsr.csv > msronly.csv
+#1704537896
+run chart
+#1704537936
+qsv headers msronly.csv 
+#1704537981
+run chart
+#1704538139
+run build 1
+#1704538142
+run table
+#1704538149
+run chart
+#1704538636
+gnuplot
+#1704538783
+run chart
+#1704538898
+qsv headers msronly.csv 
+#1704538919
+head msronly.csv 
+#1704538967
+run chart
+#1704556696
+D
+#1704556711
+run chart
+#1704556719
+A
+#1704556722
+run chart
+#1704557073
+run build 1
+#1704557076
+run chart
+#1704530491
+e Taskfile 
+#1704557119
+git status
+#1704557122
+git add .
+#1704557131
+git comit -m "better chart";git push
+#1704557137
+git commit -m "better chart";git push
+#1704557143
+man qsv
+#1704557148
+qsv --help
+#1704557163
+qsv --list
+#1704557236
+qsv msronly.csv 
+#1704557243
+qsv flatten msronly.csv 
+#1704557250
+qsv --list
+#1704557345
+<msronly.csv qsv stats
+#1704557379
+<msronly.csv qsv table
+#1704557384
+qsv --list
+#1704557397
+<msronly.csv qsv slice --help
+#1704557423
+man uniq
+#1704557491
+sqv uniq
+#1704557495
+qsv uniq
+#1704557516
+csvclean --help
+#1704557558
+csvclean -nv
+#1704557567
+csvclean -nv msronly.csv 
+#1704557570
+csv
+#1704557598
+<msronly.csv csvstat
+#1704557607
+man csvstat
+#1704557620
+csvgrep --help
+#1704557639
+csvcut --help
+#1704557688
+<msronly.csv csvcut headers
+#1704557692
+<msronly.csv headers
+#1704557694
+<msronly.csv header
+#1704557703
+<msronly.csv csvheaders
+#1704557708
+<msronly.csv qsv headers
+#1704557737
+<msronly.csv csvcut Yld 
+#1704557743
+<msronly.csv csvcut -c Yld 
+#1704557753
+<msronly.csv csvcut -c Yld | uniq
+#1704557783
+uniq --help
+#1704557796
+<msronly.csv csvcut -c Yld | uniq -D
+#1704557822
+<joined.csv csvcut -c Yld | uniq -D
+#1704557829
+<joined.csv csvcut -c Yld,Saf | uniq -D
+#1704557864
+<joined.csv csvcut -c Yld,Saf | sort -u
+#1704557896
+<joined.csv csvcut -c Yld,Saf | csvsort 
+#1704557902
+csvsort --help
+#1704557928
+<joined.csv csvcut -c Yld,Saf | csvsort 
+#1704558290
+<joined.csv csvcut -c Yld,Saf | goawk -i csv -o csv '!/./ || !seen[$0]++'
+#1704558310
+<joined.csv csvcut -c Yld,Saf | csvsort | goawk -i csv -o csv '!/./ || !seen[$0]++'
+#1704558323
+<joined.csv csvcut -c Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$0]++'
+#1704558330
+<joined.csv csvcut -c Yld,Saf | csvsort -c Saf | goawk -i csv -o csv '!/./ || !seen[$0]++'
+#1704558354
+<joined.csv csvcut -c Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$1]++'
+#1704558409
+<joined.csv csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$1]++'
+#1704558423
+<joined.csv csvcut -c Tkr,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$1]++'
+#1704558434
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$1]++'
+#1704558458
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || seen[$1]++ {print}'
+#1704558511
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$1]++'
+#1704558522
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$2]++'
+#1704558531
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!/./ || !seen[$2]++ {print}'
+#1704558545
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv '!seen[$2]++ {print}'
+#1704558551
+<joined.csv csvcut -c Tik,Yld,Saf | csvsort -c Yld | goawk -i csv -o csv 'seen[$2]++ {print}'
+#1704558787
+csvsort --help
+#1704558816
+qsv list
+#1704558823
+qsv help
+#1704558836
+qsv --update
+#1704558871
+qsv --version
+#1704558883
+qsv --list
+#1704558901
+qsv dedup --list
+#1704558905
+qsv dedup --help
+#1704558971
+<joined.csv qsv dedup --select Yld
+#1704558978
+qsv dedup --help
+#1704559056
+qsv sort --help
+#1704559086
+<joined.csv qsv sort -s Yld
+#1704559096
+<joined.csv qsv sort -s Yld | qsv cut -s Yld
+#1704559122
+<joined.csv qsv sort -n -s Yld | qsv select Yld 
+#1704559129
+<joined.csv qsv sort -n -s Yld | qsv select -s Yld 
+#1704559136
+qsv select --help
+#1704559166
+<joined.csv qsv sort -n -s Yld | qsv headers
+#1704559180
+<joined.csv qsv sort --numeric -s Yld | qsv headers
+#1704559190
+<joined.csv qsv sort -s Yld | qsv headers
+#1704559209
+qsv sort --help
+#1704559228
+<joined.csv qsv sort -s Yld -N | qsv headers
+#1704559238
+<joined.csv qsv sort -s Yld -N
+#1704559255
+qsv --list
+#1704559376
+qsv join Yld joined.csv Yld joined.csv 
+#1704559386
+qsv join Yld joined.csv Yld joined.csv | csvlook
+#1704559394
+csvlook --help
+#1704559420
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-column-width 5
+#1704559432
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 3
+#1704559437
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 6
+#1704559473
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 3 | qsv sort -s Yld
+#1704559481
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 3
+#1704559487
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 6
+#1704559518
+csvsort --help
+#1704559547
+qsv join Yld joined.csv Yld joined.csv | csvsort -c Yld | csvlook --max-columns 6
+#1704559603
+qsv merge --help
+#1704559609
+qsv join --help
+#1704559698
+qsv join Yld joined.csv Yld joined.csv | csvlook --max-columns 15
+#1704559947
+<joined.csv goawk -i csv -o csv '
+    { key=$1 FS $3 FS $4; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+'
+#1704560027
+<joined.csv goawk -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+'
+#1704560043
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+'
+#1704560129
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+' | csvcut -c Tik,Yld,Saf
+#1704560257
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+' | csvcut -c Tik,Yld,Saf
+#1704560294
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+' | csvcut -c Tik,Yld,Saf
+#1704560307
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+'
+#1704560447
+<joined.csv goawk -H -i csv -o csv '
+    { key=@"Yld"; a[key,++cnt[key]]=$0 }
+    END {
+        for (key in cnt)
+            if (cnt[key] > 1)
+                for (i=1; i<=cnt[key]; i++)
+                    print a[key,i]
+    }
+' | csvcut -c ]
+#1704560488
+csvquote --help
+#1704560533
+csvformat --help
+#1704560576
+qsv --list
+#1704560888
+<joined.csv goawk -H -i csv -o csv -f dedupl.awk 
+#1704611475
+e joined.csv 
+#1704611501
+run chart
+#1704611621
+<joined.csv csvcut -c Tik,Yld,Saf,M
+#1704611638
+<joined.csv csvcut -c Tik,Yld,Saf,M > joined1.csv
+#1704611651
+mv joined1.csv joined.csv 
+#1704611654
+run chart
+#1704611668
+e joined.csv 
+#1704611676
+run chart
+#1704560404
+e dedupl.awk
+#1704611846
+mv dedupl.awk dedupl.awk.bak
+#1704611854
+e dedupl.awk
+#1704612928
+<joined.csv awk -f dedupl.awk
+#1704612948
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704616950
+awk --help
+#1704639705
+v joined.csv 
+#1704640415
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704640447
+chart
+#1704640451
+run chart
+#1704640484
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined.csv
+#1704640573
+sponge
+#1704640580
+sudo apt install moreutils
+#1704640656
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > sponge joined.csv
+#1704640670
+v joined.csv 
+#1704640659
+run chart
+#1704640690
+rm sponge 
+#1704640695
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk | sponge joined.csv
+#1704640698
+run chart
+#1704640764
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk | sponge joined.csv
+#1704640767
+run chart
+#1704640774
+v joined.csv 
+#1704640790
+run build 1
+#1704640793
+v joined.csv 
+#1704640917
+qsv headers joined.csv 
+#1704640978
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704641012
+e joined.csv 
+#1704641032
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704641045
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704641051
+v joined2.csv 
+#1704641082
+mv joined2.csv joined.csv 
+#1704641091
+run chart
+#1704641131
+run build 1
+#1704641211
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704641228
+run chart
+#1704641372
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704641378
+rm joined2.csv 
+#1704641380
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704641508
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704641758
+run chart
+#1704641847
+v joined.csv 
+#1704642032
+<joined.csv qsv cut 
+#1704642181
+qsv --list
+#1704642213
+qsv table --help
+#1704642315
+qsv table -c 15 best.csv 
+#1704642326
+csvlook --help
+#1704642353
+qsv table --max-column-width 15 best.csv 
+#1704642361
+csvlook --max-column-width 15 best.csv 
+#1704642066
+v Taskfile 
+#1704642455
+run table
+#1704642500
+qsv table --help
+#1704642537
+run table
+#1704642573
+qsv table --help
+#1704642652
+run table
+#1704642710
+csvlook --help
+#1704642798
+man csvlook
+#1704642817
+info csvlook
+#1704717510
+cd ..
+#1704717523
+rm -rf root_basic/
+#1704717528
+git clone https://git.rfleury.com/community/root_basic.git
+#1704717577
+cd root_basic/
+#1704717580
+cd co
+#1704717582
+cd code
+#1704717588
+cd base/
+#1704717611
+e base_inc.h
+#1704717665
+cd ..
+#1704717675
+cd font_provider/
+#1704717684
+e font_provider_*
+#1704717800
+cd ..
+#1704717808
+cd os/
+#1704717822
+cd core
+#1704717827
+v os_core.
+#1704717830
+v os_core.h
+#1704717896
+v os_core.c
+#1704717945
+grep FileOpen *
+#1704717962
+cd win32
+#1704717968
+grep FileOpen *
+#1704717985
+v os_core_win32.c
+#1704718061
+cd ..
+#1704718064
+grep FileOpen *
+#1704718074
+v os_core.c
+#1704718098
+/FileWrite
+#1704718104
+grep FileWrite *
+#1704718126
+v win32/os_core_win32.c
+#1704718255
+cd divs/
+#1704718260
+run chart
+#1704718292
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704718312
+e joined.csv 
+#1704718330
+run chart
+#1704718360
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704718393
+rm joined2.csv 
+#1704718401
+rm joined2.csv > joined2.csv
+#1704718424
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704718435
+cp joined2.csv joined.csv 
+#1704718436
+run chart
+#1704718490
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > joined2.csv
+#1704718494
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704642422
+e Taskfile 
+#1704718512
+run build
+#1704718515
+run build 1
+#1704718536
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > /dev/null
+#1704720781
+run chart
+#1704720997
+csvcut -c Tik,Yld,Saf joined.csv 
+#1704721047
+csvcut -c Tik,Yld,Saf joined.csv | csvsort Yld
+#1704721053
+csvcut -c Tik,Yld,Saf joined.csv | csvsort -c Yld
+#1704721139
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk > /dev/null
+#1704721509
+<joined.csv goawk -i csv -o csv -H -f dedupl.awk
+#1704981924
+cd divs
+#1704982003
+run build 1
+#1704982006
+run table
+#1704982759
+run chart
+#1704982828
+run table | grep UPS
+#1705049186
+cd dev
+#1705049190
+wget https://github.com/bflattened/bflat/releases/download/v8.0.1/bflat-8.0.1-linux-glibc-x64.tar.gz
+#1705049206
+tar xvf bflat-8.0.1-linux-glibc-x64.tar.gz 
+#1705049293
+rm -r bflat lib lib64 libclr* LICENSE.TXT THIRD-PARTY-NOTICES.TXT WindowsAPIs.txt gnuplot-6.0.0.tar.gz 
+#1705049311
+rm libjitinterface_x64.so libobjwriter.so 
+#1705049320
+mkdir bflat
+#1705049331
+mv bflat-8.0.1-linux-glibc-x64.tar.gz bflat
+#1705049334
+cd bflat/
+#1705049343
+tar xvf bflat-8.0.1-linux-glibc-x64.tar.gz 
+#1705049379
+cd ..
+#1705049384
+rm -r ref bin
+#1705049388
+cd bflat/
+#1705049394
+./bflat --help
+#1705049441
+e ~/.bashrc 
+#1705049478
+. ~/.bashrc 
+#1705049481
+cd ..
+#1705049483
+bflat
+#1705049536
+mkdir bflatsamples
+#1705049546
+cd ~
+#1705049562
+mv gnuplot_6.0.0-1_amd64.deb dev/
+#1705049565
+cd dev
+#1705049574
+mkdir debs
+#1705049579
+mv *.deb debs/
+#1705049589
+cd bflat/
+#1705049601
+rm bflat-8.0.1-linux-glibc-x64.tar.gz 
+#1705049632
+cd ..
+#1705049678
+mv bflat bflatbin
+#1705049685
+e ~/.bashrc 
+#1705049702
+source ~/.bashrc 
+#1705049706
+bflat
+#1705049713
+git clone https://github.com/bflattened/bflat.git
+#1705049716
+cd bflat
+#1705049719
+cd samples/
+#1705049732
+file (which bflat)
+#1705049740
+which bflat
+#1705049755
+file $(which bflat)
+#1705049768
+ll $(which bflat)
+#1705049781
+cd Sokol/
+#1705049785
+v README.md 
+#1705049830
+bflat build triangle.cs 
+#1705049842
+v README.md 
+#1705049853
+bflat build triangle.cs --target:winexe
+#1705049917
+cd ..
+#1705049923
+cd HelloWorld/
+#1705049927
+v README.md 
+#1705049938
+bflat build hello.cs 
+#1705049968
+cd dev/bflatbin/
+#1705049981
+cd ../bflat
+#1705049985
+cd ..
+#1705050005
+mv bflat dev/
+#1705050009
+cd dev/bflat
+#1705050013
+cd samples/HelloWorld/
+#1705050019
+bflat build hello.cs 
+#1705050742
+sudo apt-get install libtinfo5
+#1705050751
+bflat build hello.cs 
+#1705050907
+sudo apt-get update
+#1705050922
+sudo apt-get -y install libc++1
+#1705050927
+bflat build hello.cs 
+#1705051000
+lsb_release -a
+#1705051117
+ll
+#1705051120
+./hello 
+#1705051123
+./hello boss
+#1705051155
+./hello co*̶͑̾̾​̅ͫ͏̙̤g͇̫͛͆̾ͫ̑͆l͖͉̗̩̳̟̍ͫͥͨe̠̅sZA̡͊͠͝LGΌ ISͮ̂҉̯͈͕̹̘̱ TO͇̹̺ͅƝ̴ȳ̳ TH̘Ë͖́̉ ͠P̯͍̭O̚​N̐Y̡ H̸̡̪̯ͨ͊̽̅̾̎Ȩ̬̩̾͛ͪ̈́̀́͘ ̶̧̨̱̹̭̯ͧ̾ͬC̷̙̲̝͖ͭ̏ͥͮ͟Oͮ͏̮̪̝͍M̲̖͊̒ͪͩͬ̚̚͜Ȇ̴̟̟͙̞ͩ͌͝S̨̥̫͎̭ͯ̿̔̀ͅ?
+#1705051170
+ll
+#1705051181
+./hello P̯͍̭O̚​N̐Y̡
+#1705051202
+v hello.cs 
+#1705051212
+v README.md 
+#1705051220
+cd ..
+#1705051224
+cd MinimalSize/
+#1705051227
+v README.md 
+#1705051272
+blat build minimalsize.cs -o notoptimized
+#1705051278
+bflat build minimalsize.cs -o notoptimized
+#1705051281
+ll
+#1705051300
+bflat build minimalsize.cs --no-reflection --no-stacktrace-data --no-globalization --no-exception-messages -Os --no-pie --separate-symbols
+#1705051303
+ll
+#1705051310
+./minimalsize
+#1705051316
+./notoptimized 
+#1705051323
+v minimalsize
+#1705051328
+v minimalsize.cs 
+#1705051679
+gdb --tui minimalsize
+#1705051714
+ll
+#1705051728
+gdb --tui notoptimized
+#1705051761
+cd ..
+#1705051763
+cd HelloWorld/
+#1705051769
+gdb hello
+#1705051801
+gdb --tui hello
+#1705051829
+cd ..
+#1705051834
+cd Sna
+#1705051838
+cd Snake/
+#1705051841
+v README.md 
+#1705051966
+cd dev
+#1705051974
+cd bflat
+#1705051987
+cd samples/Snake/
+#1705051994
+sudo apt install ovmf -y
+#1705052022
+mkdir -p efi/boot
+#1705052032
+bflat build --stdlib:zero --os:uefi -o:efi/boot/bootx64.efi
+#1705052049
+ll efi/boot/bootx64.efi 
+#1705052062
+qemu-system-x86_64 -bios /usr/OVMF/OVMF_CODE.fd -hdd fat:rw:.
+#1705052198
+qemu-system-x86_64 -bios -hdd fat:rw:.
+#1705052207
+qemu-system-x86_64 -hdd fat:rw:.
+#1705052326
+qemu-system-x86_64 -L fat:rw:.
+#1705052347
+qemu-system-x86_64 -L. fat:rw:.
+#1705052351
+qemu-system-x86_64 -L . fat:rw:.
+#1705052455
+sudo apt install ovmf
+#1705052477
+qemu-system-x86_64 -bios /usr/share/OVMF/OVMF_CODE.fd -hdd fat:rw:.
+#1705052550
+bflat build --stdlib:zero
+#1705052557
+./Snake 
+#1705052578
+v FrameBuffer.cs 
+#1705052625
+v Game.cs 
+#1705052674
+v NvVars 
+#1705052677
+ll
+#1705052681
+v Random.cs 
+#1705052692
+v Snake.cs 
+#1705052741
+bflat build -o SnakeFull
+#1705052746
+./SnakeFull 
+#1705052769
+cd ..
+#1705052773
+cd Sokol/
+#1705052777
+v README.md 
+#1705052785
+bflat build triangle.cs 
+#1705052789
+./triangle 
+#1705052807
+sudo apt install libsokol-dev
+#1705052810
+sudo apt install libsoko
+#1705052813
+sudo apt install libsokol
+#1705052940
+cd ../Sokol/
+#1705052942
+v README.md 
+#1705053431
+bflat build triangle.cs --target:winexe
+#1705053438
+./triangle 
+#1705053461
+bflat build triangle.cs
+#1705053666
+lsb_release -a
+#1705053825
+cd ..
+#1705053829
+cd DynamicLibrary/
+#1705053835
+v README.md 
+#1705053858
+bflat build library.cs
+#1705053860
+ll
+#1705053881
+bflat build libraryconsumer.cs 
+#1705053915
+ll
+#1705053919
+./libraryconsumer 
+#1705053931
+ll
+#1705053967
+ldd ./libraryconsumer
+#1705053989
+ldd ./libraryconsumer -i:library
+#1705054008
+bflat build libraryconsumer.cs -i:library -o libconsumerstatic
+#1705054019
+v README.md 
+#1705054094
+v library.cs 
+#1705054150
+v libraryconsumer.cs 
+#1705054171
+ll
+#1705054176
+./libraryconsumer 
+#1705054200
+cd ..
+#1705054209
+cd src/
+#1705054213
+cd zerolib/
+#1705054217
+v README.md 
+#1705054263
+cd System/
+#1705054269
+v Nullable.cs 
+#1705054288
+v Console.cs 
+#1705054296
+v Array.cs 
+#1705054326
+v Environment.Efi.cs 
+#1705054344
+v Primitives.cs 
+#1705054361
+v String.cs 
+#1705054393
+v Span.cs 
+#1705054424
+v ValueTuple.cs 
+#1705054451
+cd Runtime/
+#1705054456
+cd CompilerServices/
+#1705054464
+v RuntimeFeature.cs 
+#1705054474
+cd ../..
+#1705054479
+cd ..
+#1705054482
+cd Internal/
+#1705054492
+v Startup.Unix.cs 
+#1705054517
+v Startup.Windows.cs 
+#1705054700
+cd ..
+#1705054705
+cd ../../..
+#1705054710
+cd bflat
+#1705054714
+cd samples/
+#1705054718
+cd MinimalSize/
+#1705054727
+e minimalsize.cs 
+#1705054752
+bflat build --help
+#1705054797
+bflat build --stlib zero
+#1705054811
+bflat build --stdlib zero
+#1705054819
+bflat build --stdlib none
+#1705054839
+cd ../HelloWorld/
+#1705054848
+bflat build --stdlib none
+#1705054853
+bflat build --stdlib none hello.cs
+#1705054862
+bflat build --stdlib zero hello.cs
+#1705059668
+cd ../Sokol/
+#1705059674
+e triangle.cs 
+#1705239547
+cd ..
+#1705239556
+cd Snake/
+#1705239564
+v README.md 
+#1705239582
+bflat build --stdlib:zero
+#1705239587
+bflat build --stdlib:none
+#1705239609
+v FrameBuffer.cs 
+#1705239673
+cd ..
+#1705239685
+cd src/zerolib/
+#1705239691
+ls Internal/
+#1705239696
+ls Internal/Runtime/
+#1705239700
+ls Internal/Runtime/CompilerHelpers/
+#1705239713
+v Internal/Runtime/CompilerHelpers/InteropHelpers.cs 
+#1705239750
+cd System/
+#1705239759
+v Console.cs 
+#1705239617
+v *.cs
+#1705240055
+bflat build --help
+#1705240140
+bflat build --stdlib:none -libc none
+#1705240149
+bflat build --stdlib:none --libc none
+#1705239867
+v Console.Windows.cs 
+#1705240272
+v Console.Efi.cs 
+#1705240296
+v Console.Unix.cs 
+#1705240483
+v ReadOnlySpan.cs 
+#1705240876
+cd ..
+#1705240878
+cd dev
+#1705240883
+mkdir bflattests
+#1705240888
+cd bflattests/
+#1705240912
+grep main *
+#1705240916
+grep main *.cs
+#1705240920
+grep Main *.cs
+#1705240904
+e Test.cs
+#1705240943
+bflat --stdlib:none Test.cs 
+#1705240949
+bflat build --stdlib:none Test.cs 
+#1705240990
+bflat build --stdlib:zero Test.cs
+#1705241010
+./Test 
+#1705241028
+bflat build --stdlib:none Test.cs
+#1705241047
+bflat build --stdlib:zero Test.cs
+#1705241080
+bflat build --stdlib:none Test.cs
+#1705241120
+bflat build --stdlib:zero Test.cs
+#1705241129
+bflat build --stdlib:zero Test.cs ; ./Test 
+#1705241185
+./Test 
+#1705241394
+mv StdLib.cs StdC.cs
+#1705241397
+e StdC.cs 
+#1705241828
+bflat build --stdlib:zero Test.cc
+#1705241837
+bflat build --stdlib:zero Test.cs
+#1705241849
+bflat build --stdlib:zero StdC.cs Test.cs
+#1705241892
+./Test 
+#1705241913
+rm Test
+#1705241916
+bflat build --stdlib:zero StdC.cs Test.cs
+#1705241917
+ll
+#1705241935
+gdb --tui StdC
+#1705241961
+./Test
+#1705241970
+rm StdC
+#1705241976
+bflat build --stdlib:zero StdC.cs Test.cs -o Test
+#1705241979
+./Test 
+#1705241988
+gdb --tui Test
+#1705242173
+bflat build --stdlib:zero StdC.cs Test.cs -o Test
+#1705242196
+./Test 
+#1705242211
+bflat build --stdlib:zero Test.cs -o Test
+#1705242214
+./Test 
+#1705242239
+bflat build --stdlib:zero Test.cs -o Test;./Test
+#1705242344
+bflat build --help
+#1705242406
+$?
+#1705242416
+echo $?
+#1705241314
+v ../../src/zerolib/System/Console.Windows.cs 
+#1705244314
+cd bflattests/
+#1705244335
+bflat build --stdlib:zero Test.cs -o Test
+#1705244575
+v ../bflat/src/zerolib/Internal/Runtime/CompilerHelpers/InteropHelpers.cs 
+#1705244967
+v ../bflat/src/zerolib/System/Runtime/InteropServices/MemoryMarshal.cs 
+#1705245020
+v ../bflat/src/zerolib/System/Runtime/InteropServices/InteropAttributes.cs 
+#1705245166
+bflat build --stdlib:zero Test.cs -o Test
+#1705245363
+v ../bflat/src/zerolib/System/Runtime/CompilerServices/Unsafe.cs 
+#1705245437
+v ../bflat/src/zerolib/System/Console.Unix.cs 
+#1705245584
+bflat build --stdlib:zero Test.cs -o Test
+#1705245631
+./Test 
+#1705245689
+bflat build --stdlib:zero Test.cs -o Test
+#1705245691
+./Test 
+#1705245736
+bflat build --stdlib:zero Test.cs -o Test
+#1705245823
+./Test 
+#1705245859
+v ../bflat/src/zerolib/System/Console.Unix.cs 
+#1705246116
+bflat build --stdlib:zero Test.cs -o Test
+#1705246145
+v ../bflat/src/zerolib/System/Console.Unix.cs 
+#1705246189
+v ../bflat/src/zerolib/System/Console.cs 
+#1705246482
+bflat build --stdlib:zero Test.cs -o Test
+#1705246603
+v ../bflat/src/zerolib/System/Console.cs 
+#1705246637
+bflat build --stdlib:zero Test.cs -o Test
+#1705248866
+v ../bflat/src/zerolib/System/Console.cs 
+#1705248930
+v ../bflat/src/zerolib/System/Console. 
+#1705248952
+v ../bflat/src/zerolib/System/Console
+#1705248981
+v ../bflat/src/zerolib/System/Console.Unix.cs 
+#1705249071
+v ../bflat/src/zerolib/System/Console.Windows.cs 
+#1705249227
+cd dev/bflat/src/
+#1705249234
+cd zerolib/
+#1705249241
+v README.md 
+#1705249352
+cd System/
+#1705249361
+v Object.cs 
+#1705249380
+v Object.Efi.cs 
+#1705249405
+v Nullable.cs 
+#1705249431
+v Primitives.cs 
+#1705249459
+v Environment.Efi.cs 
+#1705249490
+v Environment.Unix.cs 
+#1705249528
+v Environment.Windows.cs 
+#1705249604
+v Array.cs 
+#1705249628
+v Enum.cs 
+#1705249790
+v Span.cs 
+#1705249901
+bflat build --stdlib:zero Test.cs -o Test
+#1705249932
+bflat build --stdlib:zero Test.cs -o Test
+#1705250100
+bflat build Test.cs -o Test
+#1705250105
+Test
+#1705250109
+./Test 
+#1705250262
+bflat build Test.cs -o Test
+#1705250266
+./Test 
+#1705250308
+bflat build Test.cs -o Test
+#1705250310
+./Test 
+#1705250338
+bflat build --stdlib:zero Test.cs -o Test
+#1705250371
+v Span.cs 
+#1705250415
+v ReadOnlySpan.cs 
+#1705250449
+git status
+#1705250686
+bflat build SpanBug.cs 
+#1705250707
+bflat build --stdlib zero SpanBug.cs 
+#1705250871
+v Span.cs 
+#1705390620
+cd ../bflat/src/zerolib/
+#1705390626
+code .
+#1705568153
+cd dev
+#1705568158
+rm -rf bflat
+#1705568165
+git clone git@github.com:lucabol/bflat.git
+#1705568172
+cd bflat
+#1705568176
+cd src/
+#1705568200
+e Hello.cs
+#1705568237
+bflat Hello.cs 
+#1705568243
+bflat build Hello.cs 
+#1705568251
+bflat build --help
+#1705568286
+bflat build -O0 -stdlib Zero
+#1705568293
+bflat build -O0 --stdlib Zero
+#1705568312
+ls zerolib/
+#1705568325
+rm Hello
+#1705568331
+mv Hello.cs zerolib/
+#1705568334
+cd zerolib/
+#1705568339
+bflat build -O0 --stdlib Zero
+#1705568376
+bflat build -O0 --stdlib None
+#1705568445
+v README.md 
+#1705568466
+bflat build -O0 --stdlib:none
+#1705568554
+e Hello1.cs
+#1705568603
+bflat build -O0 --stdlib:none Hello.cs
+#1705568630
+bflat build -O0 --stdlib:none Hello1.cs
+#1705568645
+mv Hello.cs Hello.cs.bak
+#1705568654
+bflat build --stdlib:none Hello1.cs
+#1705568658
+bflat build -O0 --stdlib:none Hello1.cs
+#1705568673
+bflat build -O0 --stdlib:none
+#1705568706
+rm Hello1.cs 
+#1705568712
+mv Hello.cs.bak Hello.cs
+#1705568720
+bflat build -O0 --stdlib:none
+#1705568728
+bflat build -O0 -c --stdlib:none
+#1705568739
+nm zerolib.o 
+#1705568771
+v README.md 
+#1705568802
+bflat build --stdlib:none
+#1705568861
+v Console.Unix.cs
+#1705568880
+v System/Console.Unix.cs
+#1705568953
+bflat build --stdlib:zero Hello.cs 
+#1705568959
+./Hello 
+#1705568970
+v Hello.cs
+#1705568987
+gdb --tui Hello
+#1705569013
+bflat build -O0 --stdlib:zero Hello.cs 
+#1705569015
+gdb --tui Hello
+#1705569096
+bflat build -O0 Hello.cs 
+#1705569108
+gdb --tui Hello
+#1705569300
+v gdb.txt 
+#1705569314
+e gdb.txt 
+#1705569417
+more Hello.cs 
+#1705569623
+rm Hello
+#1705569630
+bflat build -O0 --stdlib:zero Hello.cs 
+#1705569638
+bflat build -O0 --stdlib:none Hello.cs 
+#1705569646
+bflat build -O0 --stdlib:none
+#1705569671
+v README.md 
+#1705569769
+more Hello.cs 
+#1705569880
+bflat build --stdlib:none
+#1705590452
+cd dev/bflat
+#1705590454
+git status
+#1705590467
+cd src/zerolib/
+#1705590471
+rm Hello
+#1705590475
+rm gdb.txt 
+#1705590498
+git add Hello.cs ; git commit -m "Hello" ; git push
+#1705929085
+cd dev/bflat/src/zerolib/
+#1705929092
+bflat Hello.cs 
+#1705929096
+bflat build Hello.cs 
+#1705929105
+v Hello.cs 
+#1705929115
+gdb --tui a.out
+#1705929125
+gdb --tui Hello
+#1705929151
+bflat build --help
+#1706006684
+cd ../..
+#1706006688
+cd ..
+#1706006694
+cd bflatbin/
+#1706006705
+v WindowsAPIs.txt 
+#1706006710
+ls bin/
+#1706006756
+ls lib/linux/x64/
+#1706006764
+ls lib/linux/x64/glibc/
+#1706006783
+objdump lib/linux/x64/glibc/
+#1706006805
+objdump lib/linux/x64/glibc/libSystem.Native.a 
+#1706006812
+objdump -f lib/linux/x64/glibc/libSystem.Native.a 
+#1706006818
+objdump lib/linux/x64/glibc/libSystem.Native.a 
+#1706006837
+objdump -t lib/linux/x64/glibc/libSystem.Native.a 
+#1706006862
+objdump -t lib/linux/x64/glibc/libSystem.Native.a | less
+#1706007104
+objdump --help
+#1706007127
+objdump --help | less
+#1706089575
+conf
+#1706089594
+config
+#1706089598
+config status
+#1706089608
+config add .
+#1706089616
+config status
+#1706089623
+pwd
+#1706089631
+config add .

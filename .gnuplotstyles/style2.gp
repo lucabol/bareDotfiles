@@ -7,4 +7,6 @@ set linetype 6 lw 3 pt 5 lc rgb '0xd2b48c' # tan
 
 set pointsize 3
 
-set termoption font "Pragmata Pro Liga,16" 
+if (GPVAL_TERM ne 'dumb' && GPVAL_TERM ne 'block' ) {
+  set termoption font "Pragmata Pro Liga,16" 
+}
