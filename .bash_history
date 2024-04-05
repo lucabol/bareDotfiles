@@ -11513,3 +11513,4537 @@ config status
 pwd
 #1706089631
 config add .
+#1706089653
+config add -u
+#1706089659
+config status
+#1706089674
+config commit -m "Renew"
+#1706089678
+config push
+#1706089732
+config remote -v
+#1706165915
+cd dev/bflat
+#1706165918
+cd samples/
+#1706165924
+cd Snake/
+#1706165933
+grep static *
+#1706165949
+cd ..
+#1706165959
+cd src/zerolib/
+#1706165978
+grep --help | grep recourse
+#1706165990
+man grep | grep recurse
+#1706166005
+grep --help
+#1706166019
+grep -r static *.cs
+#1706166039
+grep -r void *.cs
+#1706166043
+grep -r void *
+#1706166050
+grep -r static *
+#1706166287
+v System/Console.Unix.cs 
+#1706600171
+cd dev/laststanding/
+#1706600177
+v l_os.h 
+#1706600282
+cd ..
+#1706600302
+cd ulib
+#1706600313
+v osstdc.h 
+#1706600333
+cd ..
+#1706600363
+cd libc-size-test/
+#1706600370
+v l_os.h
+#1706615795
+cd ..
+#1706615806
+v ulib/osstdc.h 
+#1706635510
+v ulib/hash.h 
+#1707377674
+cd dev
+#1707377680
+rm -rf bflat
+#1707377692
+git clone git@github.com:lucabol/bflat.git
+#1707377704
+cd bflat/src/zerolib/
+#1707377757
+cp Build.bat Build.sh
+#1707377770
+chmod a+x Build.sh
+#1707377774
+./Build.sh 
+#1707377794
+./TPOP.exe 
+#1707377800
+./TPOP.exe kjbible.txt 
+#1707377811
+rm TPOP.exe 
+#1707377819
+e Build.sh
+#1707378014
+ll ~/dev/bflatbin/lib/linux/x64/glibc/
+#1707378046
+e Build.sh 
+#1707378090
+./Build.sh 
+#1707378315
+bflat build -Os --stdlib:none  -o Main --ldflags "-l ~/dev/bflatbin/lib/linux/x64/glibc/libSystem.Native.a"
+#1707378329
+bflat build -Os --stdlib:none  -o Main --ldflags ~/dev/bflatbin/lib/linux/x64/glibc/libSystem.Native.a
+#1707378333
+ll
+#1707378370
+./Build.sh 
+#1707378523
+bflat build -Os --stdlib:none  -o Main --ldflags ~/dev/bflatbin/lib/linux/x64/glibc/libSystem.Native.a
+#1707378558
+./Build.sh 
+#1707378712
+bash --help
+#1707378748
+bash -c "bflat build -Os --stdlib:none  -o Main --ldflags ~/dev/bflatbin/lib/linux/x64/glibc/libSystem.Native.a"
+#1707378795
+./Build.sh 
+#1707378798
+ll
+#1707378812
+lld Main
+#1707378848
+ldd TPOP
+#1707378861
+ldd Main
+#1707378886
+ll
+#1707378907
+./Test 
+#1707378914
+./Test bob rob
+#1707378933
+./Test bob rob τα
+#1707378970
+./Main kjbible.txt 
+#1707378983
+link --help
+#1707379041
+bash Perf.bat 
+#1707379202
+./Build.sh 
+#1707379219
+ll
+#1707379249
+./Build.sh 
+#1707379252
+ll
+#1707379309
+./Build.sh 
+#1707379311
+ll
+#1707379333
+./Build.sh 
+#1707379335
+ll
+#1707379360
+cp Perf.bat Perf.sh
+#1707379379
+ll
+#1707379390
+e Perf.sh
+#1707379413
+chmod a+x Perf.sh
+#1707379416
+./Perf.sh 
+#1707379433
+e Perf.sh
+#1707379444
+./Perf.sh 
+#1707379544
+bflat build --help
+#1707379621
+e Build.sh
+#1707379639
+./Build.sh 
+#1707379640
+ll
+#1707379679
+file TPOP
+#1707379684
+file Main
+#1707379725
+bflat build --help
+#1707379786
+./Build.sh 
+#1707379788
+ll
+#1707379827
+file Main
+#1707379831
+file TPOP
+#1707379854
+strip TPOP
+#1707379855
+ll
+#1707379875
+strip --help
+#1707379924
+./Build.sh 
+#1707379925
+ll
+#1707379939
+file Main TPOP
+#1707379963
+bflat build --help
+#1707379992
+./Build.sh 
+#1707379993
+ll
+#1707380009
+file Main TPOP
+#1707380041
+./Build.sh 
+#1707380093
+ll
+#1707380099
+rm Main.dwo
+#1707380123
+./Perf.sh 
+#1707380188
+git status
+#1707380287
+e .gitignore 
+#1707380323
+git status
+#1707380339
+git commit -m "Making it work for linux"
+#1707380344
+git add .
+#1707380345
+git commit -m "Making it work for linux"
+#1707380348
+git status
+#1707380350
+git push
+#1707380383
+gcc -Os TPOP.c eprintf.c
+#1707380384
+ll
+#1707380406
+rm a.out 
+#1707492991
+cd ..
+#1707492996
+cd divs
+#1707492998
+dir
+#1707493001
+run clean
+#1707493005
+run build 1
+#1707493009
+run
+#1707493014
+run build
+#1707493021
+run build 1
+#1707493028
+run table
+#1707493169
+run clean
+#1707493176
+run build 1
+#1707493180
+run table
+#1707493279
+run
+#1707493282
+run chart
+#1707744863
+cd dev
+#1707744871
+git clone https://github.com/Hagtronics/statistics-scripts.git
+#1707744875
+cd statistics-scripts/
+#1707744904
+cd python/
+#1707744910
+python XmR_Chart.py 
+#1707744914
+python2 XmR_Chart.py 
+#1707744918
+python3 XmR_Chart.py 
+#1707744928
+pip install matplotlib
+#1707744935
+python3 XmR_Chart.py 
+#1707744946
+pip install tkinter
+#1707818347
+cd dev/bflat/
+#1707818350
+git status
+#1707818363
+git pull
+#1707818689
+cd src/zerolib/
+#1707818692
+build
+#1707818697
+./Build.sh 
+#1707818770
+e Build.sh 
+#1707818781
+./Build.sh 
+#1707818795
+e Build.sh
+#1707818820
+./Build.sh 
+#1707818826
+ll
+#1707818851
+./Perf.sh 
+#1707818868
+e Perf.sh
+#1707818885
+./Perf.sh 
+#1707819021
+git commit -m "Build and Perf work on linux"
+#1707819033
+git add Build.sh 
+#1707819037
+git add Perf.sh 
+#1707819040
+git commit -m "Build and Perf work on linux"
+#1707819043
+git push
+#1707819056
+./Standard kjbible.txt 
+#1707819777
+git status
+#1707819783
+git pull
+#1707819792
+./Build.sh 
+#1707819800
+./perf
+#1707819807
+./Perf.sh 
+#1707819887
+hyperfine --help
+#1707819943
+e Perf.sh 
+#1707819998
+./Perf.sh 
+#1707820066
+e linux.md 
+#1707820247
+ls -lh
+#1707820275
+cd dev/bflat/src/zerolib/
+#1707820278
+ls -lh
+#1707820320
+ls -lh TPOP NoAlloc Arena Standard
+#1707820349
+file NoAlloc
+#1707820150
+e Perf.sh 
+#1707820371
+./Perf.sh 
+#1707820434
+git status
+#1707820439
+git add linux.md 
+#1707820443
+git add Perf.sh 
+#1707820453
+git commit -m "Display better table"
+#1707820455
+git push
+#1707821576
+cd dev/bflat/src/zerolib/
+#1707821600
+ls -lh Arena NoAlloc Standard Test TPOP
+#1707821830
+nvim Markov_arena.cs 
+#1707821873
+./Build.sh 
+#1707821879
+./Perf.sh 
+#1707822010
+./Arena kjbible.txt 
+#1707822177
+nvim Markov_standard.cs 
+#1707822287
+nvim Markov_noalloc.cs 
+#1707822373
+./Build.sh 
+#1707822378
+perf
+#1707822382
+./Perf.sh 
+#1707822471
+n Markov_standard.cs 
+#1707822478
+e Markov_standard.cs 
+#1707822517
+./Build.sh 
+#1707822526
+./Standard kjbible.txt 
+#1707822561
+n Markov_arena.cs 
+#1707822566
+e Markov_arena.cs 
+#1707822646
+./Build.sh 
+#1707822655
+./Perf.sh 
+#1707822693
+e TPOP.c
+#1707822714
+e Markov_noalloc.cs 
+#1707822779
+git status
+#1707822788
+git add Markov_*
+#1707822793
+git add TPOP.c 
+#1707822796
+git add linux.md 
+#1707822800
+./Build.sh 
+#1707822807
+./Perf.sh 
+#1707822841
+git push
+#1707822853
+git pull
+#1707822861
+git push
+#1707822888
+git status
+#1707822898
+git commit -m "Hashtable size"
+#1707822901
+git push
+#1707830796
+git pull
+#1707830804
+./Build.sh 
+#1707830812
+perf
+#1707830815
+./Perf.sh 
+#1707830963
+e Build.sh
+#1707831032
+./Build.sh 
+#1707831037
+dir
+#1707831041
+ll
+#1707831070
+./Build.sh 
+#1707831082
+ll
+#1707831090
+git status
+#1707831097
+git add linux.md 
+#1707831112
+git commit -m "Taking tests with same hashtables"
+#1707831115
+git push
+#1707831160
+./Perf.sh 
+#1707831237
+e .gitignore 
+#1707831254
+git status
+#1707831257
+e .gitignore 
+#1707831267
+git status
+#1707831274
+ga New Run
+#1707831282
+ls ~/scripts/
+#1707831300
+v ~/.bash_aliases 
+#1707831370
+ls ~/scripts/
+#1707831405
+ls ~/bin/
+#1707831433
+git add . ; git commit -m "new run"; git push
+#1707831439
+git status
+#1707834790
+tail kjbible.txt 
+#1707834832
+tail 2
+#1707834837
+tail --help
+#1707834856
+tail -n 2 kjbible.txt 
+#1707834866
+tail -n 4 kjbible.txt 
+#1707836237
+git pull
+#1707836244
+git status
+#1707895474
+cd dev/bflat
+#1707895481
+git status
+#1707895484
+git pull
+#1707896970
+cd src/zerolib/
+#1707896974
+./Build.sh 
+#1707896980
+perf
+#1707896984
+./Perf.sh 
+#1707897040
+git status
+#1707897046
+git commit -m "New run"
+#1707897062
+git add . ; git commit -m "New run" ; git push
+#1707914909
+cd dev/bflat/src/zerolib/
+#1707914910
+ll
+#1707987191
+cd ..
+#1707988133
+git clone git@github.com:lucabol/MyBlog.git
+#1707988145
+cd MyBlog/
+#1707988207
+npx
+#1707988221
+npx @11ty/eleventy
+#1707988302
+npm -v
+#1707988314
+npm install -g npm@latest
+#1707988337
+sudo apt install node
+#1707988521
+lsb_release 
+#1707988525
+lsb_release --help
+#1707988535
+lsb_release -a
+#1707988633
+npm install n -g
+#1707988641
+sudo npm install n -g
+#1707988655
+n stable
+#1707988659
+sudo n stable
+#1707988673
+hash -r
+#1707988676
+rehash
+#1707988685
+node -version
+#1707988694
+node --version
+#1707988704
+npx @11ty/eleventy
+#1707988720
+npm install
+#1707989357
+npx @11ty/eleventy
+#1707989370
+npx @11ty/eleventy --serve
+#1707989415
+v .eleventy.js 
+#1707989576
+ls img/
+#1707989582
+ls js/
+#1707989590
+ls css/
+#1707989600
+v css/base.css 
+#1707989616
+v css/main.css 
+#1707989634
+e css/main.css 
+#1707989658
+npx @11ty/eleventy --serve
+#1707989944
+e css/main.css 
+#1707989964
+npx @11ty/eleventy --serve
+#1707990038
+npx @11ty/eleventy --serve --port 8087
+#1707990143
+git status
+#1707990168
+git add . ; git commit -m "Trebuchet instead of system for titles"; git push
+#1707994613
+e .eleventy.js 
+#1707994796
+e css/main.css 
+#1707994907
+npx @11ty/eleventy --serve
+#1707997518
+git status
+#1707997532
+git add . ; git commit -m "Enabling typeset.js"; git push
+#1707997660
+v .eleventy.js 
+#1707997862
+ls css
+#1707997867
+ls css/hitheme/
+#1707997886
+grep -I prism **/*
+#1707997900
+grep -I prism **/* | more
+#1707997927
+cd css
+#1707997935
+grep -I prism *
+#1707997939
+cd ..
+#1707997943
+ls _includes/
+#1707997968
+v _data/metadata.json 
+#1707997974
+v _data/projects.yaml 
+#1707997981
+v _data/webmentions.js 
+#1707997990
+v _data/commentsCounts.json 
+#1707997998
+v _data/projects.yaml 
+#1707998015
+ls posts
+#1707998032
+ls posts/ls
+#1707998042
+ls posts.njk 
+#1707998046
+v posts.njk 
+#1707998081
+v code.njk 
+#1707998100
+v index.njk 
+#1707998129
+v _includes/z-menu-icons.html 
+#1707998148
+v _includes/z-navigation.html 
+#1708067987
+cd ..
+#1708067996
+cd bflat/src/zerolib/
+#1708068007
+grep partial *.cs
+#1708068015
+cd Sys
+#1708068016
+grep partial *.cs
+#1708068026
+v Console.cs 
+#1708068038
+v Environment.cs 
+#1708068060
+v Span.cs 
+#1708068102
+v PatchSystem.cs 
+#1708068922
+cd ..
+#1708068932
+cd MyBlog/
+#1708068937
+v .eleventy.js 
+#1708069099
+v posts/2004-07-29-my-quest-for-a-new-home.md
+#1708069296
+pandoc --list-highlight-styles
+#1708069302
+sudo apt install pandoc
+#1708069317
+pandoc --list-highlight-styles
+#1708069364
+pandoc -D html
+#1708069384
+pandoc -D html5
+#1708069522
+pandoc posts/2022-03-07-implementing-forth-dotnet.md -o test.html
+#1708069535
+o test.html
+#1708069539
+test.html
+#1708069546
+firefox test.html
+#1708069624
+pandoc -f markdown -t html5 posts/2022-03-07-implementing-forth-dotnet.md -o test.html
+#1708069626
+firefox test.html
+#1708069669
+pandoc -f
+#1708069687
+pandoc --list-input-formats
+#1708069707
+pandoc -f markdown_github -t html5 posts/2022-03-07-implementing-forth-dotnet.md -o test.html
+#1708069718
+pandoc -f gfm -t html5 posts/2022-03-07-implementing-forth-dotnet.md -o test.html
+#1708069721
+firefox test.html
+#1708069843
+pandoc --list-output-formats
+#1708069873
+pandoc --list-highlight-languages
+#1708069897
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html
+#1708069901
+firefox test.html
+#1708070163
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone=true
+#1708070168
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone
+#1708070178
+firefox test.html
+#1708070209
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone -v title="My Title"
+#1708070215
+firefox test.html
+#1708070274
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=pygment
+#1708070289
+pandora --list-highlight-styles
+#1708070294
+pandoc --list-highlight-styles
+#1708070306
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=tango
+#1708070313
+firefox test.html
+#1708070340
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=pygments
+#1708070344
+firefox test.html&
+#1708070365
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=espresso
+#1708070380
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=zenburn
+#1708070391
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=kate
+#1708070405
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=monochrome
+#1708070415
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=breezedark
+#1708070433
+pandoc -f gfm -t html posts/2022-03-07-implementing-forth-dotnet.md -o test.html --standalone --highlight-style=haddock
+#1708084738
+cd dev/MyBlog/
+#1708084742
+cd css
+#1708084745
+grep font
+#1708084751
+grep font *
+#1708084790
+grep ligature *
+#1708084842
+e main.css 
+#1708084875
+cd ..
+#1708084900
+npx @11ty/eleventy --serve
+#1708084950
+git status
+#1708084958
+git add css/main.css 
+#1708084971
+git commit -m "Enable ligatures"; git push
+#1708088607
+e css/main.css 
+#1708088701
+npx @11ty/eleventy --serve
+#1708088744
+git status
+#1708088748
+git add css/main.css 
+#1708088760
+git commit -m "Remove ligature from titles";git push
+#1708089315
+mkdir fonts
+#1708089410
+cp /mnt/c/Users/lucabol/Downloads/georgia.ttf fonts/
+#1708089422
+cp /mnt/c/Users/lucabol/Downloads/trebucbd.ttf fonts/
+#1708089432
+ls fonts/
+#1708089436
+ll fonts
+#1708089442
+rm fonts/*
+#1708089522
+cp /mnt/c/Users/lucabol/Downloads/trebucbd-subset.ttf fonts/
+#1708089531
+cp /mnt/c/Users/lucabol/Downloads/georgia-subset.ttf fonts/
+#1708089533
+ll fonts/
+#1708089673
+rm fonts/*
+#1708089687
+cp /mnt/c/Users/lucabol/Downloads/georgiasubset.* fonts/
+#1708089702
+e css/main.css 
+#1708089913
+cp /mnt/c/Users/lucabol/Downloads/trebucbdsubset.* fonts/
+#1708089916
+ll fonts
+#1708090120
+npx @11ty/eleventy --serve
+#1708090362
+npx @11ty/eleventy --serve --port 8083
+#1708090826
+npx @11ty/eleventy --serve --port 8084
+#1708090885
+npx @11ty/eleventy
+#1708090902
+node --trace-deprecation
+#1708090914
+npx @11ty/eleventy --trace-deprecation
+#1708090932
+npx --trace-deprecation @11ty/eleventy
+#1708090997
+e /home/lucabol/dev/MyBlog/node_modules/emitter-mixin/package.json
+#1708091037
+npx --trace-deprecation @11ty/eleventy
+#1708091048
+git status
+#1708091058
+git add fonts/*
+#1708091072
+git add css/main.css 
+#1708091088
+git commit -m "Georgia/Trebuchet backup" ; git push
+#1708091092
+git status
+#1708094995
+e css/main.css 
+#1708095450
+ls fonts/
+#1708095463
+npx @11ty/eleventy --serve
+#1708095725
+e css/main.css 
+#1708095799
+npx @11ty/eleventy --serve
+#1708095856
+ls _site
+#1708095874
+e .eleventy.js 
+#1708095898
+npx @11ty/eleventy --serve
+#1708095948
+ls _site/
+#1708095952
+ls _site/fonts
+#1708095968
+npx @11ty/eleventy
+#1708095984
+npx @11ty/eleventy --serve --port 8087
+#1708096182
+ls _site/
+#1708096202
+e css/main.css 
+#1708096231
+npx @11ty/eleventy --serve --port 8089
+#1708096358
+cd dev/MyBlog/
+#1708096583
+git status
+#1708096590
+rm test.html 
+#1708096602
+git add .;git commit -m "Font stack";git push
+#1708096369
+e css/main.css 
+#1708167804
+cd dev/MyBlog/
+#1708167815
+ls fonts/
+#1708167837
+cp /mnt/c/Users/lucabol/Downloads/georgiasubset.* fonts/
+#1708167842
+git status
+#1708167846
+git add .
+#1708167862
+git commit -m "Add liga to georgia"
+#1708167864
+git push
+#1708263988
+cd dev/MyBlog/
+#1708263994
+e css/main.css 
+#1708264070
+npx @11ty/eleventy --serve --port 8087
+#1708264188
+git add .;git commit -m "Add text-wrap:balance";git push
+#1708278228
+cd ..
+#1708278232
+cd divs/
+#1708278242
+run build `
+#1708278247
+run build 1
+#1708278253
+run table
+#1708278419
+run chart
+#1708292731
+cd dev
+#1708292744
+mkdir blogtest
+#1708292746
+cd blogtest/
+#1708292773
+cp ../MyBlog/posts/2022-03-07-implementing-forth-dotnet.md ./
+#1708292785
+sudo apt install asciidoctor
+#1708292864
+asciidoctor --help
+#1708292883
+mv 2022-03-07-implementing-forth-dotnet.md test.md
+#1708292889
+asciidoctor test.md 
+#1708292903
+firefox test.html 
+#1708292943
+asciidoctor --help
+#1708293027
+asciidoctor test.md -ev
+#1708293211
+ruby -v
+#1708293229
+gem install kramdown-asciidoc
+#1708293240
+sudo gem install kramdown-asciidoc
+#1708293251
+kramdoc test.md
+#1708293264
+asciidoctor test.adoc
+#1708293274
+firefox test.html &
+#1708293419
+v test.html 
+#1708293656
+v test.adoc 
+#1708293711
+firefox test.html &
+#1708293773
+:q
+#1708294095
+gem install pygments.rb
+#1708294102
+sudo gem install pygments.rb
+#1708294137
+$(dirname $(gem which pygments.rb))/../vendor/pygments-main/pygmentize -L styles
+#1708294229
+ls /var/lib/gems/3.0.0/gems/pygments.rb-2.4.1/lib/../vendor/pygments-main/bin/pygmentize  -L styles
+#1708294240
+/var/lib/gems/3.0.0/gems/pygments.rb-2.4.1/lib/../vendor/pygments-main/bin/pygmentize  -L styles
+#1708294327
+asciidoctor --help
+#1708294363
+asciidoctor -a source-highlighter=pygments test.adoc
+#1708294385
+firefox test.html &
+#1708294456
+grep -i highl ../MyBlog/*
+#1708294501
+grep -i highl ../MyBlog/**
+#1708294510
+grep -i highl ../MyBlog/css/*
+#1708294679
+/var/lib/gems/3.0.0/gems/pygments.rb-2.4.1/lib/../vendor/pygments-main/bin/pygmentize  -L styles
+#1708294685
+/var/lib/gems/3.0.0/gems/pygments.rb-2.4.1/lib/../vendor/pygments-main/bin/pygmentize  -L styles | more
+#1708294793
+asciidoctor -a source-highlighter=pygments test.adoc -a pygment-style=solarized-light
+#1708294828
+asciidoctor -a source-highlighter=pygments test.adoc -a pygments-style=solarized-light
+#1708295156
+e pygments.sh
+#1708295201
+asciidoctor --help
+#1708295259
+chmod u+x pygments.sh 
+#1708295262
+./pygments.sh 
+#1708295268
+rm test.html 
+#1708295276
+ll
+#1708295329
+ll ../MyBlog/_site/posts/2022-03-07-implementing-forth-dotnet/
+#1708295418
+asciidoctor -a source-highlighter=highlight.js test.adoc -o high.html
+#1708295740
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=ally-dark test.adoc -o high.html
+#1708295826
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=ascetic test.adoc -o high.html
+#1708295856
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=ally-dark-min test.adoc -o high.html
+#1708295892
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=agate test.adoc -o high.html
+#1708295912
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=ascetic-min test.adoc -o high.html
+#1708295925
+asciidoctor -a source-highlighter=highlight.js -a highlightjs-theme=agate test.adoc -o high.html
+#1708296000
+e highlights.sh
+#1708296018
+chmod u+x highlights.sh 
+#1708296020
+./highlights.sh 
+#1708296235
+sudo apt-get install ruby-rouge
+#1708296296
+asciidoctor -a source-highlighter=rouge -a rouge-style=monokai test.adoc -o rouge.html
+#1708296372
+asciidoctor -a source-highlighter=rouge -a rouge-style=bw test.adoc -o rouge.html
+#1708296405
+asciidoctor -a source-highlighter=rouge -a rouge-style=base16 test.adoc -o rouge.html
+#1708296414
+asciidoctor -a source-highlighter=rouge -a rouge-style=monokai test.adoc -o rouge.html
+#1708296426
+e rouge.sh
+#1708296440
+chmod u+x rouge.sh
+#1708296443
+./rouge.sh 
+#1708297655
+cat test.md | clip.exe
+#1708298945
+cd ..\
+#1708298950
+cd ..
+#1708298955
+git clone https://github.com/mity/md4c.git
+#1708298960
+cd md4c/
+#1708299285
+pandoc --list-highlight-languages
+#1708299389
+pandoc --list-highlight-styles
+#1708299442
+cd ../blogtest/
+#1708299465
+pandoc --highlight-style=espresso test.md -o pandoc.html
+#1708299479
+firefox pandoc.html &
+#1708299553
+pandoc --highlight-style=pygments test.md -o pandoc.html
+#1708299569
+pandoc --help
+#1708299599
+pandoc --highlight-style=pygments -s test.md -o pandoc.html
+#1708299624
+pandoc --highlight-style=pygments -s -f markdown test.md -o pandoc.html
+#1708299634
+pandoc --highlight-style=pygments -s test.md -o pandoc.html
+#1708299645
+v test.md
+#1708299752
+pandoc --highlight-style=pygments --from=markdown-github -s test.md -o pandoc.html
+#1708299763
+pandoc --highlight-style=pygments --from=markdown_github -s test.md -o pandoc.html
+#1708299773
+pandoc --highlight-style=pygments --from=gfm -s test.md -o pandoc.html
+#1708299945
+v test.md 
+#1708299999
+pandoc --highlight-style=pygments --from=gfm+yaml -s test.md -o pandoc.html
+#1708300013
+pandoc --highlight-style=pygments --from=gfm+yaml_metadata_block -s test.md -o pandoc.html
+#1708300021
+pandoc --highlight-style=pygments --from=markdown+yaml_metadata_block -s test.md -o pandoc.html
+#1708300167
+pandoc --highlight-style=pygments --from=commonmark_x -s test.md -o pandoc.html
+#1708300172
+pandoc --highlight-style=pygments --from=commonmark -s test.md -o pandoc.html
+#1708300190
+v test.md 
+#1708300230
+pandoc --highlight-style=pygments --from=markdown_github -s test.md -o pandoc.html
+#1708300479
+pandoc --list-input-formats
+#1708300522
+pandoc --highlight-style=pygments --from=markdown+yaml_metadata_block -s test.md -o pandoc.html
+#1708300569
+pandoc --highlight-style=pygments --from=markdown_mmd+yaml_metadata_block -s test.md -o pandoc.html
+#1708300583
+pandoc --highlight-style=pygments --from=markdown_strict+yaml_metadata_block -s test.md -o pandoc.html
+#1708300599
+pandoc --highlight-style=pygments --from=markdown_phpextra+yaml_metadata_block -s test.md -o pandoc.html
+#1708300624
+pandoc --highlight-style=pygments --from=gfm+yaml_metadata_block -s test.md -o pandoc.html
+#1708300645
+pandoc --highlight-style=pygments --from=markdown_github -s test.md -o pandoc.html
+#1708300671
+pandoc --highlight-style=pygments --from=markdown_github+yaml_metadata_block -s test.md -o pandoc.html
+#1708300735
+e parseyaml.py
+#1708300774
+cp test.md test1.md
+#1708300784
+python parseyaml.py test.md
+#1708300790
+python3 parseyaml.py test.md
+#1708300805
+pip install pandocfilters
+#1708300808
+python3 parseyaml.py test.md
+#1708300819
+python3 parseyaml.py < test.md
+#1708300872
+e test1.md
+#1708300919
+pandoc --highlight-style=pygments --from=markdown+yaml_metadata_block -s test.md -o pandoc.html
+#1708300944
+pandoc --highlight-style=pygments --from=gfm -s test.md -o pandoc.html
+#1708300959
+pandoc --highlight-style=pygments --from=markdown_github -s test.md -o pandoc.html
+#1708300989
+pandoc --highlight-style=pygments --from=commonmark+yaml_metadata_block -s test.md -o pandoc.html
+#1708300997
+pandoc --highlight-style=pygments --from=commonmark -s test.md -o pandoc.html
+#1708301022
+pandoc --highlight-style=pygments --from=commonmark -s test1.md -o pandoc.html
+#1708301033
+pandoc --highlight-style=pygments --from=gfm -s test1.md -o pandoc.html
+#1708301057
+pandoc --highlight-style=pygments --from=markdown_github -s test.md -o pandoc.html
+#1708301064
+pandoc --highlight-style=pygments --from=markdown_github -s test1.md -o pandoc.html
+#1708301077
+pandoc --highlight-style=pygments --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301288
+ll *.html
+#1708301339
+cp pandoc.html /mnt/c/Users/lucabol/Downloads/
+#1708301535
+pandoc --list-highlight-styles
+#1708301547
+pandoc --highlight-style=tango --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301592
+pandoc --highlight-style=espresso --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301608
+pandoc --highlight-style=zenburn --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301620
+pandoc --highlight-style=kate --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301635
+pandoc --highlight-style=monochrome --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301652
+pandoc --highlight-style=breezedark --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301666
+pandoc --highlight-style=haddock --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301685
+pandoc --highlight-style=pygments --from=markdown+yaml_metadata_block -s test1.md -o pandoc.html
+#1708301705
+e pandoc.sh
+#1708301725
+chmod u+x pandoc.sh
+#1708302233
+cd ..
+#1708302246
+cd 
+#1708302248
+cd MyBlog/
+#1708302252
+cd css
+#1708302269
+v main.css 
+#1708302336
+v base.css 
+#1708302349
+ls hitheme/
+#1708302409
+cd ..
+#1708302422
+ls _site/css
+#1708302455
+grep language css/**
+#1708302461
+grep language css/*
+#1708302475
+grep language _site/css/*
+#1708302478
+grep language _site/
+#1708302483
+grep language _site/*
+#1708302516
+ls index.njk 
+#1708302519
+v index.njk 
+#1708302553
+v _includes/home.njk 
+#1708302560
+v _includes/base.njk 
+#1708302709
+v _includes/home.njk 
+#1708302721
+v index.njk 
+#1708302751
+v css/hitheme/a11y-dark.css 
+#1708302911
+cd ..
+#1708302927
+git clone https://github.com/PrismJS/prism.git
+#1708302946
+cd MyBlog/
+#1708302960
+cp ../prism/themes css/
+#1708302967
+cp -r ../prism/themes css/
+#1708302982
+ls css/themes/
+#1708303023
+e _includes/base.njk 
+#1708303129
+history | grep npx
+#1708314768
+pwd
+#1708314772
+cd dev/MyBlog/
+#1708314781
+e _includes/base.njk 
+#1708315165
+ls css/hitheme/
+#1708303142
+npx @11ty/eleventy --serve --port 8087
+#1708315403
+npx @11ty/eleventy --serve --port 8087 &
+#1708315428
+ls css/hitheme/
+#1708315506
+npx @11ty/eleventy --serve --port 8087 --quiet  &
+#1708315517
+ls css/hitheme/
+#1708316329
+git status
+#1708316350
+git add css/themes/*
+#1708316355
+git add .
+#1708316358
+git status
+#1708316377
+git commit -m "change theme for syntax highlight"
+#1708316381
+git push
+#1708316539
+npm audit fix
+#1708316845
+git status
+#1708316864
+history | grep npx
+#1708316873
+npx @11ty/eleventy --serve --port 8087
+#1708316919
+git add .;git commit -m "fix security?";git submit
+#1708316926
+git add .;git commit -m "fix security?";git push
+#1708316654
+v .eleventy.js 
+#1708317478
+grep toc css/*
+#1708317490
+e css/main.css 
+#1708317704
+npx @11ty/eleventy --serve --port 8087&
+#1708318051
+cd dev/MyBlog/
+#1708318056
+e css/main.css 
+#1708318185
+history | grep git
+#1708318206
+git add .;git commit -m "Thinner border for contents";git push
+#1708318211
+git status
+#1708326440
+cd dev/MyBlog/
+#1708326662
+ls js
+#1708326733
+v Readme.md 
+#1708326744
+ls _data
+#1708326758
+history | grep npx
+#1708328422
+cd posts
+#1708328432
+v 2023-10-26-i-am-speaking-at-gotecc-world.md 
+#1708328447
+grep 'functional programming' *.md
+#1708328464
+grep '- functional programming' *.md
+#1708328475
+grep "- functional programming" *.md
+#1708328487
+grep '\- functional programming' *.md
+#1708328529
+cd dev/MyBlog/posts/
+#1708328542
+e 2012-03-06-a-simple-scheme-to-implement-design-by-contract-in-c.md
+#1708328611
+e 2012-03-23-writing-functional-code-in-c-records.md
+#1708328808
+history | grep npx
+#1708328818
+npx @11ty/eleventy --serve
+#1708328843
+cd ..
+#1708328980
+cd ..
+#1708328982
+git status
+#1708329001
+git add .;git commit -m "shorten functional programming";git push
+#1708328850
+npx @11ty/eleventy --serve
+#1708329201
+cd posts
+#1708329238
+cp 2023-10-26-i-am-speaking-at-gotecc-world.md 2024-02-21-best-programming-languages.md
+#1708329245
+e 2024-02-21-best-programming-languages.md 
+#1708330522
+cd ..
+#1708330557
+ls posts
+#1708330586
+e posts/2024-02-21-best-programming-languages.md 
+#1708330526
+npx @11ty/eleventy --serve
+#1708330661
+grep -i Books posts/*.md
+#1708330685
+grep -i '\- Books' posts/*.md
+#1708330691
+e posts/2024-02-21-best-programming-languages.md 
+#1708331858
+git add .;git commit -m "Prog lang";git submit
+#1708331865
+git add .;git commit -m "Prog lang";git push
+#1708331876
+git status
+#1708331905
+ls posts
+#1708332047
+git add posts/2024-02-21-best-programming-languages.md 
+#1708332050
+git status
+#1708330737
+npx @11ty/eleventy --serve --port 8087
+#1708354880
+cd dev/MyBlog/
+#1708354883
+cd css
+#1708354887
+grep measure *
+#1708604796
+cd dev/MyBlog/
+#1708604808
+grep measure css/*
+#1708604831
+e css/main.css 
+#1708606328
+cd ..
+#1708606344
+cd bflat
+#1708606350
+cd src/zerolib/
+#1708606355
+cd ..
+#1708611017
+cd dev
+#1708611022
+cd md4c/
+#1708611032
+v README.md 
+#1708611052
+cd scripts/
+#1708611062
+cd ..
+#1708611987
+cd MyBlog/
+#1708611996
+grep hype css/*
+#1708612003
+grep hyp css/*
+#1708612015
+e css/main.css 
+#1708612266
+history | grep npx
+#1708612275
+npx @11ty/eleventy --serve --port 8087
+#1708612441
+npx @11ty/eleventy --serve --port 8087 &
+#1708612461
+e css/main.css 
+#1708612497
+npx @11ty/eleventy --serve --port 8087 &
+#1708612698
+e css/main.css 
+#1708612707
+npx @11ty/eleventy --serve --port 8087 &
+#1708614054
+cd dev/MyBlog/
+#1708614081
+e css/main.css 
+#1708614355
+git status
+#1708614364
+history | grep git
+#1708614384
+git add .;git commit -m "auto hypens on html";git submit
+#1708614398
+e css/main.css 
+#1708614428
+git status
+#1708614438
+git add .;git commit -m "remove hypens on html";git push
+#1708614791
+cd ..
+#1708614797
+cd md4c/
+#1708614868
+mkdir build
+#1708614871
+cd build/
+#1708614875
+cmake ..
+#1708614878
+make
+#1708614964
+ll
+#1708614972
+ls md2html/
+#1708614978
+ll md2html/
+#1708614986
+sudo make install
+#1708615005
+md2html --help
+#1708615068
+sudo make uninstall
+#1708615078
+v Makefile 
+#1708615103
+sudo make clean
+#1708615109
+sudo make clean-install
+#1708615116
+grep clean Makefile
+#1708615136
+grep remove Makefile 
+#1708615151
+sudo apt install md4c
+#1708615156
+cd ..
+#1708615160
+rm -rf build/
+#1708615176
+mkdir build
+#1708615178
+cd build
+#1708615377
+cmake -DBUILD_SHARED_LIBS=OFF -DMD_FLAG_TABLES -DMD_FLAG_COLLAPSEWHITESPACE -DMD_FLAG_STRIKETHROUGH -DMD_FLAG_PERMISSIVEWWWAUTOLINKS ..
+#1708615414
+cmake -DBUILD_SHARED_LIBS=OFF ..
+#1708615434
+make -DMD_FLAG_TABLES -DMD_FLAG_COLLAPSEWHITESPACE -DMD_FLAG_STRIKETHROUGH -DMD_FLAG_PERMISSIVEWWWAUTOLINKS
+#1708615495
+make
+#1708615514
+sudo make install
+#1708615521
+md2html
+#1708615527
+md2html --help
+#1708615609
+mdig --help
+#1708615614
+cd ..
+#1708615634
+cd blogtest/
+#1708615650
+md2html test.md
+#1708615661
+md2html test.md | more
+#1708615723
+md2html --help
+#1708615783
+md2html test.md | bat
+#1708615788
+md2html test.md | v
+#1708615875
+cat test.md 
+#1708615945
+cat test.md | sed '1 { /^---/ { :a N; /\n---/! ba; d} }' | md2html 
+#1708615966
+cat test.md | sed '1 { /^---/ { :a N; /\n---/! ba; d} }' | md2html | v
+#1708616035
+e removeYAML.sh
+#1708616066
+chmod u+x removeYAML.sh 
+#1708616075
+./removeYAML.sh test.md
+#1708616082
+./removeYAML.sh test.md | more
+#1708616123
+man md2html
+#1708616167
+v pygments.sh 
+#1708616196
+e rmd2html.sh
+#1708616253
+md2html --help
+#1708616297
+chmod u+x rmd2html.sh 
+#1708616301
+./rmd2html.sh 
+#1708616313
+firefox md2html.html 
+#1708616344
+firefox md2html.html &
+#1708616849
+sudo apt install yq
+#1708616882
+snap install yq
+#1708616887
+sudo snap install yq
+#1708616894
+cd ..
+#1708616915
+yq
+#1708617108
+yq -f test.md
+#1708617123
+yq -f ".title" test.md
+#1708617136
+yq -f "" test.md
+#1708617156
+yq -f "title" test.md
+#1708617233
+yq --front-matter "title" test.md
+#1708617241
+yq --front-matter=process "title" test.md
+#1708617280
+yq --front-matter=process ".title" test.md
+#1708617286
+yq --front-matter=process ".title" test.md | more
+#1708617326
+yq --front-matter=extract ".title" test.md | more
+#1708617355
+yq --front-matter=extract "# .title" test.md | more
+#1708617367
+yq --front-matter=extract '# .title' test.md | more
+#1708617375
+yq --front-matter=extract '.title' test.md | more
+#1708617463
+yq -f test.md
+#1708617477
+yq -f e test.md
+#1708617558
+yq -f '.[]' test.md
+#1708617566
+yq -f '.[].tags' test.md
+#1708617570
+yq -f '.tags' test.md
+#1708617632
+yq -f '.[] | select(.tags)' test.md
+#1708617640
+yq -f ".[] | select(.tags)" test.md
+#1708617661
+yq -f ".[] | .tags" test.md
+#1708617668
+yq -f ".tags" test.md
+#1708617755
+yq -f e ".tags" test.md
+#1708617780
+yq -f e ".tags | flatten" test.md 
+#1708617861
+yq -f e ".title" test.md 
+#1708617877
+yq -f e "# .title" test.md 
+#1708617908
+yq -f e ".title | '# ' + key" test.md 
+#1708617926
+yq -f e '.title | "# " + key' test.md 
+#1708617936
+yq -f e '.title | "# " + value' test.md 
+#1708617957
+yq -f e '"# " + .title' test.md 
+#1708618006
+yq -f e '"# " + .title + "\n" + "bob"' test.md 
+#1708618330
+sed "1i$(yq -f e '"# " + .title + "\n" + "bob"' test.md)" test.md
+#1708618417
+yq -f e '"# " + .title + "\n" + "bob"' test.md 
+#1708618432
+yq -f e '"# " + .title + "\n"' test.md 
+#1708618448
+yq -f e '"# " + .title + "\n"' test.md | cat - test.md
+#1708618460
+yq -f e '"# " + .title + "\n"' test.md | cat - test.md | more
+#1708618525
+yq -f e '"# " + .title + "\n"' test.md | cat - $(./removeYAML.sh test.md)
+#1708618614
+yq -f e '"# " + .title + "\n"' test.md | cat $(./removeYAML.sh test.md)
+#1708618627
+yq -f e '"# " + .title + "\n"' test.md | cat - $(./removeYAML.sh test.md)
+#1708618632
+cat --help
+#1708618852
+echo $(yq -f e '"# " + .title + "\n"' test.md)  $(./removeYAML.sh test.md)
+#1708618898
+echo "$(yq -f e '"# " + .title + "\n"' test.md)$(./removeYAML.sh test.md)"
+#1708618904
+echo "$(yq -f e '"# " + .title + "\n"' test.md)$(./removeYAML.sh test.md)" | more
+#1708618941
+echo "$(yq -f e '"# " + .title' test.md)\n\n $(./removeYAML.sh test.md)" | more
+#1708618984
+echo -e "$(yq -f e '"# " + .title' test.md)\n\n$(./removeYAML.sh test.md)" | more
+#1708618994
+echo -e "$(yq -f e '"# " + .title' test.md)\n$(./removeYAML.sh test.md)" | more
+#1708619017
+echo -e "$(yq -f e '"# " + .title' test.md)\n$(./removeYAML.sh test.md)" | md2html -f --github
+#1708619023
+echo -e "$(yq -f e '"# " + .title' test.md)\n$(./removeYAML.sh test.md)" | md2html -f --github | more
+#1708619085
+md2html --help
+#1708619173
+echo -e "$(yq -f e '"# " + .title' test.md)\n$(./removeYAML.sh test.md)" | md2html -f --github --html-title=$(yq -f e '.title' test.md) | more
+#1708619204
+echo -e "$(yq -f e '"# " + .title' test.md)\n$(./removeYAML.sh test.md)" | md2html -f --github --html-title="$(yq -f e '.title' test.md)" | more
+#1708619303
+./rmd2html.sh 
+#1708619306
+ll
+#1708620251
+md2html 
+#1708620257
+md2html --help
+#1708677086
+cd md4c/
+#1708677093
+cd src/
+#1708677110
+e CMakeLists.txt 
+#1708677157
+e *.in
+#1708677275
+ls *.h
+#1708677279
+ls *.c
+#1708677286
+v entity.*
+#1708677310
+v entity.h entity.c
+#1708677413
+v md4c.h
+#1708677640
+v md4c-html.h
+#1708677676
+v md4c-html.c
+#1708677803
+cd ..
+#1708677811
+cd md2html/
+#1708677819
+v cmdline.h
+#1708679860
+ls *.html
+#1708679907
+cp *.html ../windev/
+#1708954924
+cd ..
+#1708954927
+cd MyBlog/
+#1708954938
+history | grep npx
+#1708954954
+e serve.sh
+#1708954969
+chmod u+x serve.sh 
+#1708954975
+e css/main.css 
+#1708955812
+cd ../MyBlog/
+#1708955815
+e css/main.css 
+#1708956233
+git diff
+#1708956237
+git add .
+#1708956239
+git status
+#1708956257
+git commit -m "Change background color";git push
+#1708955003
+./serve.sh 
+#1708956313
+e css/main.css 
+#1708957808
+git status
+#1709198825
+cd dev/MyBlog/
+#1709198828
+git status
+#1709198837
+git checkout -b simple
+#1709198864
+e _includes/post.njk 
+#1709199103
+./serve.sh 
+#1709199410
+cd dev/MyBlog/
+#1709225492
+ls *.njk
+#1709225498
+v code.njk 
+#1709225506
+v index.njk 
+#1709225527
+v _includes/home.njk 
+#1709199416
+./serve.sh 
+#1709225641
+ls *.njk
+#1709225651
+v index.njk 
+#1709225674
+v _includes/home.njk 
+#1709225844
+v posts.njk 
+#1709225956
+v *.njk
+#1709225976
+v index.njk 
+#1709232625
+git status
+#1709232628
+git add .
+#1709232631
+git status
+#1709232643
+git commit -m "Simplification 1";git push
+#1709232665
+git push --set-upstream origin simple
+#1709233463
+git add .;git commit -m "Simplification 1";git push
+#1709297112
+ls img/
+#1709297166
+ls _site/posts/2022-02-22-down-by-the-seaside/
+#1709297188
+v img/avatar.svg 
+#1709199789
+e css/main.css 
+#1709297364
+ls gith*
+#1709297371
+ls img/gith*
+#1709297375
+cd img/
+#1709297382
+cd ..
+#1709297383
+ll
+#1709297396
+cd img/
+#1709297575
+v serve.sh 
+#1709297586
+npx @11ty/eleventy
+#1709297616
+v img/gavatar200.svg 
+#1709297664
+e img/gavatar200.svg 
+#1709298832
+git add .;git commit -m "Simplification 1";git push
+#1709300153
+e _includes/*.njk
+#1709300313
+git add .;git commit -m "Simplification 1";git push
+#1709297747
+./serve.sh 
+#1709297402
+e github.svg
+#1709549552
+cd dev/MyBlog/
+#1709549562
+e css/base.css 
+#1709549871
+./serve.sh 
+#1709550059
+git status
+#1709550065
+git add .;git commit -m "Simplification 1";git push
+#1709550078
+git branch --help
+#1709550090
+git branch --list
+#1709550115
+git checkout master
+#1709550136
+git checkout -b --help
+#1709550141
+git checkout --help
+#1709550195
+git checkout -b March2024
+#1709550202
+git push
+#1709550213
+git push --set-upstream origin March2024
+#1709550228
+git checkout simple
+#1709550255
+git checkout master
+#1709550268
+git pull origin master
+#1709550275
+git merge simple
+#1709550283
+git push origin master
+#1709550495
+e posts/2022-03-09-horchata.md 
+#1709550559
+git add .;git commit -m "Horchata remove code";git push
+#1709550628
+git branch -d simple
+#1709550636
+git push origin --delete simple
+#1709554347
+e css/base.css 
+#1709554373
+git add .;git commit -m "Small caps";git push
+#1709554378
+cd css
+#1709554386
+rm main.css 
+#1709554392
+rm -rf hitheme
+#1709554396
+rm -rf themes/
+#1709554399
+cd ..
+#1709554413
+rm testwebmention.njk 
+#1709554420
+e .eleventy.js 
+#1709554479
+./serve.sh 
+#1709554505
+e .eleventy.js 
+#1709554812
+grep -I mention *
+#1709554819
+v netlify.toml 
+#1709554868
+v .eleventy.js 
+#1709554895
+v serve.sh 
+#1709554907
+npx @11ty/eleventy --help
+#1709554925
+npx @11ty/eleventy
+#1709554937
+ls js
+#1709554949
+cd js
+#1709554954
+grep -I mention
+#1709554959
+grep -I mention *
+#1709554969
+v main.js 
+#1709554978
+v dom.js 
+#1709554983
+v javascript.11ty.js 
+#1709554995
+v main.js 
+#1709555002
+v theme.js 
+#1709555005
+cd ..
+#1709555091
+e .eleventy.js 
+#1709555197
+npx @11ty/eleventy
+#1709555213
+grep webmentions **/*
+#1709555244
+grep --help | grep error
+#1709555250
+grep webmentions **/* -q
+#1709555289
+grep -s webmentions **/*
+#1709555333
+cd _data/
+#1709555344
+rm webmentions.js 
+#1709555346
+cd ..
+#1709555350
+npx @11ty/eleventy
+#1709555365
+./serve.sh 
+#1709555412
+e _includes/post.njk 
+#1709555472
+./serve.sh 
+#1709555556
+npm install @jamshop/eleventy-plugin-typography
+#1709555571
+./serve.sh 
+#1709555601
+npx @11ty/eleventy
+#1709555683
+./serve.sh 
+#1709556268
+e _includes/post.njk 
+#1709556277
+./serve.sh 
+#1709556415
+e .eleventy.js 
+#1709556426
+./serve.sh 
+#1709556454
+git status
+#1709556470
+history | grep git
+#1709556488
+git add .;git commit -m "Remove some unused code";git push
+#1709628441
+cp posts/2024-02-21-best-programming-languages.md posts/2024-02-21-how-I-changed-my-blog.md 
+#1709628454
+e posts/2024-02-21-how-I-changed-my-blog.md 
+#1709630300
+./serve.sh 
+#1709630323
+v tag.njk 
+#1709630339
+./serve.sh 
+#1709631398
+cd dev/MyBlog/
+#1709631507
+mv posts/2024-02-21-how-I-changed-my-blog.md posts/2024-03-05-how-I-changed-my-blog.md 
+#1709631531
+e posts/2024-03-05-how-I-changed-my-blog.md 
+#1709632541
+git status
+#1709632557
+git add .;git commit -m "How I changed My Blog";git push
+#1709713255
+cd divs/
+#1709713259
+run clean
+#1709713264
+run table
+#1709713267
+run build
+#1709713271
+run build 1
+#1709713275
+run table
+#1709736925
+cd ..
+#1709737093
+cd md4c/
+#1709737099
+cd src/
+#1709737104
+v entity.c
+#1709737228
+v entity.h
+#1709737266
+v md4c.pc.in 
+#1709737283
+v md4c.h
+#1709737644
+v md4c.c
+#1709737825
+v md4c-html.h
+#1709737864
+v md4c-html.c
+#1710338687
+conda
+#1710338737
+sudo apt install miniconda
+#1710338797
+mkdir -p ~/miniconda3
+#1710338825
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+#1710338836
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+#1710338853
+rm -rf ~/miniconda3/miniconda.sh
+#1710338862
+conda init bash
+#1710338889
+~/miniconda3/bin/conda init bash
+#1710338911
+conda
+#1710338933
+conda create --name=machinelearning python=3.7
+#1710338963
+conda activate machinelearning
+#1710338987
+conda install numpy=1.19.5
+#1710338997
+conda install matplotlib=3.2.2
+#1710339030
+conda install seaborn=0.11.1
+#1710339051
+conda install scikit-learn=0.24.1
+#1710339061
+conda install keras=2.3.1
+#1710339079
+conda install jupyter=1.0.0
+#1710339122
+cd dev
+#1710339163
+cp /mnt/c/Users/lucabol/Downloads/pplearn-code.zip ./
+#1710339168
+unzip pplearn-code.zip 
+#1710339183
+mv code pplearn
+#1710339188
+rm pplearn-code.zip 
+#1710339190
+cd pplearn/
+#1710339195
+cd 02_first/
+#1710339254
+v pizza.txt 
+#1710339272
+python3 plot.py 
+#1710339351
+python3 linear_regression.py 
+#1710339450
+MESA_LOADER_DRIVER_OVERRIDE=i965 python3 linear_regression.py 
+#1710339465
+sudo apt-get install libgl1-mesa-dri
+#1710339477
+python3 linear_regression.py 
+#1710339561
+DISPLAY=:0 LIBGL_DEBUG=verbose python3 linear_regression.py 
+#1710339726
+strings /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so: /home/lucabol/miniconda3/envs/machinelearning/lib/python3.7/site-packages/matplotlib/../../../libstdc++.so.6 | grep GLIBCXX_3.4.30
+#1710339759
+conda install libgcc
+#1710339771
+python3 linear_regression.py 
+#1710339798
+sudo find / -wholename "*conda*/**/libstdc++.so*"
+#1710339816
+sudo find /home -wholename "*conda*/**/libstdc++.so*"
+#1710339900
+mv ~/miniconda3/lib/libstdc++.so.6 ~/libstdc++.so.6
+#1710339909
+python3 linear_regression.py 
+#1710339957
+rm /home/lucabol/miniconda3/envs/machinelearning/lib/libstdc++*
+#1710339960
+python3 linear_regression.py 
+#1710339988
+rm ~/libstdc++.so.6 
+#1710340008
+python3 linear_regression_with_bias.py 
+#1710340078
+cd dev/pplearn/
+#1710340082
+cd 02_first/
+#1710340091
+e linear_regression_with_bias.py 
+#1710340231
+lvim +LvimUpdate +q
+#1710340242
+e linear_regression_with_bias.py 
+#1710341018
+python3 linear_regression_with_bias.py 
+#1710341029
+conda activate
+#1710341033
+python3 linear_regression_with_bias.py 
+#1710341036
+conda
+#1710341042
+conda list
+#1710341044
+conda
+#1710341062
+conda activate --help
+#1710341083
+conda info
+#1710341117
+conda doctor
+#1710341138
+python3 linear_regression_with_bias.py 
+#1710341152
+conda activate mach
+#1710341159
+conda activate machinelearning
+#1710341164
+python3 linear_regression_with_bias.py 
+#1710341280
+v solution/README.txt 
+#1710341321
+cd ..
+#1710341326
+cd 03_gradient/
+#1710341338
+cd ../03_gradient/
+#1710341367
+v plot_loss.py 
+#1710341400
+python3 gradient_descent_without_bias.py 
+#1710341465
+python3 plot_loss.py 
+#1710341493
+python3 plot_loss_with_path.py &
+#1710341508
+python3 plot_loss_with_slices.py 
+#1710341544
+python3 gradient_descent_final.py 
+#1710341944
+e gradient_descent_final.py 
+#1710342032
+python3 gradient_descent_final.py 
+#1710342095
+open solution/large_lr.jpg 
+#1710342119
+cd solution/
+#1710342131
+python3 loss_increasing.py 
+#1710403413
+cd ../../04_hyperspace/
+#1710403420
+v pizza_2_vars.txt 
+#1710403453
+python3 plot_plane.py 
+#1710403535
+v pizza_3_vars.txt 
+#1710404226
+v multiple_regression_without_bias.py 
+#1710404687
+python multiple_regression_without_bias.py 
+#1710404701
+python3 multiple_regression_without_bias.py 
+#1710404709
+python multiple_regression_without_bias.py 
+#1710404721
+python multiple_regression_without_bias.py | more
+#1710404807
+v multiple_regression_final.py 
+#1710404856
+python multiple_regression_final.py 
+#1710405050
+ls 
+#1710405052
+cd solution/
+#1710405056
+v README.txt 
+#1710405077
+cd ..
+#1710405091
+v readme.txt 
+#1710405103
+v data/life-expectancy/readme.txt 
+#1710414462
+ls data
+#1710414479
+cd ..
+#1710414483
+mkdir ppexamples
+#1710414486
+cd ppexamples/
+#1710414505
+cp ../pplearn/data/life-expectancy/life-expectancy-without-country-names.txt ./
+#1710414528
+cp ../pplearn/04_hyperspace/multiple_regression_final.py ./
+#1710414532
+e multiple_regression_final.py 
+#1710414634
+python multiple_regression_final.py 
+#1710414803
+cd ../../ppexamples/
+#1710414808
+v life-expectancy-without-country-names.txt 
+#1710414859
+cd ../pplearn/04_hyperspace/solution/
+#1710414868
+python life_expectancy_experiment.py 
+#1710415069
+v README.txt 
+#1710415233
+cd ..
+#1710415238
+cd pplearn/05_discerning/
+#1710415247
+v police.txt 
+#1710415324
+python plot_regression.py 
+#1710415344
+python plot_classification_2d.py 
+#1710415520
+python plot_sigmoid.py 
+#1710415534
+v plot_sigmoid.py 
+#1710415577
+v plot_classification_2d.py 
+#1710431689
+v classifier.py 
+#1710431866
+python plot_losses.py 
+#1710432104
+python plot_classification_3d.py 
+#1710432136
+python plot_classification_2d.py 
+#1710432253
+python plot_categorical_variable.py 
+#1710432305
+python classifier.py 
+#1710432455
+cd solution/
+#1710432460
+python classifier.py 
+#1710432472
+v police.txt 
+#1710432500
+v README.txt 
+#1710432596
+cd ../../06_real/
+#1710432783
+ls ../data/
+#1710432787
+ls ../data/mnist/
+#1710433324
+v mnist.py 
+#1710434728
+cd dev
+#1710434787
+git clone https://github.com/beancount/beancount
+#1710434798
+cd beancount/
+#1710434814
+pip3
+#1710434869
+sudo -H python3 -m pip install .
+#1710434962
+sudo -H python3 -m pip install git+https://github.com/beancount/beancount#egg=beancount
+#1710434988
+sudo apt-get install python3-dateutil python3-bottle python3-ply python3-lxml python3-bs4 …
+#1710434998
+sudo apt-get install python3-dateutil python3-bottle python3-ply python3-lxml python3-bs4
+#1710435025
+sudo python3 setup.py install
+#1710435063
+bean-check
+#1710435103
+cd ..
+#1710435110
+mkdir beancount-tutorial
+#1710435114
+cd beancount-tutorial/
+#1710435124
+bean-example --help
+#1710435140
+bean-example > example.beancount
+#1710435145
+v example.beancount 
+#1710435348
+bean-check example.beancount
+#1710435364
+bean-report example.beancount balances
+#1710435377
+sudo apt install beancount
+#1710435388
+bean-report example.beancount balances
+#1710435447
+sudo apt remove beancount
+#1710435459
+pip3 --help
+#1710435467
+pip3 show
+#1710435472
+pip3 show bean
+#1710435475
+pip3 show bean*
+#1710435479
+pip3 show beancount
+#1710435496
+pip3 list
+#1710435528
+conda deactivate all
+#1710435533
+conda deactivate
+#1710435568
+pip list
+#1710435592
+pip --help
+#1710435612
+sudo pip uninstall git+https://github.com/beancount/beancount#egg=beancount
+#1710435634
+sudo apt install beancount
+#1710435649
+bean-report example.beancount balances
+#1710435681
+bean-report --help-reports
+#1710435708
+bean-report --help-formats
+#1710435746
+bean-report example.beancount balances -e ETrade
+#1710435771
+bean-report example.beancount balances -e ETrade --cost
+#1710435793
+bean-report example.beancount balances | treeify
+#1710435885
+bean-report example.beancount balsheet
+#1710435905
+bean-report example.beancount balsheet /tmp/balsheet.html
+#1710435917
+bean-report example.beancount balsheet > /tmp/balsheet.html
+#1710435922
+open /tmp/balsheet.html 
+#1710435981
+bean-report example.beancount balsheet > /tmp/balsheet.html
+#1710435991
+open /tmp/balsheet.html 
+#1710436027
+ls /tmp/
+#1710436037
+v /tmp/balsheet.html 
+#1710436047
+bat /tmp/balsheet.html 
+#1710436061
+open /tmp/balsheet.html 
+#1710436078
+bean-report example.beancount balsheet > balsheet.html
+#1710436081
+open balsheet.html 
+#1710436130
+bean-report example.beancount income > income.html
+#1710436132
+open income.html 
+#1710436157
+bean-report --help-formats
+#1710436172
+bean-report example.beancount journal -a Assets:US:BofA:Checking
+#1710436198
+bean-report example.beancount journal -a Assets:US:BofA:Checking --balance
+#1710436217
+bean-report example.beancount journal -a Assets:US:ETrade:GLD
+#1710436231
+bean-report example.beancount journal -a Assets:US:ETrade:GLD --cost
+#1710436255
+bean-report example.beancount journal --balance
+#1710436269
+bean-report example.beancount holdings
+#1710436279
+bean-report example.beancount holdings --by=account
+#1710436318
+bean-report example.beancount holdings --by=root-account
+#1710436334
+bean-report example.beancount holdings --by=commodity
+#1710436340
+bean-report example.beancount holdings --by=currency
+#1710436353
+bean-report example.beancount networth
+#1710436365
+bean-report example.beancount accounts
+#1710436374
+bean-report example.beancount events
+#1710436390
+bean-report example.beancount stats-directives
+#1710436399
+bean-report example.beancount stats-postings
+#1710436413
+bean-report -f csv example.beancount holdings
+#1710436425
+bean-web example.beancount
+#1710436446
+bean-web --help
+#1710436463
+bean-web --port 8083 example.beancount
+#1710436577
+pip3 install fava
+#1710436622
+fava example.beancount 
+#1710500225
+cd ..
+#1710500240
+cd pplearn/06_real/
+#1710500249
+v mnist.py 
+#1710500253
+v digit_classifier.py 
+#1710500367
+python digit_classifier.py 
+#1710500378
+conda activate
+#1710500381
+python digit_classifier.py 
+#1710500392
+conda list
+#1710500399
+conda --envs
+#1710500403
+conda -h
+#1710500425
+conda activate --help
+#1710500450
+conda info
+#1710500478
+ls /home/lucabol/miniconda3/envs
+#1710500486
+conda activate machinelearning
+#1710500491
+python digit_classifier.py 
+#1710500564
+v digit_classifier.py 
+#1710500737
+cd solution/
+#1710500744
+v mnist.py 
+#1710500779
+v digit_classifier.py 
+#1710500819
+python digit_classifier.py 
+#1710501253
+v README.txt 
+#1710501305
+cd ../..
+#1710501309
+cd 07_final/
+#1710501317
+v mnist.py 
+#1710501425
+v mnist_classifier.py 
+#1710433371
+e mnist.py 
+#1710834977
+cd ../05_discerning/
+#1710834985
+cd ../06_real/
+#1710834993
+v digit_classifier.py 
+#1710834999
+v classifier.py 
+#1710835175
+cd ../07_final/
+#1710835292
+v mnist.py 
+#1710835409
+v mnist_classifier.py 
+#1710835720
+python mnist_classifier.py 
+#1710835925
+cd solution/
+#1710835938
+python sonar_classifier.py 
+#1710835958
+e sonar_classifier.py 
+#1710835975
+v README.txt 
+#1710836055
+cp /mnt/c/Users/lucabol/Downloads/sonar.all-data ./
+#1710836058
+python sonar_classifier.py 
+#1710836084
+v sonar_classifier.py 
+#1710836095
+v sonar.py 
+#1710836109
+v sonar.all-data 
+#1710836239
+cd ../../06_real/
+#1710836243
+v digit_classifier.py 
+#1710836643
+cd ../08_perceptron/
+#1710836650
+python plot_linearly_separable.py 
+#1710840835
+cd ..
+#1710840837
+code .
+#1710841239
+cd dev/pplearn/02_first/
+#1710841246
+python plot.py 
+#1710841257
+conda activate
+#1710841259
+python plot.py 
+#1710841411
+ll
+#1710841429
+ls notebooks/
+#1710842326
+cd 02_first/
+#1710851445
+cd ..
+#1710851473
+mkdir demo
+#1710851476
+cd demo
+#1710851501
+cp ../02_first ./01_LinearRegression
+#1710851508
+cp -r ../02_first ./01_LinearRegression
+#1710851511
+cd 01_LinearRegression/
+#1710851520
+py
+#1710851606
+python plot.py 
+#1710851744
+v plot.py 
+#1710851958
+v linear_regression.py 
+#1710852019
+python linear_regression_with_bias.py 
+#1710852036
+python linear_regression.py 
+#1710852065
+v linear_regression.py 
+#1710852108
+e linear_regression.py 
+#1710852482
+python linear_regression.py 
+#1710852511
+e linear_regression_with_bias.py 
+#1710852599
+python linear_regression_with_bias.py 
+#1710852613
+python linear_regression.py 
+#1710852646
+python linear_regression_with_bias.py 
+#1710852800
+e linear_regression_with_bias.py 
+#1710852841
+python linear_regression_with_bias.py 
+#1710852956
+v solution/README.txt 
+#1710852986
+cd solution/
+#1710852994
+python big_learning_rate.py 
+#1710853005
+python tiny_learning_rate.py 
+#1710853018
+python linear_regression.py 
+#1710853023
+v linear_regression.py 
+#1710853043
+v big_learning_rate.py 
+#1710853066
+cd ../../
+#1710853131
+cp -r ../03_gradient ./02_GradientDescent
+#1710853135
+cd 02_GradientDescent/
+#1710853249
+e ../01_LinearRegression/linear_regression_with_bias.py 
+#1710853871
+rm plot_loss*
+#1710853886
+cp ../01_LinearRegression/linear_regression_with_bias.py 
+#1710853889
+cp ../01_LinearRegression/linear_regression_with_bias.py ./
+#1710853893
+e linear_regression_with_bias.py 
+#1710853933
+python linear_regression_with_bias.py 
+#1710854029
+python gradient_descent_final.py 
+#1710854111
+e gradient_descent_final.py 
+#1710854124
+python gradient_descent_final.py 
+#1710854247
+python linear_regression_with_bias.py 
+#1710854286
+python gradient_descent_final.py 
+#1710854343
+rm gradient_descent_without_bias.py 
+#1710854351
+e gradient_descent_final.py 
+#1710854694
+cd ..
+#1710854701
+cd 01_LinearRegression/
+#1710854714
+mv solution experiments
+#1710854716
+cd experiments/
+#1710854721
+rm README.txt 
+#1710854746
+v ~/.bash_aliases 
+#1710854758
+v ~/.bash_aliases | grep rm
+#1710854763
+trash --help
+#1710854842
+trash-list
+#1710854849
+trash-restore 
+#1710854857
+v README.txt 
+#1710854861
+cd ..
+#1710854865
+cd 02
+#1710854868
+cd ..
+#1710854870
+cd 02_GradientDescent/
+#1710854877
+mv solution experiments
+#1710854880
+cd experiments/
+#1710854887
+open large_lr.jpg 
+#1710854908
+v README.txt 
+#1710854949
+python loss_increasing.py 
+#1710854956
+v loss_increasing.py 
+#1710854964
+e loss_increasing.py 
+#1710855026
+feh large_lr.jpg 
+#1710855032
+sudo apt install feh
+#1710855045
+feh large_lr.jpg 
+#1710865230
+cd ..
+#1710865260
+cp -r ../04_hyperspace ./03_MultipleRegression
+#1710865264
+cd 03_MultipleRegression/
+#1710865334
+cd ..
+#1710865347
+mv 03_MultipleRegression 03_MultipleLinearRegression
+#1710865351
+cd 03_MultipleLinearRegression/
+#1710865756
+python plot_plane.py 
+#1710865772
+rm plot_plane.py 
+#1710865778
+rm pizza_2_vars.txt 
+#1710865785
+v pizza_3_vars.txt 
+#1710836693
+v plot_linearly_separable.py 
+#1710865838
+cd ..
+#1710865842
+cd demo/
+#1710865848
+cd 03_MultipleLinearRegression/
+#1710865862
+x1, x2, x3, y = np.loadtxt(​"pizza_3_vars.txt"​, skiprows=1, unpack=True)
+#1710865864
+python
+#1710866211
+v multiple_regression_without_bias.py 
+#1710866221
+v multiple_regression_final.py 
+#1710866234
+rm multiple_regression_without_bias.py 
+#1710866239
+e multiple_regression_final.py 
+#1710866888
+python multiple_regression_final.py 
+#1710866941
+e multiple_regression_final.py 
+#1710867137
+mv solution experiments
+#1710867140
+cd experiments/
+#1710867148
+python life_expectancy_experiment.py 
+#1710867183
+cp ../../../data/life-expectancy/life-expectancy-without-country-names.txt ./
+#1710867193
+python life_expectancy_experiment.py 
+#1710867225
+e life_expectancy_experiment.py 
+#1710867248
+python life_expectancy_experiment.py 
+#1710867329
+v README.txt 
+#1710867353
+e life_expectancy_experiment.py 
+#1710867369
+python life_expectancy_experiment.py 
+#1710867386
+v README.txt 
+#1710867447
+v "life-expectancy-without-country-names.txt" 
+#1710867463
+python life_expectancy_experiment.py 
+#1710867519
+v "life_expectancy_experiment.py" 
+#1710867547
+mv "life-expectancy-without-country-names.txt" life_data.txt
+#1710867553
+e life_expectancy_experiment.py 
+#1710867576
+python life_expectancy_experiment.py 
+#1710867590
+e life_expectancy_experiment.py 
+#1710868077
+cd 
+#1710868111
+cd pplearn/demo/
+#1710868151
+cp -r ../05_discerning ./04_BinaryClassifier
+#1710868156
+cd 04_BinaryClassifier/
+#1710868165
+rm plot_*
+#1710868175
+python classifier.py 
+#1710868181
+v police.txt 
+#1710868199
+e classifier.py 
+#1710868221
+conda activate
+#1710868224
+e classifier.py 
+#1710868231
+conda activate
+#1710868243
+conda activate machinelearning
+#1710868248
+e classifier.py 
+#1710868283
+cd ../..
+#1710868288
+cd 04_BinaryClassifier/
+#1710868292
+e classifier.py 
+#1710868803
+conda deactivate
+#1710868807
+conda activate
+#1710868811
+conda activate machinele
+#1710868815
+conda activate machinelearning
+#1710868819
+e classifier.py 
+#1710868972
+pyenv shell $ENVNAME
+#1710868994
+conda --help
+#1710869007
+conda doctor
+#1710869043
+e classifier.py 
+#1710869051
+python classifier.py 
+#1710869056
+e classifier.py 
+#1710870095
+python classifier.py 
+#1710870129
+e classifier.py 
+#1710870309
+mv solution experiments
+#1710870312
+cd experiments/
+#1710870316
+v README.txt 
+#1710870396
+v classifier.py 
+#1710870413
+python classifier.py 
+#1710870422
+cd ..
+#1710870424
+e classifier.py 
+#1710870447
+cd experiments/
+#1710870465
+mv classifier.py printweights.py
+#1710870468
+python printweights.py 
+#1710870478
+e printweights.py 
+#1710870483
+cd ..
+#1710870532
+ls ../data/
+#1710870537
+ls ../data/mnist/
+#1710870544
+ll ../data/mnist/
+#1710870625
+less ../data/mnist/t10k-images-idx3-ubyte.gz 
+#1710870666
+zcat ../data/mnist/t10k-images-idx3-ubyte.gz 
+#1710870676
+gzip --help
+#1710870697
+gzip -l ../data/mnist/t10k-images-idx3-ubyte.gz 
+#1710870777
+cp -r ../06_real ./05_RecognizeOneDigit
+#1710870781
+cd 05_RecognizeOneDigit/
+#1710870802
+python print_sample_digits.py 
+#1710870849
+mkdir ../data
+#1710870862
+cp -r ../../data/mnist ../data/
+#1710870867
+python print_sample_digits.py 
+#1710870954
+python print_sample_digits_with_labels.py 
+#1710870972
+python print_samples_of_specific_digit.py 
+#1710871072
+python print_sample_digits.py 
+#1710871106
+rm print_sample_digits_with_labels.py 
+#1710871113
+rm print_samples_of_specific_digit.py 
+#1710875076
+v mnist.py 
+#1710875101
+v digit_classifier.py 
+#1710875128
+v solution/README.txt 
+#1710875150
+mv solution experiments
+#1710875167
+ls __pycache__/
+#1710875202
+python print_sample_digits.py 
+#1710875813
+v mnist.py 
+#1710875823
+ls digit_classifier.py 
+#1710875826
+v digit_classifier.py 
+#1710875898
+ls ../..
+#1710875917
+ls ../../08_perceptron/
+#1710875935
+v ../../08_perceptron/
+#1710875938
+v ../../08_perceptron/plot_linearly_separable.py 
+#1710875964
+python ../../08_perceptron/plot_linearly_separable.py 
+#1710876170
+v digit_classifier.py 
+#1710876265
+ls ../../10_building/
+#1710876275
+v ../../10_building/forward_propagation.py 
+#1710876320
+v ../../11_training/backpropagation.py 
+#1710876345
+v ../../11_training/neural_network.py 
+#1710876497
+python ../../08_perceptron/plot_linearly_separable.py 
+#1710876543
+cd dev/pplearn/demo/
+#1710876553
+conda activate machinelearning
+#1710876566
+cd 05_RecognizeOneDigit/
+#1710876573
+v mnist.py 
+#1710920612
+python print_sample_digits.py 
+#1710920679
+ls ../data/mnist/
+#1710920687
+ll ../data/mnist/
+#1710920902
+e mnist.py 
+#1710921569
+python digit_classifier.py 
+#1710921612
+e mnist.py 
+#1710921822
+cd experiments/
+#1710921830
+python digit_classifier.py 
+#1710921934
+e digit_classifier.py 
+#1710921951
+python digit_classifier.py 
+#1710921984
+v README.txt 
+#1710922025
+cd ..
+#1710922091
+cp -r ../07_final ./06_MultiClassClassifier
+#1710922101
+cd 06_MultiClassClassifier/
+#1710922110
+mv solution experiments
+#1710922485
+e mnist.py 
+#1710923522
+python mnist_classifier.py 
+#1710923634
+cd experiments/
+#1710923648
+python sonar_classifier.py 
+#1710923677
+v sonar.py 
+#1710923688
+v sonar_classifier.py 
+#1710923708
+e sonar_classifier.py 
+#1710923752
+cd ..
+#1710928848
+cp -r ../10_building ./10_NetworkClassifier
+#1710928850
+cd 10_NetworkClassifier/
+#1710928898
+e forward_propagation.py 
+#1710929821
+ls solution/
+#1710929825
+cd solution/
+#1710929838
+python forward_propagation_with_preloaded_weights.py 
+#1710929846
+e forward_propagation_with_preloaded_weights.py 
+#1710929875
+mv ../weights.json ./
+#1710929878
+python forward_propagation_with_preloaded_weights.py 
+#1710929883
+v README.txt 
+#1710929888
+cd ..
+#1710929925
+mv 10_NetworkClassifier 10_BuildingTheNetwork
+#1710929928
+cd 10_BuildingTheNetwork/
+#1710929935
+mv solution experiments
+#1710929938
+cd ..
+#1710930165
+v 10_BuildingTheNetwork/experiments/weights.json 
+#1710930198
+v 10_BuildingTheNetwork/forward_propagation.py 
+#1710930483
+mv 10_BuildingTheNetwork 10_ForwardPropagation
+#1710936959
+cp -r ../11_training ./11_BackPropagation
+#1710936961
+cd 11_BackPropagation/
+#1710936979
+v backpropagation.py 
+#1710936996
+v neural_network.py 
+#1710937339
+e neural_network.py 
+#1710937688
+python neural_network.py 
+#1710937983
+mv solution experiments
+#1710937990
+rm backpropagation.py 
+#1710937994
+python plot_sigmoid.py 
+#1710938004
+rm plot_sigmoid.py 
+#1710938012
+python neural_network.py 
+#1710938028
+e results.txt
+#1710938113
+cd experiments/
+#1710938117
+v README.txt 
+#1710938172
+python neural_network_with_bad_initialization.py 
+#1710938192
+cd ..
+#1710939289
+v neural_network.py 
+#1710939392
+e neural_network.py 
+#1710939515
+cd dev/
+#1710939542
+mv pplearn/demo ./ppdemo
+#1710939545
+cd ppdemo/
+#1710947147
+cd 11_BackPropagation/
+#1710947152
+v neural_network.py 
+#1711006320
+cd experiments/
+#1711006325
+python neural_network_with_bad_initialization.py 
+#1711006338
+v neural_network_with_bad_initialization.py 
+#1711006346
+v README.txt 
+#1711006487
+cd dev/ppdemo/
+#1711006515
+cp ../pplearn/12_classifiers/ ./12_Intuition
+#1711006521
+cp -r ../pplearn/12_classifiers/ ./12_Intuition
+#1711006543
+cd 12_Intuition/
+#1711006549
+v linearly_separable.txt 
+#1711006564
+v perceptron.py 
+#1711006577
+v neural_network.py 
+#1711006354
+python neural_network_with_bad_initialization.py 
+#1711006601
+v plot_perceptron_boundary.py 
+#1711006695
+e plot_perceptron_boundary.py 
+#1711006820
+cd ../
+#1711006823
+cd ../12_Intuition/
+#1711006833
+python plot_perceptron_boundary.py 
+#1711006887
+cd ppdemo/
+#1711006895
+conda activate machinelearning
+#1711006899
+cd 12_Intuition/
+#1711006902
+v perceptron.py 
+#1711006908
+v neural_network.py 
+#1711007009
+v plot_perceptron_model.py 
+#1711007019
+python plot_perceptron_model.py 
+#1711007037
+v plot_perceptron_model.py 
+#1711007444
+e plot_perceptron_boundary.py 
+#1711007464
+python plot_perceptron_boundary.py 
+#1711007682
+python plot_neural_network_boundary.py 
+#1711007856
+e plot_neural_network_boundary.py 
+#1711007875
+python plot_neural_network_boundary.py 
+#1711008025
+cd ..
+#1711008028
+cd ..
+#1711008043
+mv 12_Intuition 12_DecisionBoundary
+#1711008046
+cd 12_DecisionBoundary/
+#1711008080
+mv solution experiments
+#1711008082
+cd experiments/
+#1711008142
+feh *.jpg
+#1711008168
+v README.txt 
+#1711008212
+e show.sh
+#1711008227
+chmod a+x show.sh 
+#1711008229
+./show.sh 
+#1711008248
+cd ..
+#1711008278
+mv circles.txt experiments/
+#1711008295
+mv plot_perceptron_model.py experiments/
+#1711008304
+mv plot_neural_network_model.py experiments/
+#1711008313
+v plot_data.py 
+#1711008377
+mv plot_data.py experiments/
+#1711008386
+cd experiments/
+#1711008400
+cd ..
+#1711008428
+cd 12_DecisionBoundary/experiments/
+#1711008431
+./show.sh 
+#1711008961
+cp -r ../pplearn/13_batching ./13_MiniBatching 
+#1711008963
+cd 13
+#1711008965
+cd 13_MiniBatching/
+#1711008983
+python plot_loss.py 
+#1711009011
+e neural_network.py 
+#1711009371
+python neural_network.py 
+#1711010049
+cd ..
+#1711010052
+cd 13_MiniBatching/
+#1711010077
+v compare.py 
+#1711010109
+v compare_batch_sizes.py 
+#1711010129
+mv solution experiments
+#1711010145
+python plot_gd_stochastic.py 
+#1711010161
+rm plot_*
+#1711010165
+rm compare*
+#1711010169
+cd experiments/
+#1711010181
+feh *.jpg
+#1711010261
+cp *.jpg /mnt/c/Users/lucabol/Downloads/
+#1711010303
+feh --help
+#1711010306
+man feh
+#1711010387
+feh batch_size.jpg 
+#1711010395
+feh -. batch_size.jpg 
+#1711010409
+feh -Z batch_size.jpg 
+#1711010419
+feh -. *.jpg 
+#1711010439
+e show.sh
+#1711010454
+chmod a+x show.sh 
+#1711010457
+./show.sh 
+#1711010491
+v README.txt 
+#1711010520
+./show.sh 
+#1711010571
+cd ..
+#1711010818
+cp -r ../pplearn/14_testing ./14_Overfitting
+#1711010821
+cd 14_Overfitting/
+#1711010832
+v plot_overfitting.py 
+#1711010849
+python plot_overfitting.py 
+#1711011111
+v mnist_three_sets.py 
+#1711011203
+v mnist_two_sets.py 
+#1711011218
+rm mnist_two_sets.py 
+#1711011228
+rm plot_overfitting.py 
+#1711011231
+ls solution/
+#1711011234
+ls solution/README.txt 
+#1711011238
+v solution/RE
+#1711011241
+v solution/README.txt 
+#1711011256
+rm -r solution/
+#1711011261
+rm __pycache__/
+#1711011265
+cd ..
+#1711020192
+cd ..
+#1711020247
+cp -r ../pplearn/15_development ./15_development
+#1711020250
+cd 15_development/
+#1711020273
+v mnist_standardized.py 
+#1711020386
+e mnist_standardized.py 
+#1711020498
+python mnist_vs_standardized_mnist.py 
+#1711020640
+v mnist_vs_standardized_mnist.py 
+#1711021025
+e mnist_standardized.py 
+#1711021262
+v neural_network.py 
+#1711022451
+python final_test.py 
+#1711022619
+mv solution experiments
+#1711022621
+cd experiments/
+#1711022626
+v README.txt 
+#1711022645
+v ninetynine.py 
+#1711022663
+cd ..
+#1711097012
+cd 01_LinearRegression/
+#1711097025
+py
+#1711097043
+e ~/.bash_aliases 
+#1711097058
+p
+#1711097089
+. ~/.bash_aliases 
+#1711097094
+p plot.py 
+#1711097110
+v linear_regression_with_bias.py 
+#1711097121
+e linear_regression_with_bias.py 
+#1711097248
+rm linear_regression.py 
+#1711097250
+cd experiments/
+#1711097265
+p big_learning_rate.py 
+#1711097277
+p linear_regression.py 
+#1711097280
+p tiny_learning_rate.py 
+#1711097289
+cd ..
+#1711097294
+p linear_regression_with_bias.py 
+#1711097320
+v linear_regression_with_bias.py 
+#1711097454
+cd ../02_GradientDescent/
+#1711097461
+v linear_regression_with_bias.py 
+#1711097470
+v gradient_descent_final.py 
+#1711097485
+p linear_regression_with_bias.py 
+#1711097505
+cd ../02_GradientDescent/
+#1711097515
+p gradient_descent_final.py 
+#1711097528
+. ~/.bash_aliases 
+#1711097542
+p gradient_descent_final.py 
+#1711097567
+v gradient_descent_final.py 
+#1711097787
+cd experiments/
+#1711097797
+p loss_increasing.py 
+#1711097814
+feh large_lr.jpg 
+#1711097836
+v large_lr.jpg 
+#1711097842
+cd ..
+#1711097845
+v gradient_descent_final.py 
+#1711097960
+cd ../03_MultipleLinearRegression/
+#1711097965
+v pizza_3_vars.txt 
+#1711097972
+v multiple_regression_final.py 
+#1711098082
+p multiple_regression_final.py 
+#1711098099
+cd experiments/
+#1711098106
+v life_data.txt 
+#1711098116
+v life_expectancy_experiment.py 
+#1711098130
+p life_expectancy_experiment.py 
+#1711098306
+cd ../../04_BinaryClassifier/
+#1711098311
+v police.txt 
+#1711098322
+v classifier.py 
+#1711098556
+p classifier.py 
+#1711098608
+cd experiments/
+#1711098614
+v README.txt 
+#1711098622
+p printweights.py 
+#1711098637
+v police.txt 
+#1711098795
+cd ../05_RecognizeOneDigit/
+#1711098806
+p print_sample_digits.py 
+#1711098826
+v mnist.py 
+#1711098922
+v digit_classifier.py 
+#1711098951
+p digit_classifier.py 
+#1711098999
+cd experiments/
+#1711099002
+p digit_classifier.py 
+#1711099342
+cd ../../06_MultiClassClassifier/
+#1711099349
+v mnist_classifier.py 
+#1711099368
+v mnist.py 
+#1711099440
+v mnist_classifier.py 
+#1711099495
+p mnist_classifier.py 
+#1711099623
+v mnist_classifier.py 
+#1711099781
+cd experiments/
+#1711099789
+v README.txt 
+#1711099805
+p sonar_classifier.py 
+#1711099850
+v sonar_classifier.py 
+#1711099860
+cd ..
+#1711102255
+conda install tensorflow
+#1711102315
+cp ../pplearn/16_deeper 16_deeper
+#1711102320
+cp -r ../pplearn/16_deeper 16_deeper
+#1711102324
+cd 16_deeper/
+#1711102330
+v echidna.txt 
+#1711102345
+v echidna.py 
+#1711102387
+v echidna.txt 
+#1711113868
+e network_shallow.py 
+#1711113920
+e echidna.py 
+#1711114562
+p network_shallow.py 
+#1711114678
+e network_shallow.py 
+#1711114700
+p network_shallow.py 
+#1711115125
+e network_deep.py 
+#1711115202
+p network_deep.py 
+#1711115447
+cd ..
+#1711115463
+mv 16_deeper 16_MakingItDeep
+#1711115468
+ll
+#1711115505
+cd 16_MakingItDeep/
+#1711115510
+mv solution experiments
+#1711115513
+cd experiments/
+#1711115518
+e mnist_with_keras.py 
+#1711115671
+v README.txt 
+#1711116640
+cd ../..
+#1711116656
+ll
+#1711116672
+mv 15_development 15_Development
+#1711116721
+cp ../pplearn/17_overfitting 17_OverfittingAgain
+#1711116727
+cp -r ../pplearn/17_overfitting 17_OverfittingAgain
+#1711116730
+cd 17_OverfittingAgain/
+#1711116741
+e network_deep.py 
+#1711115680
+p mnist_with_keras.py 
+#1711353146
+conda activate machinelearning
+#1711353150
+cd ppdemo/
+#1711353155
+cd 01_LinearRegression/
+#1711353161
+p plot.py 
+#1711353170
+p linear_regression_with_bias.py 
+#1711359474
+v linear_regression_with_bias.py 
+#1711359504
+cd ../03_MultipleLinearRegression/
+#1711359508
+v pizza_3_vars.txt 
+#1711359516
+cd ..
+#1711359522
+cd 01_LinearRegression/
+#1711359536
+cd experiments/
+#1711359539
+p big_learning_rate.py 
+#1711359547
+p tiny_learning_rate.py 
+#1711359555
+v README.txt 
+#1711359580
+cd ../../02_GradientDescent/
+#1711359587
+v gradient_descent_final.py 
+#1711359636
+v linear_regression_with_bias.py 
+#1711359649
+cd ppdemo/
+#1711359652
+cd 02_GradientDescent/
+#1711359670
+p linear_regression_with_bias.py 
+#1711359687
+conda activate machinelearning
+#1711359694
+p gradient_descent_final.py 
+#1711359692
+p linear_regression_with_bias.py 
+#1711359714
+cd ..
+#1711359718
+cd 03_MultipleLinearRegression/
+#1711359724
+v multiple_regression_final.py 
+#1711359935
+p multiple_regression_final.py 
+#1711359948
+cd experiments/
+#1711359953
+v life_
+#1711359956
+v life_data.txt 
+#1711359971
+p life_expectancy_experiment.py 
+#1711360000
+v README.txt 
+#1711360009
+cd ..
+#1711360013
+cd ../04_BinaryClassifier/
+#1711360028
+v police.txt 
+#1711360066
+v classifier.py 
+#1711360199
+p classifier.py 
+#1711360215
+cd experiments/
+#1711360224
+p printweights.py 
+#1711360239
+v police.txt 
+#1711360253
+cd ..
+#1711360263
+cd 05_RecognizeOneDigit/
+#1711360380
+v digit_classifier.py 
+#1711360396
+e digit_classifier.py 
+#1711360440
+p print_sample_digits.py 
+#1711360461
+v mnist.py 
+#1711360546
+v digit_classifier.py 
+#1711360564
+p digit_classifier.py 
+#1711360609
+cd experiments/
+#1711360613
+p digit_classifier.py 
+#1711360649
+cd ..
+#1711360654
+cd ../06_MultiClassClassifier/
+#1711360686
+v mnist.py 
+#1711360764
+v mnist_classifier.py 
+#1711361208
+cd ../06_MultiClassClassifier/
+#1711361212
+v mnist_classifier.py 
+#1711361151
+p mnist_classifier.py 
+#1711361254
+cd experiments/
+#1711361287
+wc --help
+#1711361296
+wc -l ../mnist_classifier.py 
+#1711361314
+v README.txt 
+#1711361327
+p sonar_classifier.py 
+#1711361350
+v README.txt 
+#1711361362
+cd ..
+#1711361485
+cd divs/
+#1711361491
+run build 1
+#1711361500
+run clean
+#1711361501
+run build 1
+#1711361534
+e Taskfile 
+#1711361620
+run build 1
+#1711361633
+run table
+#1711361648
+e Taskfile 
+#1711361693
+run table
+#1711362037
+ga
+#1711362050
+run chart
+#1711363438
+run build
+#1711363441
+run build 1
+#1711363445
+run table
+#1711363501
+run chart
+#1711441632
+p mnist_classifier.py 
+#1711441688
+cd ..
+#1711461768
+cd 01_LinearRegression/
+#1711461771
+v pizza.txt 
+#1711461782
+p plot.py 
+#1711461814
+v linear_regression_with_bias.py 
+#1711462012
+p linear_regression_with_bias.py 
+#1711462046
+v linear_regression_with_bias.py 
+#1711462074
+cd experiments/
+#1711462079
+p big_learning_rate.py 
+#1711462088
+b tiny_learning_rate.py 
+#1711462093
+p tiny_learning_rate.py 
+#1711462096
+b linear_regression.py 
+#1711462098
+p linear_regression.py 
+#1711462103
+v linear_regression.py 
+#1711462106
+cd ..
+#1711462123
+cd ../02_GradientDescent/
+#1711462183
+v gradient_descent_final.py 
+#1711462248
+cd 02_GradientDescent/
+#1711462271
+p gradient_descent_final.py 
+#1711462269
+p linear_regression_with_bias.py 
+#1711462289
+cd experiments/
+#1711462302
+v loss_increasing.py 
+#1711462313
+p loss_increasing.py 
+#1711462323
+feh large_lr.jpg 
+#1711462342
+cd ../../03_MultipleLinearRegression/
+#1711462360
+v pizza_3_vars.txt 
+#1711462434
+v multiple_regression_final.py 
+#1711462549
+p multiple_regression_final.py 
+#1711462576
+cd experiments/
+#1711462581
+v life_
+#1711462583
+v life_expectancy_experiment.py 
+#1711462587
+v life_data.txt 
+#1711462608
+v life_expectancy_experiment.py 
+#1711462629
+p life_expectancy_experiment.py 
+#1711462663
+v life_data.txt 
+#1711462695
+cd ..
+#1711462702
+cd 04_BinaryClassifier/
+#1711462713
+v police.txt 
+#1711462866
+v classifier.py 
+#1711462980
+p classifier.py 
+#1711462989
+cd experiments/
+#1711462997
+p printweights.py 
+#1711463016
+cd ../../05_RecognizeOneDigit/
+#1711463027
+p print_sample_digits.py 
+#1711463106
+v mnist.py 
+#1711463201
+v digit_classifier.py 
+#1711463231
+p digit_classifier.py 
+#1711463285
+wc -l digit_classifier.py 
+#1711463306
+cd experiments/
+#1711463316
+p digit_classifier.py 
+#1711463348
+cd ..
+#1711463353
+cd ../06_MultiClassClassifier/
+#1711463358
+p mnist_classifier.py 
+#1711463599
+v mnist.py 
+#1711463667
+v mnist_classifier.py 
+#1711463757
+cd experiments/
+#1711463765
+v sonar_classifier.py 
+#1711463795
+p sonar_classifier.py 
+#1711463815
+v README.txt 
+#1711463853
+cd ..
+#1711465190
+cd 01_LinearRegression/
+#1711465193
+v linear_regression_with_bias.py 
+#1711465797
+v pizza.txt 
+#1711465924
+p plot.py 
+#1711465940
+v linear_regression_with_bias.py 
+#1711466199
+p linear_regression_with_bias.py 
+#1711466216
+v linear_regression_with_bias.py 
+#1711466288
+cd experiments/
+#1711466300
+p big_learning_rate.py 
+#1711466319
+p tiny_learning_rate.py 
+#1711466371
+cd ..
+#1711466385
+cd 02_GradientDescent/
+#1711466501
+v gradient_descent_final.py 
+#1711466600
+p gradient_descent_final.py 
+#1711466665
+cd experiments/
+#1711466674
+v loss_increasing.py 
+#1711466683
+p loss_increasing.py 
+#1711466696
+feh large_lr.jpg 
+#1711466732
+cd ..
+#1711466742
+cd 03_MultipleLinearRegression/
+#1711466771
+v pizza_3_vars.txt 
+#1711466885
+v multiple_regression_final.py 
+#1711467078
+p multiple_regression_final.py 
+#1711467105
+cd experiments/
+#1711467111
+v life_data.txt 
+#1711467139
+v life_expectancy_experiment.py 
+#1711467160
+p life_expectancy_experiment.py 
+#1711467186
+v life_data.txt 
+#1711467222
+cd ..
+#1711467249
+cd ../04_BinaryClassifier/
+#1711467272
+v police.txt 
+#1711467498
+v classifier.py 
+#1711467722
+p classifier.py 
+#1711467738
+cd experiments/
+#1711467744
+p printweights.py 
+#1711467773
+v police.txt 
+#1711467823
+cd ../../05_RecognizeOneDigit/
+#1711467854
+p print_sample_digits.py 
+#1711467959
+v mnist.py 
+#1711468099
+v digit_classifier.py 
+#1711468153
+cd ../05_RecognizeOneDigit/
+#1711468156
+cd experiments/
+#1711468132
+p digit_classifier.py 
+#1711468166
+p digit_classifier.py 
+#1711468254
+cd ..
+#1711468257
+cd 06_MultiClassClassifier/
+#1711468269
+p mnist_classifier.py 
+#1711468398
+v mnist.py 
+#1711468469
+v mnist_classifier.py 
+#1711468536
+cd experiments/
+#1711468552
+v sonar_classifier.py 
+#1711468565
+p sonar_classifier.py 
+#1711468592
+wc -l sonar_classifier.py 
+#1711544000
+cd ..
+#1711544014
+cd 10_ForwardPropagation/
+#1711544020
+v forward_propagation.py 
+#1711544091
+e forward_propagation.py 
+#1711544177
+v mnist.py 
+#1711544192
+cd experiments/
+#1711544197
+v forward_propagation_with_preloaded_weights.py 
+#1711544222
+p forward_propagation_with_preloaded_weights.py 
+#1711544231
+v README.txt 
+#1711544242
+cd ../
+#1711544243
+cd ..
+#1711546569
+cd ../../11_BackPropagation/
+#1711546575
+v results.txt 
+#1711547035
+cd ls
+#1711547041
+cd 11_BackPropagation/
+#1711547044
+p neural_network.py 
+#1711547133
+e neural_network.py 
+#1711547220
+p neural_network.py 
+#1711547267
+e neural_network.py 
+#1711547281
+p neural_network.py 
+#1711547332
+e results.txt 
+#1711547349
+p neural_network.py 
+#1711547387
+v neural_network.py 
+#1711547451
+e neural_network.py 
+#1711547514
+p neural_network.py 
+#1711547548
+cd experiments/
+#1711547553
+p neural_network_with_bad_initialization.py 
+#1711547610
+e neural_network_with_bad_initialization.py 
+#1711547643
+p neural_network_with_bad_initialization.py 
+#1711547658
+v README.txt 
+#1711547675
+e results.txt
+#1711547789
+p neural_network_with_bad_initialization.py 
+#1711547859
+cd ..
+#1711547862
+ls 1*
+#1711547864
+cd ..
+#1711547866
+ls 1*
+#1711546587
+v neural_network.py 
+#1711548193
+cd ../12_DecisionBoundary/
+#1711548237
+v linearly_separable.txt 
+#1711548257
+p plot_perceptron_boundary.py 
+#1711548281
+e plot_perceptron_boundary.py 
+#1711548297
+p plot_perceptron_boundary.py 
+#1711548319
+e plot_perceptron_boundary.py 
+#1711548329
+p plot_perceptron_boundary.py 
+#1711548395
+mv plot_perceptron_boundary.py plot_perceptron_boundary_right.py
+#1711548417
+cp plot_perceptron_boundary_right.py plot_perceptron_boundary_nonlinear.py
+#1711548434
+mv plot_perceptron_boundary_right.py plot_perceptron_boundary_linear.py
+#1711548440
+p plot_perceptron_boundary_linear.py 
+#1711548451
+e plot_perceptron_boundary_linear.py 
+#1711548466
+p plot_perceptron_boundary_linear.py 
+#1711548483
+p plot_perceptron_boundary_nonlinear.py 
+#1711548498
+p plot_neural_network_boundary.py 
+#1711548680
+p plot_perceptron_boundary_nonlinear.py 
+#1711548723
+e plot_neural_network_boundary.py 
+#1711548749
+p plot_neural_network_boundary.py 
+#1711548930
+mv plot_neural_network_boundary.py plot_neural_network_boundary_nonlinear.py 
+#1711548945
+cp plot_neural_network_boundary_nonlinear.py plot_neural_network_boundary_linear.py 
+#1711548951
+e plot_neural_network_boundary_linear.py 
+#1711548975
+p plot_neural_network_boundary_linear.py 
+#1711549123
+cd experiments/
+#1711549139
+feh data.jpg 
+#1711549160
+./show.sh 
+#1711549184
+v README.txt 
+#1711549286
+cd ../../13_MiniBatching/
+#1711549289
+p neural_network.py 
+#1711549304
+v neural_network.py 
+#1711549365
+e neural_network.py 
+#1711549382
+p neural_network.py 
+#1711550140
+cd experiments/
+#1711550144
+./show.sh 
+#1711550202
+v README.txt 
+#1711550475
+cd ../../14_Overfitting/
+#1711550488
+v mnist_three_sets.py 
+#1711550812
+cd ../15_Development/
+#1711550835
+p final_test.py 
+#1711551058
+v final_test.py 
+#1711551074
+v neural_network.py 
+#1711551123
+v final_test.py 
+#1711551135
+v mnist_standardized.py 
+#1711551243
+p compare.py 
+#1711551251
+v compare.py 
+#1711551268
+p compare_hidden_nodes.py 
+#1711551290
+p mnist_vs_standardized_mnist.py 
+#1711551324
+e mnist_vs_standardized_mnist.py 
+#1711551368
+p mnist_vs_standardized_mnist.py 
+#1711551524
+cd experiments/
+#1711551707
+v README.txt 
+#1711551726
+v ninetynine.py 
+#1711551747
+v neural_network_quieter.py 
+#1711551761
+p ninetynine.py 
+#1711552596
+v README.txt 
+#1711552608
+cd ..
+#1711552619
+v final_test.py 
+#1711552634
+v experiments/ninetynine.py 
+#1711552669
+cp neural_network.py experiments/
+#1711552678
+cp final_test.py experiments/
+#1711552681
+cd experiments/
+#1711552683
+p final_test.py 
+#1711552702
+e final_test.py 
+#1711552713
+e neural_network.py 
+#1711552816
+p final_test.py 
+#1711552930
+e results.txt
+#1711552964
+p final_test.py 
+#1711553071
+v final_test.py ninetynine.py 
+#1711553084
+cd ..
+#1711553090
+rm *
+#1711553127
+v ~/.bash_aliases 
+#1711553155
+trash --help
+#1711553166
+man trash
+#1711553184
+trash-restore experiments
+#1711553191
+trash-list
+#1711553215
+trash-list --help
+#1711553226
+trash-list | grep exper
+#1711553246
+trash-restore /home/lucabol/dev/ppdemo/15_Development/experiments
+#1711553257
+cp experiments/* ./
+#1711553265
+p final_test.py 
+#1711553285
+ls ..
+#1711553303
+v mnist_standardized.py 
+#1711553312
+e mnist_standardized.py 
+#1711553342
+p final_test.py 
+#1711553359
+rm -r experiments/
+#1711553372
+v final_test.py 
+#1711553375
+v ninetynine.py 
+#1711553479
+cd ..
+#1711553540
+gh repo --help
+#1711821643
+glxinfo
+#1711821666
+glxinfo -B
+#1712042002
+cd ppdemo/
+#1712042011
+cd 16_MakingItDeep/
+#1712042342
+docker
+#1712042358
+sudo apt install docker.io
+#1712042383
+docker pull rocm/tensorflow:latest
+#1712042389
+sudo docker pull rocm/tensorflow:latest
+#1712042869
+docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712042880
+sudo docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712043123
+sudo apt list|grep -i gpu|grep installed
+#1712043147
+glxinfo -B
+#1712043182
+glmark2
+#1712043192
+sudo apt install glmark2
+#1712043204
+glmmark3
+#1712043207
+glmmark2
+#1712043247
+glmark2
+#1712043618
+sudo docker run -it --network=host --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712044142
+sudo docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712045163
+clinfo
+#1712045176
+sudo apt install clinfo
+#1712045181
+clinfo
+#1712045283
+glxdemo
+#1712045297
+glxgears
+#1712045305
+glxinfo
+#1712045310
+glxinfo --help
+#1712045326
+glxinfo -B
+#1712045536
+lsb_release -a
+#1712045549
+sudo apt update
+#1712045562
+wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.0.60002-1_all.deb
+#1712045567
+ll
+#1712045589
+sudo apt install ./amdgpu-install_6.0.60002-1_all.deb
+#1712045645
+sudo amdgpu-install --usecase=graphics,rocm
+#1712046139
+glxinfo
+#1712046143
+glxinfo -B
+#1712046157
+glxgears
+#1712046235
+sudo docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712046297
+clinfo
+#1712046387
+sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+#1712046388
+# See prerequisites. Adding current user to Video and Render groups
+#1712046388
+sudo usermod -a -G render,video $LOGNAME
+#1712046388
+wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.0.60002-1_all.deb
+#1712046389
+sudo apt install ./amdgpu-install_6.0.60002-1_all.deb
+#1712046389
+sudo apt update
+#1712046391
+sudo apt install amdgpu-dkms
+#1712046392
+sudo apt install rocm
+#1712046395
+echo "Please reboot system for all settings to take effect."
+#1712046410
+sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+#1712046427
+sudo usermod -a -G render,video $LOGNAME
+#1712046436
+wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.0.60002-1_all.deb
+#1712046450
+sudo apt install ./amdgpu-install_6.0.60002-1_all.deb
+#1712046458
+sudo apt update
+#1712046471
+sudo apt install amdgpu-dkms
+#1712046480
+sudo apt install rocm
+#1712046512
+uname -m && cat /etc/*release
+#1712046528
+uname -srmv
+#1712046681
+sudo docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712046696
+docker run -it --network=host --device=/dev/kfd --device=/dev/dri --ipc=host --shm-size 16G --group-add video --cap-add=SYS_PTRACE --security-opt seccomp=unconfined rocm/tensorflow:latest
+#1712046706
+python3 --version
+#1712046809
+sudo update-alternatives --config python3
+#1712046817
+sudo apt install python3-pip
+#1712046847
+sudo apt install rocm-libs rccl
+#1712046983
+/usr/bin/python3.7  -m pip install protobuf=3.19.0
+#1712046988
+/usr/bin/python3  -m pip install protobuf=3.19.0
+#1712047015
+/usr/bin/python3  -m pip install protobuf==3.19.0
+#1712047029
+sudo pip3 install tensorflow
+#1712047068
+ls ~/.local/
+#1712047094
+python3 -c 'import tensorflow' 2> /dev/null && echo 'Success' || echo 'Failure'
+#1712047119
+export PYTHONPATH="./.local/lib/python3.10/site-packages:$PYTHONPATH"  #Use same python version as in step 2
+#1712047122
+python3 -c 'import tensorflow' 2> /dev/null && echo 'Success' || echo 'Failure'
+#1712047130
+ls ~/.local/
+#1712047152
+sudo apt install rocm-libs rccl
+#1712047165
+python3 -c 'import tensorflow' 2> /dev/null && echo 'Success' || echo 'Failure'
+#1712047214
+sudo pip3 install tensorflow
+#1712047231
+python3 -c 'import tensorflow' 2> /dev/null && echo 'Success' || echo 'Failure'
+#1712047237
+glxgears
+#1712047266
+update-alternatives --query python3
+#1712047273
+python --version
+#1712047347
+python -m pip install --user tensorflow-rocm==2.14.0.602 --upgrade
+#1712047370
+python -m pip install --user tensorflow-rocm==ROCm6.0.2 --upgrade
+#1712047407
+python -m pip install --user tensorflow-rocm==2.14.0.600 --upgrade
+#1712047438
+pip install tensorflow-rocm
+#1712047465
+sudo pip install tensorflow-rocm
+#1712061473
+conda activate machinelearning
+#1712061478
+cd ppdemo/
+#1712061486
+cd 16_MakingItDeep/
+#1712061503
+p network_shallow.py 
+#1712061517
+time python network_shallow.py 
+#1712064720
+e boundary.py 
+#1712064736
+p network_shallow.py 
+#1712064744
+e network_*
+#1712064848
+rm boundary.py 
+#1712064855
+v echidna.py 
+#1712064872
+v echidna.txt 
+#1712064883
+rm plot_echidna.py 
+#1712064890
+cd ..
+#1712064943
+v experiments/README.txt 
+#1712064959
+v network_shallow.py network_deep.py 
+#1712065045
+e network_shallow.py 
+#1712065056
+p network_shallow.py 
+#1712065357
+p network_deep.py 
+#1712065464
+v results2.txt results3.txt 
+#1712065514
+cd experiments/
+#1712065520
+v README.txt 
+#1712065527
+v mnist_with_keras.py 
+#1712065536
+e mnist_with_keras.py 
+#1712065562
+p mnist_with_keras.py 
+#1712065641
+v README.txt 
+#1712065696
+p mnist_with_keras.py 
+#1712066765
+v README.txt 
+#1712066772
+rm README.txt 
+#1712066775
+e mnist_with_keras.py 
+#1712066834
+v mnist_with_keras.py 
+#1712066842
+cd ../../17_OverfittingAgain/
+#1712066855
+v network_regularized.py 
+#1712066919
+v solution/README.txt 
+#1712067088
+v ../16_MakingItDeep/results2.txt 
+#1712067103
+v losses.py 
+#1712067293
+rm --help
+#1712067333
+rm * -network_regularized.py -solution
+#1712067342
+man trash
+#1712067376
+ll
+#1712067393
+ls ../16_MakingItDeep/
+#1712067422
+rm network_deep.py network_underfitting.py losses.py boundary.py 
+#1712067428
+e network_regularized.py 
+#1712067512
+p network_regularized.py 
+#1712067562
+e network_regularized.py 
+#1712067860
+mv solution experiments
+#1712067863
+cd experiments/
+#1712067865
+v README.txt 
+#1712067903
+v network_regularized_test.py 
+#1712068011
+cd ..
+#1712068014
+rm experiments/
+#1712068018
+cd ..
+#1712068022
+ll
+#1712068054
+cp -r ../pplearn/18_taming 18_BagOfTricks
+#1712068056
+cd 18_BagOfTricks/
+#1712068064
+v network_mnist.py 
+#1712134027
+ls solution/
+#1712134040
+v network_mnist.py 
+#1712134051
+v solution/ten_epochs.py 
+#1712134072
+cp solution/ten_epochs.py ./
+#1712134076
+rm losses.py 
+#1712134080
+rm plot_leaky_relu.py 
+#1712134086
+rm plot_relu.py 
+#1712134089
+rm -r solution/
+#1712134119
+trash list
+#1712134126
+trash-list
+#1712134134
+man trash
+#1712134141
+trash-restore
+#1712134156
+cp solution/README.txt ./
+#1712134158
+v README.txt 
+#1712134172
+rm -r solution/
+#1712134174
+rm README.txt 
+#1712134183
+mv ten_epochs.py optimized.py
+#1712134194
+v network_mnist.py 
+#1712134206
+e network_mnist.py 
+#1712134340
+v *.py
+#1712134367
+p network_mnist.py 
+#1712134428
+v *.py
+#1712134454
+p optimized.py 
+#1712134478
+cd ..
+#1712134489
+cd 16_MakingItDeep/
+#1712134496
+p network_shallow.py 
+#1712134504
+cd ../18_BagOfTricks/
+#1712134508
+v *.py
+#1712134581
+cd ..
+#1712134609
+cp -r ../pplearn/19_beyond 19_Convolutional
+#1712134611
+cd 19_Convolutional/
+#1712134619
+p print_cifar10_samples.py 
+#1712134655
+p cifar10_fully_connected.py 
+#1712134696
+cd ../18_BagOfTricks/
+#1712134702
+e *.py
+#1712134751
+p network_mnist.py 
+#1712134781
+p optimized.py 
+#1712134815
+cd ../19_Convolutional/
+#1712134819
+v cifar10_
+#1712134822
+v cifar10_*
+#1712134836
+e cifar10_cnn.py 
+#1712134862
+e cifar10_fully_connected.py 
+#1712134948
+p print_cifar10_samples.py 
+#1712135145
+p cifar10_cnn.py 
+#1712135176
+e cifar10_cnn.py 
+#1712135190
+v cifar10_fully_connected.py 
+#1712135207
+p cifar10_fully_connected.py 
+#1712135241
+e cifar10_fully_connected.py 
+#1712135295
+p cifar10_fully_connected.py 
+#1712135565
+p cifar10_cnn.py 
+#1712135698
+e cifar10_cnn.py 
+#1712135709
+p cifar10_cnn.py 
+#1712138436
+v cifar10_fully_connected.py 
+#1712138449
+v cifar10_cnn.py 
+#1712138561
+e cifar10_cnn.py 
+#1712143113
+mv /mnt/c/Users/lucabol/Downloads/DS1_key.pem ~/.ssh/
+#1712143134
+chmod 400 ~/.ssh/DS1_key.pem 
+#1712143155
+ssh -i ~/.ssh/DS1_key.pem lucabol@20.107.251.68
+#1712143202
+ssh lucabol@20.107.251.68
+#1712143213
+ssh -i ~/.ssh/DS1_key.pem lucabol@20.107.251.68
+#1712143221
+v ~/.ssh/DS1_key.pem 
+#1712143315
+ls ~/.ssh/
+#1712143320
+ll ~/.ssh/
+#1712143380
+ll /mnt/c/Users/lucabol/Downloads/DS*
+#1712143407
+ssh -i ~/.ssh/DS1_key.pem lucabol@20.107.251.68
+#1712217306
+cp /mnt/c/Users/lucabol/Downloads/DS2.pem ~/.ssh/
+#1712217516
+ssh -i ~/.ssh/DS2.pem lucabol@20.107.251.68
+#1712217538
+chmod 400 ~/.ssh/DS2.pem 
+#1712217539
+ssh -i ~/.ssh/DS2.pem lucabol@20.107.251.68
+#1712218388
+rm ~/.ssh/DS1_key.pem 
+#1712225455
+conda activate machinelearning
+#1712225462
+cd pplearn/07_final/
+#1712225480
+python mnist_classifier.py 
+#1712225551
+cd ../
+#1712225559
+cd 11_training/solution/
+#1712225564
+v README.txt 
+#1712225578
+cd ..
+#1712225662
+cd 16_deeper/solution/
+#1712225692
+time python mnist_with_keras.py 
+#1712225703
+e mnist_with_keras.py 
+#1712225777
+time python mnist_with_keras.py 
+#1712225213
+ssh -i ~/.ssh/DS2.pem lucabol@20.107.251.68
+#1712304012
+gh auth login
+#1712304022
+sudo apt install gh
+#1712304037
+gh auth login
+#1712304147
+gh extension install github/gh-copilot
+#1712304183
+gh copilot explain
+#1712304240
+gh copilot suggest "display all files in a directory"
+#1712309492
+gh copilot suggest "generic copy files"
+#1712309599
+ghce cp
+#1712309643
+eval "$(gh copilot alias -- bash)"
+#1712309652
+gh copilot alias -- bash
+#1712309665
+echo 'eval "$(gh copilot alias -- bash)"' >> ~/.bashrc
+#1712309675
+. ~/.bashrc 
+#1712309683
+ghce sudo tar
+#1712309708
+v ~/.bash_aliases `
+#1712309712
+v ~/.bash_aliases 
+#1712309722
+config status

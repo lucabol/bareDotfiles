@@ -3,6 +3,7 @@ alias e=lvim
 alias g=batgrep
 alias v='batcat -n'
 alias m=batman
+alias p=python
 
 alias nvim=lvim
 alias ls=exa

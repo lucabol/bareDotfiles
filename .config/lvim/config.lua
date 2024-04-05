@@ -52,6 +52,12 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
+-- Add for switching conda envs
+lvim.builtin.which_key.mappings["C"] = {
+  name = "Python",
+  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+}
+
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "startify" -- the other choice is dashboard
@@ -87,6 +93,13 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
+-- For python formatting : https://betterprogramming.pub/lunarvim-as-a-python-ide-ca8f57ca9f3a
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup { { name = "black" }, }
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup { { command = "flake8", filetypes = { "python" } } }
+
 -- Additional Plugins
 lvim.plugins = {
   { "ishan9299/nvim-solarized-lua" },
@@ -94,4 +107,6 @@ lvim.plugins = {
   { "ray-x/lsp_signature.nvim", event = "BufRead", config = function() require "lsp_signature".on_attach() end, },
   { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end, },
   { "JuliaEditorSupport/julia-vim" },
+  {  "ChristianChiarulli/swenv.nvim" },
+  { "stevearc/dressing.nvim"},
 }
